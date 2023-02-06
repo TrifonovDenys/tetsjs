@@ -266,25 +266,262 @@
 // console.log('Операция завершена');
 
 
-// const totalSpent = 55550;
+// let totalSpent = 2000;
 // let paymant = 500;
-// let discount;
+// let discount = 0;
 
 // if (totalSpent >= 100 && totalSpent <= 1000) {
-//   discount = 2;
+//   console.log('bronze');
+//   discount = 0.02;
 // }
-// else if (totalSpent  > 1000 && totalSpent <= 5000) {
-//   discount = 5;
+// else if (totalSpent > 1000 && totalSpent < 5000) {
+//     console.log('gold');
+//   discount = 0.05;
 // }
-// else if (totalSpent > 5000) {
-//   discount = 10;
+// else if (totalSpent >= 5000) {
+//     console.log('platinum');
+//   discount = 0.1;
 // }
 // else {
-//   discount = 0;
-// }
+//     console.log('else');
 
-// console.log(`Оформляем заказ на сумму ${paymant} со скидкой ${discount}%.`);
+    
+// }
+// paymant -= paymant * discount
+// console.log(`Оформляем заказ на сумму ${paymant} со скидкой ${discount * 100}%.`);
+
+// totalSpent += paymant;
+// console.log(`Общая сумма потраченного в магазине ${totalSpent}`);
 
 // for ( i = 1; i < 10; i += 1){
 //     console.log(i);
 // }
+// let counter = 0;
+
+// while (counter < 10) {
+//   console.log("counter: ", counter);
+//   counter += 1;
+// }
+// let password = "";
+
+// do {
+//   password = prompt("Введите пароль длиннее 4-х символов", "");
+// } while (password.length < 5);
+
+// console.log("Ввели пароль: ", password);
+// const target = 100;
+// let sum = 0;
+
+// for (let i = 0; i <= target; i += 1) {
+//   sum += i;
+// }
+
+// console.log(sum);
+
+// const max = 10;
+// for (let i = 0; i < max; i += 1) {
+//   console.log(`${max} % ${i} = `, max % i);
+// }
+// for (let i = 0; i <= 5; i += 1) {
+//   console.log(i);
+
+//   if (i === 3) {
+//     console.log("Нашли число 3, прерываем выполнение цикла");
+//     break;
+//   }
+// }
+
+// console.log("Лог после цикла");
+
+
+// Используем цикл для вывода только нечетных чисел. Для чётных i срабатывает continue, выполнение тела прекращается и управление передаётся на следующую итерацию.
+
+// for (i = 0; i <= 10; i += 1){
+//     if (i % 2 === 0) {
+//         continue
+//     }
+
+//         console.log(i);
+    
+// }
+
+
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+//   // Change code below this line
+//     message = password === ADMIN_PASSWORD ? "Access is allowed" : "Access denied, wrong password!"
+//   // Change code above this line
+//     console.log(message);
+//   return message;
+// }
+// checkPassword("jqueryismyjam")
+// checkPassword("angul4r1sl1f3")
+// checkPassword("r3actsux")
+
+
+
+
+// function getSubscriptionPrice(type) {
+//   let price;
+//   // Change code below this line
+
+//  switch (type) { // Change this line
+//     case "professional": // Change this line
+//       price = 0; // Change this line
+//       break;
+
+//     case "organization": // Change this line
+//       price = 20; // Change this line
+//       break;
+
+//     case "starter": // Change this line
+//       price = 50; // Change this line
+//       break;
+//   }
+
+//   // Change code above this line
+//     console.log(price);
+//   return price;
+// }
+
+// getSubscriptionPrice("professional")
+// getSubscriptionPrice("organization")
+// getSubscriptionPrice("starter")
+
+
+// function getShippingCost(country) {
+//     let message;
+//     let price;
+//   // Change code below this line
+// switch( country){
+//     case 'China':
+//         price = 100;
+//     message = `Shipping to ${country} will cost ${price} credits`;
+//     break;
+//     case 'Chile':
+//         price = 250;
+//     message = `Shipping to ${country} will cost ${price} credits`;
+//     break;
+//     case 'Australia':
+//         price = 170;
+//    message = `Shipping to ${country} will cost ${price} credits`;
+//     break;
+//     case 'Jamaica':
+//         price = 120;
+//     message = `Shipping to ${country} will cost ${price} credits`;
+//     break;
+//   default:
+//     message = `Sorry, there is no delivery to your country`;
+// }
+//   // Change code above this line
+//     console.log(message);
+//   return message;
+// }
+// getShippingCost("Australia");
+// getShippingCost("Germany");
+// getShippingCost("China");
+// getShippingCost("Chile");
+// getShippingCost("Jamaica");
+// getShippingCost("Sweden");
+
+
+// function getNameLength(name) {
+//   const message = `Name ${name} is ${name.length} characters long`; // Change this line
+//     console.log(message);
+//   return message;
+// }
+// getNameLength("Poly")
+// getNameLength("Harambe")
+// getNameLength("Billy")
+// getNameLength("Joe")
+
+
+// const courseTopic = "JavaScript essentials";
+// // Change code below this line
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopic.length - 1];
+
+// // Change code above this line
+// console.log(courseTopicLength);
+// console.log(firstElement);
+// console.log(lastElement);
+
+
+
+
+// function getSubstring(string, length) {
+//   const substring = string.slice(0,   length); // Change this line
+// console.log( substring);
+//   return substring;
+// }
+// getSubstring("Hello world", 3)
+// getSubstring("Hello world", 6)
+// getSubstring("Hello world", 8)
+// getSubstring("Hello world", 11)
+// getSubstring("Hello world", 0)
+
+
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+//     if (message.length > maxLength) {
+//         result = `${message.slice(0, maxLength)}...`
+//     }
+//     else {
+//         result = message;
+//     }
+//   /// Change code above this line
+//     console.log(result);
+//   return result;
+// }
+// formatMessage("Curabitur ligula sapien", 16);
+// formatMessage("Curabitur ligula sapien", 23);
+// formatMessage("Vestibulum facilisis purus nec", 20);
+// formatMessage("Vestibulum facilisis purus nec", 30);
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 41);
+
+
+// function normalizeInput(input) {
+//   const normalizedInput = input.toLowerCase(); // Change this line
+//     console.log(normalizedInput);
+//   return normalizedInput;
+// }
+// normalizeInput("Hello world")
+// normalizeInput("This ISN'T SpaM")
+// normalizeInput("Big SALE")
+
+
+// function checkForName(fullName, name) {
+//     const result = fullName.includes(name); // Change this line
+//     console.log(result);
+//   return result;
+// }
+// checkForName("Egor Kolbasov", "Egor")
+// checkForName("Egor Kolbasov", "egor")
+// checkForName("Egor Kolbasov", "egOr")
+// checkForName("Egor Kolbasov", "Zhenya")
+// checkForName("Vadim Nekrasov", "Vadim")
+// checkForName("Vadim Nekrasov", "vadim")
+// checkForName("Vadim Nekrasov", "Dima")
+
+// function checkForSpam(message) {
+//   let result;
+//   // Change code below this line
+//     result = message.toLowerCase().includes('sale') || message.toLowerCase().includes('spam');
+//     console.log(result);
+
+//   // Change code above this line
+//   return result;
+// }
+// checkForSpam("Latest technology news");
+// checkForSpam("JavaScript weekly newsletter");
+// checkForSpam("Get best sale offers now!");
+// checkForSpam("Amazing SalE, only tonight!");
+// checkForSpam("Trust me, this is not a spam message");
+// checkForSpam("Get rid of sPaM emails. Our book in on sale!");
+// checkForSpam("[SPAM] How to earn fast money?");
