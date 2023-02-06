@@ -1,3 +1,118 @@
+// function isAdult(age) {
+//     // Change code below this line
+//     const passed = age >= 18;
+//     console.log(passed);
+//     // Change code above this line
+//     return passed;
+//   }
+//   isAdult(20);
+ 
+
+
+
+
+// function isValidPassword(password) {
+//     const SAVED_PASSWORD = 'jqueryismyjam';
+//     // Change code below this line
+//     const isMatch = password === SAVED_PASSWORD;
+//     console.log(isMatch);
+//     // Change code above this line
+//     return isMatch;
+//   }
+//   isValidPassword("mangodab3st");
+//   isValidPassword("kiwirul3z");
+//   isValidPassword("jqueryismyjam");
+
+
+
+
+
+// function checkAge(age) {
+//     let message;
+  
+//     if (age >= 18) { // Change this line
+
+//       message = 'You are an adult';
+//     } else {
+//       message = 'You are a minor';
+//     }
+//     console.log(message);
+//     return message;
+//   }
+//   checkAge(20);
+//   checkAge(8);
+//   checkAge(14);
+//   checkAge(38);
+
+
+
+// function checkStorage(available, ordered) {
+//     let message;
+//     // Change code below this line
+//   if (available < ordered){
+//     message = "Order is processed, our manager will contact you."
+//   }
+//   else{
+//     message = "Not enough goods in stock!"
+//   }
+//     // Change code above this line
+//     console.log(message);
+//     return message;
+//   }
+//   checkStorage(100, 50);
+//   checkStorage(100, 130);
+//   checkStorage(200, 20);
+//   checkStorage(200, 150);
+//   checkStorage(150, 180);
+
+
+
+
+// function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+//     let message;
+//     // Change code below this line
+//   const totalPrise = pricePerDroid * orderedQuantity;
+//   if (totalPrise > customerCredits){
+//     message = 'Insufficient funds!' ;
+//   }
+//   else{
+//     message = `You ordered ${orderedQuantity} droids, you have ${customerCredits - totalPrise} credits left`;
+//   }
+//     // Change code above this line
+//     console.log(message)
+//     return message;
+//   }
+
+// makeTransaction(3000, 5, 23000);
+// makeTransaction(1000, 3, 15000);
+// makeTransaction(5000, 10, 8000);
+// makeTransaction(2000, 8, 10000);
+// makeTransaction(500, 10, 5000);
+
+
+// function checkPassword(password) {
+//     const ADMIN_PASSWORD = 'jqueryismyjam';
+//     let message;
+  
+//     if (password === null) { // Change this line
+//       message =  'Canceled by user!';
+//     } else if (password === ADMIN_PASSWORD) { // Change this line
+//       message = 'Welcome!';
+//     } else {
+//       message = 'Access denied, wrong password!';
+//     }
+//   console.log(message);
+//     return message;
+//   }
+//   checkPassword("mangohackzor");
+//   checkPassword(null);
+//   checkPassword("polyhax");
+//   checkPassword("jqueryismyjam");
+
+
+
+
+
 // Change code below this line
 // const pricePerDroid = 800;
 // const orderedQauntity = 6;
@@ -141,6 +256,7 @@
 // console.log(`Общая стоимость заказа ${paymant} кредитов. Проверяем кол-во доступных средств на счету.`);
 
 // if (paymant <= balance) {
+//     message = 'Все хорошо, снимаем деньги... Спасибо за покупку!';
 //   message = `На счету осталось ${balance - paymant} кредитов`;
 // }
 // else {
@@ -157,7 +273,7 @@
 // if (totalSpent >= 100 && totalSpent <= 1000) {
 //   discount = 2;
 // }
-// else if (totalSpent > 1000 && totalSpent <= 5000) {
+// else if (totalSpent  > 1000 && totalSpent <= 5000) {
 //   discount = 5;
 // }
 // else if (totalSpent > 5000) {
@@ -168,3 +284,7 @@
 // }
 
 // console.log(`Оформляем заказ на сумму ${paymant} со скидкой ${discount}%.`);
+
+// for ( i = 1; i < 10; i += 1){
+//     console.log(i);
+// }
