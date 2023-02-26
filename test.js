@@ -1334,21 +1334,369 @@
 //   getSum(0, 1)
 //   getSum(2, 2)
 
-function fakeBin(x){
-  binArray = [];
-  for (let number of x.split('')){
-    if (number <= 5){
-      number = 0;
-      binArray.push(number)
-      // console.log(binArray);
+// function fakeBin(x){
+//   binArray = [];
+//   for (let number of x.split('')){
+//     if (number <= 5){
+//       number = 0;
+//       binArray.push(number)
+//       // console.log(binArray);
+//     }
+//     else{
+//       number = 1
+//       binArray.push(number)
+//     }
+//     // console.log(binArray);
+//   }
+//   console.log(binArray.join(''));
+//   return binArray.join('')
+// }
+// fakeBin('45385593107843568')
+
+
+// function likes(names) {
+//   if ( names.length === 1){
+//    return `${names[0]} likes this`
+//   }
+//   if(names.length === 2){
+//     return `${names[0]} and ${names[1]} likes this`
+//   }if (names.length === 3){
+//     return `${names[0]}, ${names[1]} and ${names[2]} likes this`
+//   }
+//   if  (names.length >= 4){
+//     return `${names[0]}, ${names[1]} and ${names.length - 2} likes this`
+//   }
+//   return `no one likes this`
+// }
+// likes(['Alex', 'Jacob', 'Mark', 'Max']
+
+
+// function filter_list(l) {
+//   const newarr = []
+//   for(let i of l ){
+//     if (typeof(i) != 'string'){
+//       newarr.push(i)
+//     }
+//   }
+//   return newarr
+// }
+
+// filter_list([1,2,'aasf','1','123',123])
+
+
+// function getGrade (s1, s2, s3) {
+//   // Code here
+//   const avg = (s1 + s2 + s3) / 3
+//   console.log(avg)
+//   if (avg >= 90 && avg <= 100) {
+//     console.log('A');
+//     return 'A'
+//   }
+//   if (avg >= 80 && avg < 90) {
+//     console.log('B');
+//     return 'B'
+//   }
+//   if (avg >= 70 && avg < 80) {
+//     console.log('C');
+//     return 'C'
+//   }
+//   if (avg >= 60 && avg < 70) {
+//     console.log('C');
+//     return 'D'
+//   }
+//   if (avg >= 0 && avg < 60) {
+//     console.log('F');
+//     return 'F'
+//   }
+  
+// }
+
+// getGrade(100, 85, 96)
+
+// getGrade(84, 79, 85)
+
+// getGrade(75,70,79)
+
+// function bmi(weight, height) {
+//   const bmiIndex = weight / (height * height)
+// // console.log(bmi);
+//   console.log(bmiIndex);
+
+
+//   if (bmiIndex <= 18.5) {
+//     return "Underweight"
+//   }
+//   if (bmiIndex <= 25.0) {
+//     return "Normal"
+//   }
+//   if (bmiIndex <= 30.0) {
+//     return "Overweight"
+//   }
+//   if (bmiIndex > 30) {
+//     return "Obese"
+//   }
+  
+  
+// }
+
+// bmi(50, 1.8)
+
+// const reverseSeq = n => {
+//   const newarr = []
+//   for (i = 1; i <= n; i += 1){
+//     newarr.push(i)
+//   }
+//   console.log(newarr.reverse());
+//   return newarr.reverse();
+// }
+// console.log(reverseSeq(5))
+
+// https://rule34video.com/videos/3094667/free-for-all-2-anime-hmv-pmv/
+
+// https://rule34video.com/videos/3098521/buttons-d-art-pmv/
+// https://rule34video.com/videos/3089873/hmv-i-just-wanna/
+// https://rule34video.com/search/D--art/
+
+
+// function isValidWalk(walk) {
+//   let startPlace = 0
+//   for ( i = 0; i < walk.length; i += 1){
+//     if(walk.length < 10 || walk.length > 10 ){
+//       return false
+//     }
+//     if(walk[i] === 'n'){
+//       startPlace += 1
+//     }
+//     if(walk[i] === 's'){
+//       startPlace -= 1
+//     }
+//     if(walk[i] === 'e'){
+//       startPlace += 2
+//     }
+//     if(walk[i] === 'w'){
+//       startPlace -= 2
+//     }
+//   }
+//   console.log(startPlace !== 0 ? false : true);
+//   return startPlace !== 0 ?  false : true
+// }
+// isValidWalk(['n','s','n','s','n','s','n','s','n','s'])
+
+
+// function findNextSquare(sq) {
+//   let sqrtNumber = Math.sqrt(sq)
+//   console.log(sqrtNumber);
+//   if (Number.isInteger(sqrtNumber)){
+//     return Math.pow(sqrtNumber + 1, 2);
+//   }
+//   return -1
+// }
+// console.log(findNextSquare(121));
+// console.log(findNextSquare(155));
+// console.log(findNextSquare(342786627));
+// console.log(findNextSquare(567535329));
+
+
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+// for (let product of products){
+  
+    
+//       const keys = Object.keys(product)
+//       for (let key of keys) {
+//         if (product[key] === productName) {
+//           console.log(product.price);
+//         }
+//         // if (product[key] !== productName) {
+//         //   console.log(null);
+//         // }
+//       }
+  
+//   // return null
+// }
+  
+//   // Change code above this line
+// }
+// getProductPrice("Radar")
+// getProductPrice("Grip")
+// getProductPrice("Scanner")
+
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+// const val = []
+
+//   for (let product of products) {
+//     const keys = Object.keys(product)
+//     const values = Object.values(product)
+//     for(let key of keys){
+//     if (propName === key) {
+//       val.push(product[key])
+//       }
+//     }
+//   }
+
+// console.log(val);
+//   // Change code above this line
+// }
+// getAllPropValues("name")
+// getAllPropValues("quantity")
+// getAllPropValues("price")
+// getAllPropValues("category")
+
+
+// const books =[
+// {
+//   title: {t1: 'title'},
+//   author: 'Bernard',
+//   genres: ['history', 'new'],
+// },
+// {
+//   title: {t1: 'title'},
+//   author: 'Bernard',
+//   genres: ['history', 'new'],
+// },
+// {
+//   title: {t1: 'title'},
+//   author: 'Bernard',
+//   genres: ['history', 'new'],
+// }
+// ]
+
+// // console.log(book.title);
+// // const { title, author, genres } = book
+// // console.log(title);
+
+// for (const { title: {t1}, author, genres,  } of books) {
+//   console.log(title);
+//  console.log(t1);
+// }
+
+// Change code below this line
+// function findMatches(firstm, ...secondm) {
+//   const matches = []; // Don't change this line
+//   console.log(firstm);
+//   console.log(secondm);
+//   // Change code above this line
+//   for (let arg of firstm) {
+//     if (secondm.includes(arg)) {
+//       matches.push(arg)
+//     }
+//   }
+//   console.log(matches);
+//   return matches;
+// }
+// findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7)
+
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//    return this.books.splice(this.books.indexOf(oldName),1, newName);
+
+
+//     // Change code above this line
+//   },
+// };
+
+
+// bookShelf.updateBook("Haze", "Dungeon chronicles")
+
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   // Change code below this line
+//   getpotions(potion) {
+//     const potion = this.potions
+//     console.log(potion);
+//   return potion
+// },
+//   // Change code above this line
+// };
+
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+
+  
+  // getPotions() {
+  //   return this.potions;
+  // },
+
+
+
+  // addPotion(newPotion) {
+  //   for (let potion of atTheOldToad.potions) {
+  //     if (potion.name === newPotion.name) {
+  //       // console.log(`Error! Potion ${newPotion.name} is already in your inventory!`);
+  //       return `Error! Potion ${newPotion.name} is already in your inventory!`;
+  //     }
+  //   }
+  //   // console.log(atTheOldToad.potions);
+  //  return this.potions.push(newPotion);
+  // },
+
+
+
+  removePotion(potionName) {
+    
+    // const [potion] = atTheOldToad.potions
+    // const { name, cost } = potions
+    for (let potion of atTheOldToad.potions) {
+      // console.log(potion.name === potionName);
+      let potionIndex = this.potions.indexOf(potion);
+      console.log(potionIndex);
+      // if (potion.name !== potionName) {
+      //   //  console.log(this.potions.splice((potionIndex),1));
+      //   console.log(`Potion ${potionName} is not in inventory!`);
+      //   // return `Potion ${potionName} is not in inventory!`;
+      // }
+
     }
-    else{
-      number = 1
-      binArray.push(number)
+    this.potions.splice((potionIndex), 1)
+    console.log(atTheOldToad.potions);
+    
+  },
+
+
+
+
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.potions.indexOf(oldName);
+
+    if (potionIndex === -1) {
+      return `Potion ${oldName} is not in inventory!`;
     }
-    // console.log(binArray);
-  }
-  console.log(binArray.join(''));
-  return binArray.join('')
-}
-fakeBin('45385593107843568')
+
+    this.potions.splice(potionIndex, 1, newName);
+  },
+  // Change code above this line
+};
+// const [potion] = atTheOldToad.potions
+
+// atTheOldToad.getPotions()
+// atTheOldToad.addPotion({ name: "Stone ski", price: 520 })
+// atTheOldToad.removePotion("Dragon breath")
+console.log('and');
+atTheOldToad.removePotion("Speed potion")
+// atTheOldToad.removePotion("Speed ")
