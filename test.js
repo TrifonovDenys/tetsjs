@@ -2894,3 +2894,26 @@ ask(
 let a = 5 
 console.log(!a);
 
+
+const toCsvText = (array) => array.join("/n")
+
+toCsvText([
+  [ 0, 1, 2, 3, 4 ],
+  [ 10,11,12,13,14 ],
+  [ 20,21,22,23,24 ],
+  [ 30,31,32,33,34 ]
+] )
+
+
+const factorial = (n) => {
+  let res = 1
+  if (n < 0 || n > 12) {
+    throw new RangeError("Параметр должен быть между " + MIN + " и " + MAX);
+  }
+    for(i=1; i<=n; i+=1){
+      res *= i
+    }
+    
+    return BigInt(res)
+}
+console.log(factorial(55));
