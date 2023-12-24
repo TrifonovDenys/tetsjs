@@ -2917,3 +2917,16 @@
 //     return BigInt(res)
 // }
 // console.log(factorial(55));
+
+const students = [{name: "nic", age: 12, sity: 'Kyiv'},{name: "qwe", age: 22, sity: 'Kyiv'},{name: "nxcv", age: 13, sity: 'Kyiv'}]
+
+const findMin = (arr) => {
+  return arr.reduce((min, current) => (current.age < min.age ? current : min), arr[0]);
+};
+
+const sortedStudents = [];
+while (students.length > 0) {
+  const minStudent = findMin(students);
+  sortedStudents.push(minStudent);
+  students.splice(students.indexOf(minStudent), 1);
+}
