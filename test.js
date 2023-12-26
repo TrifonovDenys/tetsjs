@@ -6,10 +6,8 @@
 //     return passed;
 //   }
 //   isAdult(20);
- 
-
-
-
+// const isAdult = age => age >= 18;
+//   console.log(isAdult(20));
 
 // function isValidPassword(password) {
 //     const SAVED_PASSWORD = 'jqueryismyjam';
@@ -23,13 +21,9 @@
 //   isValidPassword("kiwirul3z");
 //   isValidPassword("jqueryismyjam");
 
-
-
-
-
 // function checkAge(age) {
 //     let message;
-  
+
 //     if (age >= 18) { // Change this line
 
 //       message = 'You are an adult';
@@ -43,8 +37,6 @@
 //   checkAge(8);
 //   checkAge(14);
 //   checkAge(38);
-
-
 
 // function checkStorage(available, ordered) {
 //     let message;
@@ -64,9 +56,6 @@
 //   checkStorage(200, 20);
 //   checkStorage(200, 150);
 //   checkStorage(150, 180);
-
-
-
 
 // function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
 //     let message;
@@ -89,11 +78,10 @@
 // makeTransaction(2000, 8, 10000);
 // makeTransaction(500, 10, 5000);
 
-
 // function checkPassword(password) {
 //     const ADMIN_PASSWORD = 'jqueryismyjam';
 //     let message;
-  
+
 //     if (password === null) { // Change this line
 //       message =  'Canceled by user!';
 //     } else if (password === ADMIN_PASSWORD) { // Change this line
@@ -109,10 +97,6 @@
 //   checkPassword("polyhax");
 //   checkPassword("jqueryismyjam");
 
-
-
-
-
 // Change code below this line
 // const pricePerDroid = 800;
 // const orderedQauntity = 6;
@@ -121,7 +105,6 @@
 // console.log(totalPrice);
 // let message = `You order droids worth ${totalPrice} credits. Delivery ( ${deliveryFree} credits) is included in total price.`;
 // console.log(message);
-
 
 // function makeMessage (name, price) {
 //   // Change code below this line
@@ -136,7 +119,6 @@
 // makeMessage('Reactor', 8000);
 // makeMessage('Engine', 4070);
 // console.log(makeMessage);
-
 
 // function checkStorage(available, ordered) {
 //   let message;
@@ -177,9 +159,7 @@
 // isNumberInRange(20, 50, 24);
 // isNumberInRange(20, 50, 76);
 
-
 // const isInRange = number > start && number < end;
-
 
 // function isNumberInRange(start, end, number) {
 //   const isInRange = number >= start && number <= end; // Change this line
@@ -195,9 +175,6 @@
 // isNumberInRange(10, 30, 5);
 // isNumberInRange(20, 50, 24);
 // isNumberInRange(20, 50, 76);
-
-
-
 
 // function checkStorage(available, ordered) {
 //   let message;
@@ -215,9 +192,6 @@
 // checkStorage(5, 5);
 // checkStorage(5, 6);
 
-
-
-
 // function getDiscount(totalSpent) {
 //   const BASE_DISCOUNT = 0;
 //   const BRONZE_DISCOUNT = 0.02;
@@ -227,7 +201,7 @@
 //   // Change code below this line
 //   if (totalSpent >= 50000) {
 //     discount = GOLD_DISCOUNT;
-  
+
 //   } else if(totalSpent >= 20000 && totalSpent < 50000){
 //   discount = SILVER_DISCOUNT;
 //   }
@@ -265,7 +239,6 @@
 // console.log(message);
 // console.log('Операция завершена');
 
-
 // let totalSpent = 2000;
 // let paymant = 500;
 // let discount = 0;
@@ -285,7 +258,6 @@
 // else {
 //     console.log('else');
 
-    
 // }
 // paymant -= paymant * discount
 // console.log(`Оформляем заказ на сумму ${paymant} со скидкой ${discount * 100}%.`);
@@ -333,7 +305,6 @@
 
 // console.log("Лог после цикла");
 
-
 // Используем цикл для вывода только нечетных чисел. Для чётных i срабатывает continue, выполнение тела прекращается и управление передаётся на следующую итерацию.
 
 // for (i = 0; i <= 10; i += 1){
@@ -342,10 +313,8 @@
 //     }
 
 //         console.log(i);
-    
+
 // }
-
-
 
 // function checkPassword(password) {
 //   const ADMIN_PASSWORD = "jqueryismyjam";
@@ -359,9 +328,6 @@
 // checkPassword("jqueryismyjam")
 // checkPassword("angul4r1sl1f3")
 // checkPassword("r3actsux")
-
-
-
 
 // function getSubscriptionPrice(type) {
 //   let price;
@@ -389,7 +355,6 @@
 // getSubscriptionPrice("professional")
 // getSubscriptionPrice("organization")
 // getSubscriptionPrice("starter")
-
 
 // function getShippingCost(country) {
 //     let message;
@@ -426,7 +391,6 @@
 // getShippingCost("Jamaica");
 // getShippingCost("Sweden");
 
-
 // function getNameLength(name) {
 //   const message = `Name ${name} is ${name.length} characters long`; // Change this line
 //     console.log(message);
@@ -436,7 +400,6 @@
 // getNameLength("Harambe")
 // getNameLength("Billy")
 // getNameLength("Joe")
-
 
 // const courseTopic = "JavaScript essentials";
 // // Change code below this line
@@ -450,9 +413,6 @@
 // console.log(firstElement);
 // console.log(lastElement);
 
-
-
-
 // function getSubstring(string, length) {
 //   const substring = string.slice(0,   length); // Change this line
 // console.log( substring);
@@ -463,7 +423,6 @@
 // getSubstring("Hello world", 8)
 // getSubstring("Hello world", 11)
 // getSubstring("Hello world", 0)
-
 
 // function formatMessage(message, maxLength) {
 //   let result;
@@ -485,7 +444,6 @@
 // formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
 // formatMessage("Nunc sed turpis a felis in nunc fringilla", 41);
 
-
 // function normalizeInput(input) {
 //   const normalizedInput = input.toLowerCase(); // Change this line
 //     console.log(normalizedInput);
@@ -494,7 +452,6 @@
 // normalizeInput("Hello world")
 // normalizeInput("This ISN'T SpaM")
 // normalizeInput("Big SALE")
-
 
 // function checkForName(fullName, name) {
 //     const result = fullName.includes(name); // Change this line
@@ -532,7 +489,6 @@
 //   console.log(xyi);
 // }
 
-
 // function squareSum(numbers){
 
 //   let sum = 0;
@@ -546,7 +502,6 @@
 // squareSum([1, 2, 2])
 // squareSum([0, 3, 4, 5])
 // squareSum([])
-
 
 // function checkStorage(available, ordered) {
 //   // Change code below this line
@@ -575,7 +530,6 @@
 // fruits[1];
 // fruits[fruits.length - 1]
 // console.log(fruits[fruits.length - 1]);
-
 
 // const fruits = ["apple", "plum", "pear", "orange"];
 // fruits[1] = 'peach';
@@ -617,20 +571,18 @@
 // splitMessage("Mango", "")
 // splitMessage("best_for_week", "_")
 
-
 // function calculateEngravingPrice(message, pricePerWord) {
 //    // Change code below this line
 // let price = (message.split(' ').length * pricePerWord)
 
 // return price
 //    // Change code above this line
-  
+
 // }
 // calculateEngravingPrice("JavaScript is in my blood", 10)
 // calculateEngravingPrice("JavaScript is in my blood", 20)
 // calculateEngravingPrice("Web-development is creative work", 40)
 // calculateEngravingPrice("Web-development is creative work", 20)
-
 
 // function makeStringFromArray(array, delimiter) {
 //   let string;
@@ -638,16 +590,12 @@
 //   string = array.join(delimiter);
 //   console.log(string);
 
-
 //   // Change code above this line
 //   return string;
 // }
 // makeStringFromArray(["Mango", "hurries", "to", "the", "train"], " ")
 // makeStringFromArray(["M", "a", "n", "g", "o"], "")
 // makeStringFromArray(["top", "picks", "for", "you"], "_")
-
-
-
 
 // function slugify(title) {
 //   let govno;
@@ -664,7 +612,6 @@
 // slugify("English for developer")
 // slugify("Ten secrets of JavaScript")
 // slugify("How to become a JUNIOR developer in TWO WEEKS")
-
 
 // function slugify(title) {
 //   let slug;
@@ -725,7 +672,6 @@
 // slugify("Ten secrets of JavaScript")
 // slugify("How to become a JUNIOR developer in TWO WEEKS")
 
-
 // function slugify(title) {
 //   let slug;
 //   slug = title.split(' ').join('-').toLowerCase()
@@ -739,12 +685,10 @@
 // slugify("Ten secrets of JavaScript")
 // slugify("How to become a JUNIOR developer in TWO WEEKS")
 
-
 // function makeArray(firstArray, secondArray, maxLength) {
 //     // Change code below this line
 //   let concatArray = firstArray.concat(secondArray);
 //   concatArray = concatArray.slice(0, maxLength)
-
 
 //   console.log(concatArray);
 //   return concatArray
@@ -799,7 +743,6 @@
 // }
 // calculateTotalPrice([13, 12, 123, 123])
 
-
 // function findLongestWord(string) {
 //   let arrayWord = string.split(' ')
 //   let longesrWord = arrayWord.sort((a, b) => b.length - a.length)
@@ -809,7 +752,6 @@
 // findLongestWord("The quick brown fox jumped over the lazy dog")
 // findLongestWord("Google do a roll")
 // findLongestWord("May the force be withqqqweqweqweqwe you")
-
 
 // function findLongestWord(string) {
 //   let words = string.split(' ');
@@ -855,7 +797,6 @@
 // filterArray([1, 2, 3, 4, 5], 5)
 // filterArray([12, 24, 8, 41, 76], 38)
 // filterArray([12, 24, 8, 41, 76], 20)
-
 
 // function maxOfArr(numbers) {
 //   let max = numbers[0];
@@ -973,8 +914,6 @@
 // }
 // loop(0);
 
-
-
 // function includes(array, value) {
 //   for (i = 0; i < array.length; i += 1){
 //      if(value === array[i]){
@@ -996,7 +935,6 @@
 //   console.log(`Число больше чем ${threshold}: ${numbers[i]}`); // 18, 29, 34
 // }
 
-
 // const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
 // const threshold = 15;
 // for (let i = 0; i < numbers.length; i += 1) {
@@ -1004,8 +942,6 @@
 //     console.log(`Число больше чем ${threshold}: ${numbers[i]}`); // 18, 29, 34
 //   }
 // }
-
-
 
 // var time = performance.now();
 // // некий кодconst
@@ -1062,8 +998,6 @@
 // time = performance.now() - time;
 // console.log('Время выполнения = ', time);
 
-
-
 // var time = performance.now();
 // // некий код
 // const numbers = [ 6,
@@ -1115,7 +1049,6 @@
 // time = performance.now() - time;
 // console.log('Время выполнения = ', time);
 
-
 // function XO(str) {
 //   let sl = str.toLowerCase()
 //   keek = []
@@ -1123,14 +1056,14 @@
 //   for (let i of sl) {
 //     if (i === 'x') {
 //       keek.push(i.includes('x'))
-      
+
 //     }
 //     else if (i === 'o') {
 //       lool.push(i.includes('o'))
-      
+
 //     }
 //     else { continue }
-  
+
 //   }
 //   // console.log(keek);
 //   // console.log(lool);
@@ -1138,13 +1071,11 @@
 //   n = (keek.length === lool.length ? true : false)
 //   console.log(n);
 //   return (keek.length === lool.length ? true : false)
-   
+
 // }
 // // XO('Xoxoxoox')
 // // XO("Xxxm")
 // XO('Xoxomxoo')
-
-
 
 // function nbYear(p0, percent, aug, p) {
 //   let per = percent / 100
@@ -1165,7 +1096,6 @@
 // nbYear(1500000, 0, 10000, 1999999)
 // nbYear(1000, 2, 50, 1214)
 
-
 // const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11];
 // let sum = 0
 // for (const i of numbers) {
@@ -1173,7 +1103,7 @@
 //     console.log(i);
 //     sum += i
 //   }
-  
+
 // }
 //  console.log(sum);
 
@@ -1183,7 +1113,7 @@
 // for (i = 0; i < logins.length; i += 1){
 //   if (logins[i] === loginToFind) {
 //     console.log(logins[i]);
-    
+
 //   }
 // }
 
@@ -1205,15 +1135,13 @@
 
 // console.log(logins.includes(loginToFind) ? 'you find login' : 'you not find login');
 
-
-
 // const numbers = [51, 18, 13, 24, 7, 85, 19];
 //  let min = numbers[0]
 // for (const i of numbers) {
 //    if (min > i) {
 //     min = i
 //   }
-  
+
 //  }
 // console.log(min);
 
@@ -1233,14 +1161,12 @@
 //     newmas.push(i.toUpperCase())
 //   }
 // else{newmas.push(i.toLowerCase())}
-    
+
 //  }
-   
+
 //   console.log(newmas);
 //   let newstr = newmas.join('')
 //   console.log(newstr);
-
-
 
 // const letters = str.split('')
 // let invers = ''
@@ -1251,7 +1177,6 @@
 
 // }
 // console.log(invers);
-
 
 // const title = 'Q 2 3 4 5'
 // let url = title.toLowerCase().split(' ').join('-')
@@ -1298,7 +1223,6 @@
 // createArray(1, 2, 3, 4, 5);
 // createArray(1, 2, 3);
 
-
 // function filterNumbers(array, ...arg) {
 //   let sameNumber = []
 
@@ -1307,17 +1231,16 @@
 //     if (arg.includes(i)) {
 //       sameNumber.push(i)
 //     }
-    
+
 //   }
 //   console.log(sameNumber);
 // }
 // filterNumbers([1, 2, 3, 4, 5], 10, 11, 2, 2,  3, 8);
 // filterNumbers([10,15,25,30], 23,30 ,18, 15);
 
-
 // function getSum(a, b) {
 //   let total = 0;
-  
+
 //   if (b < a) {
 //     for (i = b; i <= a; i += 1){
 //     total += i
@@ -1353,6 +1276,7 @@
 // }
 // fakeBin('45385593107843568')
 
+<<<<<<< Updated upstream
 
 // function likes(names) {
 //   if ( names.length === 1){
@@ -2932,3 +2856,1306 @@
 // }
 
 const 
+=======
+// function sum (numbers) {
+
+//   let total = 0
+//     for(const number of numbers){
+//       total +=number
+//     }
+//   return total
+// };
+
+// function descendingOrder(n){
+//   const array = []
+//   const numbers = n.toString().split('');
+//   for(const number of numbers){
+//     array.push(Number(number));
+//   }
+//   let newarr = array.sort((a, b)=> b-a);
+//   const m = newarr.join('')
+
+//   return Number(m)
+// }
+
+// descendingOrder(123456789)
+// descendingOrder(145263)
+// descendingOrder(0)
+
+// function getISSLocation() {
+//   fetch('https://api.wheretheiss.at/v1/satellites/25544')
+//     .then(response => response.json())
+//     .then(data => {
+//       const latitude = data.latitude.toFixed(2);
+//       const longitude = data.longitude.toFixed(2);
+//       const timestamp = new Date(data.timestamp * 1000).toLocaleString();
+//       console.log(`The ISS is currently at (${latitude}, ${longitude}) as of ${timestamp}`);
+//     })
+//     .catch(error => console.error('Error fetching ISS location:', error));
+// }
+
+// setInterval(getISSLocation, 5000); // Обновление каждые 5 секунд
+
+// function DNAStrand(dna){
+//   let DNArev = ''
+//   for (let i of dna){
+//     if(i === 'A'){
+//       DNArev += 'T'
+//     }
+//     if (i === 'T'){
+//       DNArev += 'A'
+//     }
+//     if(i === 'G'){
+//       DNArev += 'C'
+//     }
+//   if (i === 'C'){
+//       DNArev += 'G'
+//     }
+
+// switch(i){
+//     case 'A':
+//     DNArev += 'T'
+//     break
+
+//     case 'T':
+//     DNArev += 'A'
+//     break
+
+//     case 'G':
+//     DNArev += 'C'
+//     break
+
+//     case 'C':
+//     DNArev += 'G'
+//     break
+
+//     default:
+//     console.log("Invalid subscription type");
+// }
+//   }
+//   console.log(DNArev);
+//   return DNArev
+// }
+// DNAStrand("AAAA")
+// DNAStrand("ATTGC")
+
+// function rowSumOddNumbers(n) {
+//     console.log(n);
+//     let sum = 0
+//     let firstNumArr = (n * n) - n + 1
+//     console.log(firstNumArr);
+//     for(i = 0; i <= n; i += 1){
+//         sum += firstNumArr
+//     }
+//     console.log(sum - 1);
+//     return sum - 1
+// }
+// rowSumOddNumbers(5)
+
+// function sumOfOddNumbersInNthRow(n) {
+//     let firstNumber = 2 * (n - 1) + 1; // First odd number in the nth row
+//     let sum = 0;
+
+//     for (let i = 0; i < n; i++) {
+//       sum += firstNumber + (2 * i); // Add each odd number in the row
+//     }
+//     console.log(sum);
+//     return sum;
+//   }
+//   sumOfOddNumbersInNthRow(3)
+
+// function rowSumOddNumbers(n) {
+//     let sum = 0
+//     for (i = 1 ; i <= n; i += 1){
+//         sum += Math.pow(i , 3)
+//     }
+//     return sum
+// }
+// rowSumOddNumbers(5)
+
+// function sortArray(array) {
+//     const newarr = [];
+//     const mass = [...array]
+//     // console.log(mass);
+//      for ( let i of mass){
+//         if ( i % 2 !== 0){
+//             newarr.push(i)
+//             newarr.sort()
+//         }
+//         else{newarr.push(i)
+//         }
+//      }
+// console.log(newarr);
+//   }
+//   sortArray([5, 3, 2, 8, 1, 4])
+// //   sortArray([5, 3, 1, 8, 0])
+
+// function countPositivesSumNegatives(input) {
+//     let result = 0
+//     const mass = []
+//     for(i = 0; i < input.length ; i += 1){
+//       if (input[i] > 0){
+//         mass.push(input[i])
+//       }
+//       else {
+//         result += input[i]
+//       }
+//     }
+//     const fin = [mass.length, result]
+//     return fin
+//   }
+
+//   countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]);
+
+// function findShort(s){
+//  const m = s.split(' ')
+//    m.sort((a, b) => a.length - b.length)
+//    return m[0]
+//   }
+//   findShort("Let's travel abroad shall we")
+//   findShort("turns out random test cases are easier than writing out basic ones")
+//   findShort("bitcoin take over the world maybe who knows perhaps")
+
+// function findShort(n){
+//   const arr = []
+//   const m = n * (n + 1) / 2
+// for( i = 1; i<=n; i+=1){
+//   arr.push(i)
+// }
+// console.log(arr);
+// }
+// findShort(1000000)
+
+// var number=function(array){
+//   const arr = [...array]
+//   const newarr = []
+//   for(let i = 0; i < arr.length; i+=1){
+//     newarr.push(`${i + 1}: ${arr[i]}`)
+//   }
+//   console.log(newarr);
+// }
+// number(["a", "b", "c"])
+
+// function getDivisorsCnt(n){
+//   let sumDivisors = []
+//   for(i = 1; i<=n; i+=1){
+//     if(n % i === 0){
+//       sumDivisors.push(i)
+//     }
+//   }
+//   console.log(sumDivisors.length);
+//   return sumDivisors.length
+// }
+// getDivisorsCnt(10)
+
+// function removeEveryOther(arr){
+//   const newarr = []
+//   if(arr.length >= 2){
+//     for(i = 0; i < arr.length; i += 1){
+//       if(i % 2 === 0){
+//         newarr.push(arr[i])
+//       }
+//     }
+//     console.log(newarr);
+//     return newarr
+//   }
+//   if (arr.length < 2){
+//     console.log(arr);
+//     return arr
+//   }
+
+// }
+// // removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+// // removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])
+// removeEveryOther([[1, 2]])
+
+// function correct(string)
+// {
+// 	let str = string.split('')
+//   const newarr = []
+//   for( let i of str){
+//     console.log(i);
+//     if( i ==='5'){
+//       i = 'S'
+//       newarr.push(i)
+//     }
+//     else if( i === '1'){
+//       i = 'I'
+//       newarr.push(i)
+//     }
+//     else if( i ==='0'){
+//       i = 'O'
+//       newarr.push(i)
+//     }
+//     else{
+//       newarr.push(i)
+//     }
+//   }
+//   console.log(newarr);
+//   return newarr.join('')
+// }
+// correct("501D0N")
+
+// function stray(numbers) {
+//   let firstNum = numbers[0]
+//   let lastNum = numbers[numbers.length - 1]
+//   for(let i = 0 ; i < numbers.length; i += 1){
+//     if(firstNum == numbers[i]){
+//       return  numbers[i]
+//     }
+//     if(firstNum !== numbers[1] && firstNum !== numbers[2] ){
+//       return  numbers[i]
+//     }
+//     if(lastNum !== numbers[i]){
+//       return lastNum
+//     }
+
+//   }
+
+//   console.log(numbers.sort((a, b) => a - b));
+//   return numbers[0] !== numbers[1] ? numbers[0] : numbers[numbers.length - 1]
+
+// }
+// console.log(stray([1,3,1]));
+// console.log(stray([17, 17, 18, 17, 17, 17, 17]));
+
+// function squareDigits(num){
+// let str = `${num}`
+// const strSplit = str.split('')
+// let newstr = ''
+// for( let i of strSplit){
+//   newstr += Math.pow(Number(i), 2)
+// }
+// return Number(newstr);
+// }
+// squareDigits(3212)
+
+// function sumTwoSmallestNumbers(numbers) {
+//   numbers.sort((a,b) => a - b)
+//   return numbers[0] + numbers[1]
+// }
+// sumTwoSmallestNumbers([10, 343445353, 3453445, 3453545353453])
+
+// function toAlternatingCase(line) {
+//   // Define your method here :)
+//   const arr = []
+//   console.log(arr);
+//   for(let i of line.split('')){
+//     i === i.toLowerCase() ? arr.push(i.toUpperCase()) : arr.push(i.toLowerCase() )
+//   }
+//   console.log(arr);
+//   return arr.join('')
+// }
+// toAlternatingCase("HELLO WORLD")
+
+// function switchItUp (n) {
+// return [1,2,3,4,5,6,7,8,9,11,12,31,14,324,3453,5345,345,35,34,53,5,345,345,345,345,345,34,534,5,345,34,5,345,34,5,34534,5,35,3,45,35,34,534,5,345,34,534,534,5,345,34,5][n]
+// }
+// console.log(switchItUp (15));
+
+// function removeSmallest(numbers) {
+//     const newarr = []
+//     for(i = 0; i < numbers.length; i += 1){
+//       if (i !== numbers.indexOf(Math.min(...numbers))){
+//         newarr.push(numbers[i])
+//       }
+//     }
+//     return newarr;
+//   }
+// //   removeSmallest([1, 2, 3, 4, 5])
+//   removeSmallest([1, 2, 3, 4, 1, 5])
+
+// function nbDig(n, d) {
+//     const arr = []
+//     let total = 0
+//     for( i = 0; i <= n; i += 1){
+//         let n = i * i
+//         if(n.toString().includes(d)){
+//             arr.push(n)
+//         }
+//     }
+//     for(const number of arr.join('').split('')){
+//         if(Number(number) === d){
+//             total += 1
+//         }
+//     }
+// return total;
+// }
+// nbDig(5750, 0)
+
+// function get(array){
+//     console.log(array.splice(1, array.length - 2));
+//     console.log(array);
+//     return array
+//     // const b = []
+//     // b.push(array[0], array[array.length - 1])
+//     // console.log(b);
+//     // return b
+// }
+// get([1,2,3,4,5,6])
+
+// function finalGrade (exam, projects) {
+//     if (exam > 90 || projects > 10){
+//         return 100
+//     }
+//     if (exam > 75 && projects >= 5){
+//         return 90
+//     }
+//     if (exam > 50 && projects >= 2){
+//         return 75
+//     }
+//     return 0 // final grade
+//   }
+
+// function repeatStr (n, s) {
+//     console.log(s.repeat(n));
+//     return s.repeat(n);
+//   }
+//   repeatStr(3, "*")
+
+// function isPalindrome(x) {
+//     const y = x.toLowerCase()
+//     console.log(y);
+//     let xe = ''
+//     for(i = y.length - 1; i >= 0; i -= 1){
+//        xe += y[i]
+//     }
+//     return y === xe ? true : false
+//   }
+//   isPalindrome("Abba")
+
+// var isSquare = function(n){
+//     const ns = Math.sqrt(n)
+//         return Math.floor(ns) === ns ? true : false
+
+//    }
+//    isSquare(-1)
+//    isSquare(0)
+//    isSquare(33)
+
+// function solve(arr){
+//     const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+//     let count = 0
+//     const newarr = []
+//     for(const word of arr){
+//         let wordl = word.toLowerCase()
+//         for(i = 0; i < wordl.length; i += 1){
+//             if(wordl[i] === alphabet[i]){
+//                count += 1
+//             }
+
+//         }
+//         newarr.push(count)
+//         count = 0
+//     }
+//     return newarr
+
+//   }
+//   solve(["abode","ABc","xyzD"])
+
+// function duplicateEncode(word){
+//     let encword = ''
+//     const wordl = word.toLowerCase()
+//     for(let l of wordl){
+//         if(wordl.split(l).length-1 > 1){
+//             l = ')'
+//         }
+//         else{
+//             l = '('
+//         }
+//         encword += l
+//     }
+// return encword
+// }
+
+// function getCount(str) {
+//     const arrstr = str.split('')
+//     let count = 0;
+//     for(i=0; i<arrstr.length; i += 1){
+// if(arrstr[i] === 'a'){
+//    count += 1
+// }
+//  else if(arrstr[i] === 'e'){
+//     count += 1
+//  }
+//  else if(arrstr[i] === 'i'){
+//     count += 1
+//  }
+//  else if(arrstr[i] === 'o'){
+//     count += 1
+//  }
+//  else if(arrstr[i] === 'u'){
+//     count += 1
+//  }
+//        if(arrstr[i] === 'a'|| arrstr[i] === 'e'|| arrstr[i] === 'i'|| arrstr[i] === 'o'|| arrstr[i] === 'u'){
+//           count += 1
+//        }
+//   }
+//   console.log(count);
+//   return count;
+// }
+// getCount("abracadabra")\
+
+const pizzaPalace = {
+  pizzas: ["Ultracheese", "Smoked", "Four meats"],
+  order(pizzaName, onSuccess, onError) {
+    if (pizzaPalace.pizzas.includes(pizzaName)) {
+      return onSuccess();
+    }
+    onError(pizzaName);
+  },
+};
+// Change code above this line
+
+// Callback for onSuccess
+// function makePizza(pizzaName) {
+//   console.log(`Your order is accepted. Cooking pizza ${pizzaName}.`);
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   console.log(`Error! ${error}`);
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order('Smoked', makePizza, onOrderError);
+// pizzaPalace.order('Four meats', makePizza, onOrderError);
+// pizzaPalace.order('Big Mike', makePizza, onOrderError);
+// pizzaPalace.order('Vienna', makePizza, onOrderError);
+
+//   function changeEven(numbers, value) {
+//   // Change code below this line
+//   const newarr = []
+//   numbers.forEach(number =>{
+//     number % 2 === 0 ? newarr.push(number + value) : newarr.push(number)
+//   })
+//   return newarr
+//   // Change code above this line
+// }
+// changeEven([1, 2, 3, 4, 5], 10)
+
+// Change code below this line
+// const getUserNames = users => {
+//   const userName = users.map(user => `${user.name}, ${user.email}, ${user.gender}, ${user.age}`)
+
+// console.log(userName);
+// }
+//   // Change code above this line
+
+//   getUserNames([
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       skills: ["ipsum", "lorem"],
+//       gender: "male",
+//       age: 37,
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
+//       gender: "female",
+//       age: 34,
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       eyeColor: "green",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       isActive: false,
+//       balance: 3793,
+//       skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+//       gender: "male",
+//       age: 24,
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       eyeColor: "green",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       isActive: true,
+//       balance: 2278,
+//       skills: ["adipisicing", "irure", "velit"],
+//       gender: "female",
+//       age: 21,
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       eyeColor: "blue",
+//       friends: ["Jordan Sampson", "Eddie Strong"],
+//       isActive: true,
+//       balance: 3951,
+//       skills: ["ex", "culpa", "nostrud"],
+//       gender: "male",
+//       age: 27,
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       eyeColor: "brown",
+//       friends: ["Jacklyn Lucas", "Linda Chapman"],
+//       isActive: false,
+//       balance: 1498,
+//       skills: ["non", "amet", "ipsum"],
+//       gender: "male",
+//       age: 38,
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       eyeColor: "brown",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       isActive: true,
+//       balance: 2764,
+//       skills: ["lorem", "veniam", "culpa"],
+//       gender: "female",
+//       age: 39,
+//     },
+//   ])
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+// // Change code below this line
+// const newarr = []
+// const allGenres = books.flatMap(book => book.genres);
+// const uniqueGenres = allGenres.filter((genres, index, array) => {if(array.indexOf(genres) === index){
+//   newarr.push(genres)
+// }
+//   }
+// );
+// console.log(newarr);
+// const alphabet = {
+//   a: 1,
+//   b: 2,
+//   c: 3,
+//   d: 4,
+//   e: 5,
+//   f: 6,
+//   g: 7,
+//   h: 8,
+//   i: 9,
+//   j: 10,
+//   k: 11,
+//   l: 12,
+//   m: 13,
+//   n: 14,
+//   o: 15,
+//   p: 16,
+//   q: 17,
+//   r: 18,
+//   s: 19,
+//   t: 20,
+//   u: 21,
+//   v: 22,
+//   w: 23,
+//   x: 24,
+//   y: 25,
+//   z: 26,
+// }
+
+// function high(x){
+//   const arr = x.split(' ')
+//   const a = []
+//   for(const mass of arr){
+//     a.push(mass.split(''))
+//   }
+//   const arrn =[]
+// for(const m of a){
+//   const nnnn = m.reduce((pv, leter) =>{
+//     leter = alphabet[leter]
+//     return pv += leter
+//   }, 0)
+//   arrn.push(nnnn)
+
+// }
+// console.log(arr[4]);
+//  return arr[arrn.indexOf(Math.max(...arrn))]
+// }
+
+// high('man i need a taxi up to ubud')
+
+// const numbers = (y) =>{
+//   a = y.reduce((pv, number) => {
+//    return pv += number
+//   }, 0)
+//   console.log(a);
+// }
+// numbers([1,2,3,4,5])
+
+// const quarterOf = month => {
+//   if(month <= 3){
+//     return 1
+//   }
+//   if(month <= 6 && month >= 3){
+//     return 2
+//   }
+//   if(month <= 9 && month >= 6){
+//     return 3
+//   }
+//   if(month <= 12 && month >= 9){
+//     return 4
+//   }
+// }
+// quarterOf(3)
+
+// let arr = [];
+
+// console.log(fillArray(2, 10));
+
+// function fillArray(min, max) {
+//     for (let i = min; i <= max; i += 2) {
+
+//        return arr.push(i)
+
+//     }
+// }
+
+// function arrayDiff(a, b) {
+//   const newarr = a.filter(element => !b.includes(element))
+//   return newarr
+// }
+// arrayDiff([1,2,2], [1])
+
+// function minMax(arr){
+//   const newarr = arr.sort((a, b) => a - b)
+//   return [newarr[0], newarr[newarr.length-1]]; // fix me!
+// }
+// minMax([1, 2, 3, 4, 5])
+
+// function getDivisorsCnt(n){
+//   let count = 0
+//   for(i = 0; i<=n ; i+=1){
+//     if(n%2 ===0){
+//       count++
+//     }
+//   }
+//   return count
+// }
+// getDivisorsCnt(10)
+
+// function bouncingBall(h,  bounce,  window) {
+//   if(bounce <= 0 || bounce >= 1 && window >= h){
+//     return -1
+//   }
+//  let temp
+//   let i = 0
+
+//   do{
+//     h = h * bounce
+//     i++
+//     console.log(h);
+//   }
+//   while(h > window)
+
+// return i *2 -1
+//   console.log(i);
+// }
+// bouncingBall(30.0, 0.66, 1.5)
+
+// const sortArray = array => {
+//     const oddArr = array.filter(number => number % 2 !== 0).sort((a, b) => a - b)
+//     console.log(oddArr);
+//     console.log(array.map(number => number % 2 === 0 ? number : oddArr.shift()));
+//     return array.map(number => number % 2 === 0 ? number : oddArr.shift())
+// }
+// sortArray([5, 3, 2, 8, 1, 4])
+
+// const sortArray = array => {
+//   console.log(array.shift());
+//   console.log(array.push());
+//   console.log(array.shift());
+//   console.log(array.push());
+//   console.log(array.shift());
+//   console.log(array.push());
+//   console.log(array.shift());
+//   console.log(array.push());
+// }
+// sortArray([5, 3, 2, 8, 1, 4])
+
+// function digitize(n) {
+//   const newstr = `${n}`
+//   const newarr = []
+// for( i=newstr.length - 1; i>=0; i-=1){
+//   newarr.push(Number(newstr[i]))
+// }
+// return newarr
+// }
+// const digitize = n => n.toString().split('').map(number => Number(number)).reverse()
+
+// digitize(35231)
+
+// const arr = [[2, 2, 2],[4,2] ,[6,2]]
+// const result = arr.flatMap(el => el + 2)
+// console.log(result);
+
+// function feast(beast, dish) {
+//   console.log(beast[0] === dish[0] && beast[beast.length-1] === dish[dish.length-1]);
+// return beast[0] === dish[0] && beast[beast.length-1] === dish[dish.length-1]
+//   }
+//   feast("great blue heron", "garlic naan")
+
+// const binaryArrayToNumber = arr => {
+//   console.log(parseInt(arr.join(""), 2))
+//   return Number(Number(arr.join("")).toString(10))
+// };
+// binaryArrayToNumber([0,1,1,0])
+
+// function isPangram(string){
+//   const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','t','s','t','u','v','w','x','y','z']
+//   const newstrarr = string.toLowerCase().split('')
+//   for(const l of alphabet){
+//     if(!newstrarr.includes(l)){
+//       return false
+//     }
+//   }
+//         return true
+// }
+// isPangram("The quick brown fox jumps over the lazy dog.")
+
+// const openOrSenior = data => data.map(([age, handicap]) => age >= 55 && handicap > 7 ? 'Senior' : 'Open')
+// openOrSenior([[45, 12],[55,21],[19, -2],[104, 20]])
+
+// console.log([5,3,6,'1','qwe','2','2.1'].sort());
+
+// const newColor = document.getAttribute('data-mec-cell')
+
+// const Car = function ({brand, model, price} = {}) {
+// //  const {brand, model, price} = config
+//   this.brand = brand;
+//   this.model = model;
+//   this.price = price;
+
+// }
+
+// Car.prototype.sayHi = function () {
+//   console.log("Car.prototype.sayHi -> this", this);
+//   console.log("Hello");
+// }
+
+// Car.prototype.changePrice = function (newPrice) {
+//   this.price = newPrice
+// }
+
+// const myCar = new Car(
+//   {
+//     brand: "Audi",
+//     model: "Q3",
+//     price: 3500,
+//   })
+// console.log(myCar);
+
+// myCar.sayHi()
+// myCar.changePrice(1)
+// console.log(myCar);
+
+// const myCar2 = new Car(
+//   {
+//     brand: '{eq',
+//     model: ';jgf',
+//     price: 0
+//   }
+// )
+// console.log(myCar2);
+
+// const Object = 10
+// console.log(Object);
+
+// const stringToNumber = str => isNaN(str) ? parseFloat(str) : Number(str)
+// console.log(stringToNumber('123.1sdfsa'));
+// console.log(stringToNumber('123'));
+
+// function hexToDec(hexString) {
+//   return parseInt(hexString, 2)
+// }
+// console.log(hexToDec("1"));
+
+// const sumMix = x => x.reduce((pv, el) => pv + +el)
+// console.log(sumMix([9, 3, '7', '3']));
+
+// const solution = nums => Array.isArray(nums) ? nums.sort((a, b) => a - b) : []
+// console.log(solution(null));
+
+// function capitalize(s) {
+//   const sArr = s.split('')
+//   const sOne = sArr.reduce((pv, el, index) => {
+//     if (index % 2 === 0) {
+//     return pv + el.toUpperCase()
+//     }
+//     return pv + el
+//   }, '')
+//   const sTwo = sArr.reduce((pv, el, index) => {
+//     if (index % 2 !== 0) {
+//     return pv + el.toUpperCase()
+//     }
+//     return pv + el
+//   }, '')
+//   return [sOne, sTwo]
+// };
+// console.log(capitalize("abcdef"));
+
+// function dirReduc(arr) {
+//   const str = arr.join('').toLowerCase()
+//   console.log(str);
+//   let l = str.replaceAll('northsouth', '')
+//   l = str.replaceAll('southnorth', '')
+//   l = str.replaceAll('eastwest', '')
+//   l = str.replaceAll('westeast', '')
+//   console.log(l);
+//   // const a = arr.reduce((pv, el, index, array) => {
+
+//   // },[])
+// }
+
+// dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]);
+
+// const t = n => {
+//   let b = 4
+//   let res = 1
+//   for (i = 1; i < n; i++){
+//  console.log(res);
+//     res += 1 / b
+//     b += 3
+//   }
+//   return res.toFixed(2)
+// }
+// console.log(t(4));
+
+// function roundToNext5(n){
+//   for (i = 0; i < 5; i += 1){
+//     if (n % 5 === 0) {
+//       return n
+//     }
+//     n += 1
+//   }
+//   return n
+// }
+
+// const toBinary = n => Number(n.toString(2))
+
+// console.log(toBinary(3));
+// const sumOfMinimums = ([[...a], [...b], [...c]]) => Math.min(...a) + Math.min(...b) + Math.min(...c);
+
+// sumOfMinimums([[7, 9, 8, 6, 2], [6, 3, 5, 4, 3], [5, 8, 7, 4, 5]])
+
+// const images = [
+//   {
+//     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
+//     alt: "White and Black Long Fur Cat",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260",
+//     alt: "Orange and White Koi Fish Near Yellow Koi Fish",
+//   },
+//   {
+//     url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?dpr=2&h=750&w=1260",
+//     alt: "Group of Horses Running",
+//   },
+// ];
+
+// const listEl = document.querySelector('.gallery')
+// listEl.style.display = "flex"
+// listEl.style.listStyle = 'none'
+
+// const v = images.map(({url: src, alt}) => {
+//   listEl.insertAdjacentHTML("beforeend", `<li><img src='${src}' alt='${alt}' width='100%'></li>`)
+// })
+
+// const wave = str => {
+//   const b = []
+//   for (i = 0; i < str.length; i += 1){
+//     let a = str.split('')
+//     a.splice(i, 1, a[i].toUpperCase())
+//     b.push(a.join(''))
+//   }
+//   console.log(b);
+//   return b
+// }
+
+// wave('hello')
+// ['Two words', 'tWo words', 'twO words', 'two words', 'two Words', 'two wOrds', 'two woRds', 'two worDs', 'two wordS']
+// ['Two words', 'tWo words', 'twO words', 'two Words', 'two wOrds', 'two woRds', 'two worDs', 'two wordS']
+
+// function positiveSum(arr) {
+//   let res=0;
+//   for(i=0;i<arr.length; i += 1) {
+// console.log(arr[i]);
+//     if(arr[i]>0){
+//      res +=arr[i];
+//     }
+
+//   }
+//   console.log(res);
+//   return res
+// }
+
+// positiveSum([1,2,3,4,5])
+
+// function SeriesSum(n)
+// {
+//   let sum = 1
+//   let a = 0
+//   let m = 0
+//  for(let i = 0; i < n; i++){
+//    sum += m
+//    m = 1/(4+a)
+//    a += 3
+
+//  }
+//   console.log(sum);
+//   return sum.toFixed(2)
+// }
+
+// SeriesSum(3)
+
+// function tribonacci(s,n){
+
+//   const newarrn = [...s] // тут хранится результирующий массив
+//   const newarr3 = [...s] // промежуточный массив
+//   if (n === 0) return []
+//   if (n === 1) return s[0]
+//   if (n === 1) return [s[0], s[1]]
+
+//   for (let i = 3; i < n; i++){
+//     let newd = newarr3.reduce((pv, el) => pv + el, 0)
+//     newarrn.push(newd)
+//     newarr3.push(newd)
+//     newarr3.shift()
+//   }
+//   console.log(newarrn);
+//   return newarrn
+// }
+
+// tribonacci([1,1,1], 10)
+
+// const listEl = document.querySelector('.sub-menu > .menu-item > .sub-menu')
+// listEl.style.display = 'none'
+// listEl.parentElement.addEventListener('focus', function (e) {
+//   listEl.style.display = 'block'
+// } )
+
+// function cockroachSpeed(s) {
+//   let a = s * 100000 / 3600
+//   console.log(Math.floor(a));
+// }
+// cockroachSpeed(1.08)
+
+// function betterThanAverage(classPoints, yourPoints) {
+//   const s = classPoints.reduce((pv, el) => pv + el, 0)
+//   console.log(yourPoints > s);
+//   return yourPoints > s / classPoints.length
+// }
+// betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75)
+
+// const a = BigInt(2**1023)
+// console.log(String(a).length);
+
+// function isSortedAndHow(array) {
+//   let massage = ''
+//   const m = array.join('')
+//   const c = array.sort((a, b) => a - b)
+//   if (c.join('') === m) {
+//     massage = 'yes, ascending'
+//   }
+//    else if(c.reverse().join('') === m){
+//     massage = 'yes, descending'
+//   }
+//   else {massage = 'no'}
+//   return massage
+// }
+// isSortedAndHow([1, 2])
+// isSortedAndHow([15, 7, 3, -8])
+// isSortedAndHow([4, 2, 30])
+
+// const snail = arr => {
+// let nnn
+//   if(arr.length % 2 !== 0){
+//    nnn = arr.length - 3
+//     if (nnn === 0) nnn = 1
+//   }
+//   if(arr.length % 2 === 0){
+//    nnn = arr.length - 3
+//     if (nnn === 0) nnn = 0
+//   }
+
+//   let m = 0
+//   const newarr = []
+//   for (y = 0; y < nnn ; y++){
+//     for (i = 0; i <= m; i++){
+//       console.log(arr[i].length);
+//     for (j = 0; j < arr[i].length; j++){
+//       newarr.push(arr[i][j])
+//     }
+//     arr.shift()
+//   }
+
+//   for (i = 0; i < arr.length; i++){
+//     for (j = (arr[i].length -1); j < arr[i].length; j++){
+//       newarr.push(arr[i][j])
+//     }
+//     arr[i].pop()
+//   }
+
+//   for (i = (arr.length - 1); i >= ((arr.length - 1)); i--){
+//     for (j = ((arr[i].length - 1) ?? 0); j >= 0; j--){
+//       newarr.push(arr[i][j])
+//     }
+//   }
+//   arr.pop()
+// // if(arr.length % 2 !== 0){
+//    for (i = (arr.length - 1); i >= 0; i--){
+//     for (j = 0; j >= m; j--){
+//       newarr.push(arr[i][j])
+//     }
+//     arr[i].shift()
+//     }
+//   // }
+
+//   }
+//   if (arr.length % 2 !== 0) {
+//     newarr.push(...arr[0])
+//   }
+
+//   console.log(newarr);
+
+//   return newarr
+
+// }
+// snail([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]])
+// snail([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+// snail([[]])
+// snail([[1]])
+// snail([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]])
+// snail([
+//   [1, 2, 3, 4, 5, 6],
+//   [20, 21, 22, 23, 24, 7],
+//   [19, 32, 33, 34, 25, 8],
+//   [18, 31, 36, 35, 26, 9],
+//   [17, 30, 29, 28, 27, 10],
+//   [16, 15, 14, 13, 12, 11]])
+// snail([
+//   [1, 2, 3, 4, 5, 6 , 0],
+//   [20, 21, 22, 23, 24, 7, 0],
+//   [19, 32, 33, 34, 25, 8, 0],
+//   [18, 31, 36, 35, 26, 9, 0],
+//   [17, 30, 29, 28, 27, 10, 0],
+//   [16, 15, 14, 13, 12, 11, 0],
+// [16, 15, 14, 13, 12, 11, 0]])
+// console.log("1 2 3 4 5");
+
+// function reverseWords(str) {
+//   const a = str
+//     .split(" ")
+//     .map((el) => el.split("").reverse().join(""))
+//     .join(" ");
+//   console.log(a);
+// }
+
+// reverseWords("The quick brown fox jumps over the lazy dog.");
+
+// const elem = document.querySelector(".div");
+// elem.addEventListener("click", (e) => {
+//   console.log(e.target);
+// });
+
+// class People {
+//   constructor({ a }) {
+//     this.a = a;
+//   }
+
+//   getName() {
+//     return this.name;
+//   }
+// }
+
+// const kek = new People({a: 2});
+
+// console.log(kek);
+
+// class Mage extends People {
+
+//     super()
+
+// }
+// var requestURL =
+//   "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+// const request = new XMLHttpRequest();
+// request.open("GET", requestURL);
+// request.responseType = "json";
+// request.send();
+
+// request.onload = function () {
+//   var superHeroes = request.response;
+//   console.log(superHeroes);
+// };
+
+// const sumDigits = (number) => {
+//   if (number < 0) {
+//     number = -number;
+//   }
+//   return String(number)
+//     .split("")
+//     .reduce((acc, el) => acc + +el, 0);
+// };
+
+// console.log(sumDigits(-124));
+
+// const mango = (q, p) => Math.floor(q / 3) * 2 * p;
+
+// console.log(mango(10, 4));
+
+// const solve = (s) =>
+//   s
+//     .replace(/a|e|i|o|u/gi, " ")
+//     .split(" ")
+//     .filter((el) => el)
+//     .map((el) =>
+//       el.split("").reduce((acc, el) => acc + el.charCodeAt(0) - 96, 0)
+//     )
+//     .sort((a, b) => b - a)[0];
+
+// console.log(solve("mischtschenkoana"));
+
+// function comp(array1, array2) {
+//   if (array1 === null || array2 === null) return false;
+//   array2 = array2.map((el) => Math.sqrt(el));
+//   const a1 = new Set(array1);
+//   const a2 = new Set(array2);
+//   console.log(array1);
+//   console.log(array2);
+//   console.log(a1);
+//   console.log(a2);
+//   // if (a1.size !== a2.size) return false;
+//   return array1.every((el) => {
+//     // console.log(array2.indexOf(el));
+//     if (array2.includes(el)) {
+//       array2.splice(array2.indexOf(el), 1);
+//       console.log(array2);
+//       return true;
+//     }
+//     // return array2.includes(el).splice(array2.indexOf(el), 1);
+//   });
+// }
+
+// console.log(
+//   comp(
+//     [121, 144, 19, 161, 19, 144, 19, 11],
+//     [121, 14641, 20736, 361, 25921, 361, 20736, 361]
+//   )
+// );
+
+// multiplicationTable = function (size) {
+//   const mainArr = [];
+//   let p = 0;
+//   for (let j = 0; j < size; j++) {
+//     p++;
+//     mainArr.push([]);
+//     for (i = 1; i <= size; i += 1) {
+//       mainArr[j].push(i * p);
+//     }
+//   }
+//   console.log(mainArr);
+//   return mainArr;
+// };
+// multiplicationTable(5);
+
+// function _if(bool, func1, func2) {
+//   return bool ? Boolean(func1) : Boolean(func2);
+// }
+
+// const student = [
+//   { name: "a", age: 32 },
+//   { name: "b", age: 31 },
+//   { name: "v", age: 28 },
+//   { name: "q", age: 13 },
+//   { name: "r", age: 1 },
+//   { name: "h", age: 100 },
+// ];
+
+// const sortedStudent = student.reduce((acc, el) => {
+//   console.log(acc);
+//   const indexToInsert = acc.findIndex((item) => {
+//     return item.age > el.age;
+//   });
+
+//   if (indexToInsert === -1) {
+//     acc.push(el); // Додаємо на кінець, якщо вік найбільший
+//   } else {
+//     acc.splice(indexToInsert, 0, el); // Вставляємо в відповідне місце
+//   }
+//   return acc;
+// }, []);
+
+// console.log(sortedStudent);
+// const sum = (a, b) => {
+//   if (a === +a && b === +b) return a + b;
+//   return `a or b NaN`;
+// };
+
+// for (let i = 1; i <= 10; i += 1) {
+//   console.log(i);
+// }
+
+// const btn = document.querySelector(".div");
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+// }
+// const changeColor = () => {
+//   btn.firstElementChild.style.backgroundColor = getRandomHexColor();
+// };
+// btn.addEventListener("click", changeColor);
+
+// const getFetch = async () => {
+//   try {
+//     const fetchApi = await axios(
+//       "https://jsonplaceholder.typicode.com/posts/1"
+//     );
+//     console.log(fetchApi);
+//   } catch {
+//     throw Error;
+//   }
+// };
+
+// const list = document.querySelector(".list");
+
+// const getUsers = async () => {
+//   try {
+//     const users = await axios("https://jsonplaceholder.typicode.com/users");
+//     return users;
+//   } catch {
+//     throw Error;
+//   }
+// };
+
+// const listUser = getUsers().map((el) => `<li><p>${el.name}</p></li>`);
+
+// list.append(listUser);
+
+
+>>>>>>> Stashed changes
