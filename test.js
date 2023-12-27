@@ -2930,5 +2930,38 @@
 //   sortedStudents.push(minStudent);
 //   students.splice(students.indexOf(minStudent), 1);
 // }
+// const diamond = (n) => {
+//   let str = ''
+//   if(n % 2 === 0 || n <= 0) null
+//   for (i = 1; i <= n; i++){
+//     if (i % 2 !== 0) {
+//       str += ' '.repeat(((n - 1 ) / 2) - (i - 1) / 2) + `${"*".repeat(i)}\n`
+//     }  
+//   }
+//   for (j = n - 2; j > 0; j--){
+//     if (j % 2 !== 0) {
+//       str += ' '.repeat(((n - 1 ) / 2) - (j - 1) / 2) + `${"*".repeat(j)}\n`
+//     }  
+//   }
+//   return str
+// }
 
-const 
+// console.log(diamond(1));
+
+const diamondNum = (n) => {
+  let str = ''
+  if(n % 2 === 0 || n <= 0) null
+  for (i = 1; i <= n; i++){
+    if (i % 2 !== 0) {
+      str += ' '.repeat(((n - 1 ) / 2) - (i - 1) / 2) + `${i}\n`
+    }  
+  }
+  for (j = n - 2; j > 0; j--){
+    if (j % 2 !== 0) {
+      str += ' '.repeat(((n - 1 ) / 2) - (j - 1) / 2) + `${j}\n`
+    }  
+  }
+  return str
+}
+
+console.log(diamondNum(11));
