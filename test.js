@@ -2876,22 +2876,37 @@
 const diamondNum = (n) => {
   let str = ''
   if(n % 2 === 0 || n <= 0) null
+  
+  for (let i = 0; i < n; i++){
+    const rep = Math.abs((n - 2*i - 1)/2)
+    // for(let j = 1; j <= n; j++){
+      str += ' '.repeat(rep) 
+      str += `${i}\n` 
+    // }
+  }
+  return str
+}
+
+// console.log(diamondNum(11));
+
+
+const diamond = (n) => {
+  let str = ''
+  if(n % 2 === 0 || n <= 0) null
   for (i = 1; i <= n; i++){
     if (i % 2 !== 0) {
-      str += ' '.repeat(((n - 1 ) / 2) - (i - 1) / 2) + `${i}\n`
+      str += ' '.repeat(((n - 1 ) / 2) - (i - 1) / 2) + `${"*".repeat(i)}\n`
     }  
   }
-  for (j = n - 2; j > 0; j--){
+  for (j = n ; j > 0; j--){
     if (j % 2 !== 0) {
-      str += ' '.repeat(((n - 1 ) / 2) - (j - 1) / 2) + `${j}\n`
+      str += ' '.repeat(((n - 1 ) / 2) - (j - 1) / 2) + `${"*".repeat(j)}\n`
     }  
   }
   return str
 }
 
-console.log(diamondNum(11));
-
-const 
+console.log(diamond(11));
 
 // function sum (numbers) {
 
@@ -3332,15 +3347,15 @@ const
 // }
 // getCount("abracadabra")\
 
-const pizzaPalace = {
-  pizzas: ["Ultracheese", "Smoked", "Four meats"],
-  order(pizzaName, onSuccess, onError) {
-    if (pizzaPalace.pizzas.includes(pizzaName)) {
-      return onSuccess();
-    }
-    onError(pizzaName);
-  },
-};
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onError) {
+//     if (pizzaPalace.pizzas.includes(pizzaName)) {
+//       return onSuccess();
+//     }
+//     onError(pizzaName);
+//   },
+// };
 // Change code above this line
 
 // Callback for onSuccess
