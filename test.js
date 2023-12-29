@@ -2878,35 +2878,34 @@ const diamondNum = (n) => {
   if(n % 2 === 0 || n <= 0) null
   
   for (let i = 0; i < n; i++){
-    const rep = Math.abs((n - 2*i - 1)/2)
-    // for(let j = 1; j <= n; j++){
-      str += ' '.repeat(rep) 
-      str += `${i}\n` 
-    // }
+    let rep = Math.abs((n - 2*i - 1)/2)
+    str += ' '.repeat(rep) 
+    str += `${'*'.repeat(rep)}\n` 
+
   }
   return str
 }
 
-// console.log(diamondNum(11));
+console.log(diamondNum(5));
 
 
-const diamond = (n) => {
-  let str = ''
-  if(n % 2 === 0 || n <= 0) null
-  for (i = 1; i <= n; i++){
-    if (i % 2 !== 0) {
-      str += ' '.repeat(((n - 1 ) / 2) - (i - 1) / 2) + `${"*".repeat(i)}\n`
-    }  
-  }
-  for (j = n ; j > 0; j--){
-    if (j % 2 !== 0) {
-      str += ' '.repeat(((n - 1 ) / 2) - (j - 1) / 2) + `${"*".repeat(j)}\n`
-    }  
-  }
-  return str
-}
+// const diamond = (n) => {
+//   let str = ''
+//   if(n % 2 === 0 || n <= 0) null
+//   for (i = 1; i <= n; i++){
+//     if (i % 2 !== 0) {
+//       str += ' '.repeat(((n - 1 ) / 2) - (i - 1) / 2) + `${"*".repeat(i)}\n`
+//     }  
+//   }
+//   for (j = n ; j > 0; j--){
+//     if (j % 2 !== 0) {
+//       str += ' '.repeat(((n - 1 ) / 2) - (j - 1) / 2) + `${"*".repeat(j)}\n`
+//     }  
+//   }
+//   return str
+// }
 
-console.log(diamond(11));
+// console.log(diamond(11));
 
 // function sum (numbers) {
 
