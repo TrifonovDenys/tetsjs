@@ -2895,12 +2895,12 @@ console.log(diamondNum(5));
 //   for (i = 1; i <= n; i++){
 //     if (i % 2 !== 0) {
 //       str += ' '.repeat(((n - 1 ) / 2) - (i - 1) / 2) + `${"*".repeat(i)}\n`
-//     }  
+//     }
 //   }
 //   for (j = n ; j > 0; j--){
 //     if (j % 2 !== 0) {
 //       str += ' '.repeat(((n - 1 ) / 2) - (j - 1) / 2) + `${"*".repeat(j)}\n`
-//     }  
+//     }
 //   }
 //   return str
 // }
@@ -4206,3 +4206,13 @@ console.log(diamondNum(5));
 // const listUser = getUsers().map((el) => `<li><p>${el.name}</p></li>`);
 
 // list.append(listUser);
+
+function race(v1, v2, g) {
+  if (v1 >= v2) return null
+  const spd = v2 - v1
+  const timeToCachUp = g / spd 
+  const h = Math.floor(timeToCachUp)
+  const m = Math.floor((timeToCachUp * 60) % 60)
+  const s = Math.floor((timeToCachUp * 3600) % 60)
+  return [h,m,s]
+}
