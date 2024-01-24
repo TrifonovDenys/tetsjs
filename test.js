@@ -2873,20 +2873,20 @@
 
 // console.log(diamond(1));
 
-const diamondNum = (n) => {
-  let str = ''
-  if(n % 2 === 0 || n <= 0) null
+// const diamondNum = (n) => {
+//   let str = ''
+//   if(n % 2 === 0 || n <= 0) null
   
-  for (let i = 0; i < n; i++){
-    let rep = Math.abs((n - 2*i - 1)/2)
-    str += ' '.repeat(rep) 
-    str += `${'*'.repeat(rep)}\n` 
+//   for (let i = 0; i < n; i++){
+//     let rep = Math.abs((n - 2*i - 1)/2)
+//     str += ' '.repeat(rep) 
+//     str += `${'*'.repeat(rep)}\n` 
 
-  }
-  return str
-}
+//   }
+//   return str
+// }
 
-console.log(diamondNum(5));
+// console.log(diamondNum(5));
 
 
 // const diamond = (n) => {
