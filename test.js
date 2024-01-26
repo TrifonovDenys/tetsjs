@@ -2815,7 +2815,7 @@
 // );
 
 
-// let a = 5 
+// let a = 5
 // console.log(!a);
 
 
@@ -2860,12 +2860,12 @@
 //   for (i = 1; i <= n; i++){
 //     if (i % 2 !== 0) {
 //       str += ' '.repeat(((n - 1 ) / 2) - (i - 1) / 2) + `${"*".repeat(i)}\n`
-//     }  
+//     }
 //   }
 //   for (j = n - 2; j > 0; j--){
 //     if (j % 2 !== 0) {
 //       str += ' '.repeat(((n - 1 ) / 2) - (j - 1) / 2) + `${"*".repeat(j)}\n`
-//     }  
+//     }
 //   }
 //   return str
 // }
@@ -2879,8 +2879,8 @@
   
 //   for (let i = 0; i < n; i++){
 //     let rep = Math.abs((n - 2*i - 1)/2)
-//     str += ' '.repeat(rep) 
-//     str += `${'*'.repeat(rep)}\n` 
+//     str += ' '.repeat(rep)
+//     str += `${'*'.repeat(rep)}\n`
 
 //   }
 //   return str
@@ -4207,12 +4207,13 @@
 
 // list.append(listUser);
 
-function race(v1, v2, g) {
-  if (v1 >= v2) return null
-  const spd = v2 - v1
-  const timeToCachUp = g / spd 
-  const h = Math.floor(timeToCachUp)
-  const m = Math.floor((timeToCachUp * 60) % 60)
-  const s = Math.floor((timeToCachUp * 3600) % 60)
-  return [h,m,s]
-}
+// function race(v1, v2, g) {
+//   if (v1 >= v2) return null
+//   const spd = v2 - v1
+//   const timeToCachUp = g / spd
+//   const h = Math.floor(timeToCachUp)
+//   const m = Math.floor((timeToCachUp * 60) % 60)
+//   const s = Math.floor((timeToCachUp * 3600) % 60)
+//   return [h,m,s]
+// }
+
