@@ -1,16 +1,16 @@
-function htmlspecialchars(formData: string): string {
-  const replace = formData.split('').map(char => {
-    if (char === '<') return '&lt;'
-    if (char === '>') return '&gt;'
-    if (char === '&') return '&amp;'
-    if (char === '"') return '&quot;'
-    if (char === "'") return '&#039;'
-    return char;
-  }).join()
-  return replace;
-}
+// function htmlspecialchars(formData: string): string {
+//   const replace = formData.split('').map(char => {
+//     if (char === '<') return '&lt;'
+//     if (char === '>') return '&gt;'
+//     if (char === '&') return '&amp;'
+//     if (char === '"') return '&quot;'
+//     if (char === "'") return '&#039;'
+//     return char;
+//   }).join()
+//   return replace;
+// }
 
-htmlspecialchars("<h2>Hello World</h2>")
+// htmlspecialchars("<h2>Hello World</h2>")
 
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -26,3 +26,11 @@ htmlspecialchars("<h2>Hello World</h2>")
 
 // console.log(noBoringZeros(12300));
 
+function arr2bin(arr: any[]): string {
+  const sum = arr.reduce((acc, el) => {
+    acc += el
+    return acc;
+  }, 0)
+  return sum.toString(2)
+}
+arr2bin([1, 2])
