@@ -11,14 +11,48 @@
 //   return replace;
 // }
 // htmlspecialchars("<h2>Hello World</h2>")
-function noBoringZeros(n) {
-    for (let i = String(n).length - 1; i > 0; i--)
-        if (String(n)[i] !== '0') {
-            return n;
+// function noBoringZeros(n: number): number {
+//   for (let i = String(n).length - 1; i > 0; i--)
+//     if (String(n)[i] !== '0') {
+//       return n
+//     } else {
+//       n = Number(String(n).slice(0, -1))
+//     }
+//   return n
+// }
+// console.log(noBoringZeros(12300));
+// function arr2bin(arr: any[]): string {
+//   const sum = arr.reduce((acc, el) => {
+//     acc += el
+//     return acc;
+//   }, 0)
+//   return sum.toString(2)
+// }
+// arr2bin([1, 2])
+function bestFriend(txt, a, b) {
+    const arr = [];
+    const index = txt.split('').reduce((acc, el, i) => {
+        if (el === a) {
+            acc.push(i);
+        }
+        return acc;
+    }, []);
+    const indexb = txt.split('').reduce((acc, el, i) => {
+        if (el === b) {
+            acc.push(i);
+        }
+        return acc;
+    }, []);
+    for (let i = 0; i < index.length; i++) {
+        console.log(txt[index[i]] === a);
+        console.log(txt[indexb[i]] === b);
+        if ((txt[index[i]] === a) && (txt[indexb[i]] === b)) {
+            arr.push(true);
         }
         else {
-            n = Number(String(n).slice(0, -1));
+            arr.push(false);
         }
-    return n;
+    }
+    return arr.includes(false) ? false : true;
 }
-console.log(noBoringZeros(12300));
+console.log(bestFriend('we found your dynamite', 'd', 'y'));

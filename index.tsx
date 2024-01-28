@@ -26,11 +26,43 @@
 
 // console.log(noBoringZeros(12300));
 
-function arr2bin(arr: any[]): string {
-  const sum = arr.reduce((acc, el) => {
-    acc += el
+// function arr2bin(arr: any[]): string {
+//   const sum = arr.reduce((acc, el) => {
+//     acc += el
+//     return acc;
+//   }, 0)
+//   return sum.toString(2)
+// }
+// arr2bin([1, 2])
+
+function bestFriend(txt: string, a: string, b: string): boolean {
+  const arr = []
+  const index = txt.split('').reduce((acc: number[], el: string, i: number) => {
+    if (el === a) {
+      acc.push(i)
+    }
+    return acc
+  }, [])
+
+  const indexb = txt.split('').reduce((acc: number[], el: string, i: number) => {
+    if (el === b) {
+      acc.push(i);
+    }
     return acc;
-  }, 0)
-  return sum.toString(2)
+  }, []);
+
+  for (let i = 0; i < index.length; i++) {
+    console.log(txt[index[i]] === a);
+    console.log(txt[indexb[i]] === b);
+    if ((txt[index[i]] === a) && (txt[index[i] + 1] === b)) {
+      arr.push(true)
+    } else {
+      arr.push(false)
+    }
+  }
+
+  return arr.includes(false) ? false : true;
 }
-arr2bin([1, 2])
+
+
+console.log(bestFriend('we found your dynamite', 'd', 'y'));
