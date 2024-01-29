@@ -35,34 +35,56 @@
 // }
 // arr2bin([1, 2])
 
-function bestFriend(txt: string, a: string, b: string): boolean {
-  const arr = []
-  const index = txt.split('').reduce((acc: number[], el: string, i: number) => {
-    if (el === a) {
-      acc.push(i)
-    }
-    return acc
-  }, [])
+// function bestFriend(txt: string, a: string, b: string): boolean {
+//   const arr = []
+//   const index = txt.split('').reduce((acc: number[], el: string, i: number) => {
+//     if (el === a) {
+//       acc.push(i)
+//     }
+//     return acc
+//   }, [])
 
-  const indexb = txt.split('').reduce((acc: number[], el: string, i: number) => {
-    if (el === b) {
-      acc.push(i);
-    }
-    return acc;
-  }, []);
+//   const indexb = txt.split('').reduce((acc: number[], el: string, i: number) => {
+//     if (el === b) {
+//       acc.push(i);
+//     }
+//     return acc;
+//   }, []);
 
-  for (let i = 0; i < index.length; i++) {
-    console.log(txt[index[i]] === a);
-    console.log(txt[indexb[i]] === b);
-    if ((txt[index[i]] === a) && (txt[index[i] + 1] === b)) {
-      arr.push(true)
-    } else {
-      arr.push(false)
-    }
-  }
+//   for (let i = 0; i < index.length; i++) {
+//     console.log(txt[index[i]] === a);
+//     console.log(txt[indexb[i]] === b);
+//     if ((txt[index[i]] === a) && (txt[index[i] + 1] === b)) {
+//       arr.push(true)
+//     } else {
+//       arr.push(false)
+//     }
+//   }
 
-  return arr.includes(false) ? false : true;
+//   return arr.includes(false) ? false : true;
+// }
+
+
+// console.log(bestFriend('we found your dynamite', 'd', 'y'));
+
+// In a factory a printer prints labels for boxes.For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
+
+// The colors used by the printer are recorded in a control string.For example a "good" control string would be aaabbbbhaijjjm meaning that the printer used three times color a, four times color b, one time color h then one time color a...
+// Sometimes there are problems: lack of colors, technical malfunction and a "bad" control string is produced e.g.aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
+
+// You have to write a function printer_error which given a string will return the error rate of the printer as a string representing a rational whose numerator is the number of errors and the denominator the length of the control string.Don't reduce this fraction to a simpler expression.
+
+// The string has a length greater or equal to one and contains only letters from ato z.
+
+// Examples
+// s = "aaabbbbhaijjjm"
+// printer_error(s) => "0/14"
+
+// s = "aaaxbbbbyyhwawiwjjjwwm"
+// printer_error(s) => "8/22"
+
+export function printerError(s: string): string {
+  return `${s.split('').filter(el => el.charCodeAt(0) > 109).length}/${s.length}`
 }
 
-
-console.log(bestFriend('we found your dynamite', 'd', 'y'));
+printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz")
