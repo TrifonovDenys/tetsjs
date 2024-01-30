@@ -83,8 +83,32 @@
 // s = "aaaxbbbbyyhwawiwjjjwwm"
 // printer_error(s) => "8/22"
 
-export function printerError(s: string): string {
-  return `${s.split('').filter(el => el.charCodeAt(0) > 109).length}/${s.length}`
-}
+// export function printerError(s: string): string {
+//   return `${s.split('').filter(el => el.charCodeAt(0) > 109).length}/${s.length}`
+// }
 
-printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz")
+// printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz")
+
+
+// export function vowelIndices(word: string): number[] {
+//   return word.toLowerCase().split('').reduce((acc: number[], el: string, i: number) => {
+//     if (['a', 'e', 'i', 'o', 'u', 'y'].includes(el)) {
+//       acc.push(i + 1)
+//     }
+//     return acc
+//   }, [])
+// }
+
+// function unluckyDays(year: number): number {
+//   const arr: number[] = []
+//   for (let i = 1; i <= 12; i++) {
+//     i < 10 ? arr.push(new Date(`${year}-0${i}-13`).getDay()) : arr.push(new Date(`${year}-${i}-13`).getDay())
+//   }
+//   return arr.filter(el => el === 5).length
+// }
+
+// unluckyDays(2015)
+
+// export function switcheroo(x: string): string {
+//   return x.split('').map(el => el === 'a' ? el = 'b' : el === 'b' ? el = 'a' : el = 'c').join('')
+// }

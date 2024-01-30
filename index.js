@@ -65,8 +65,40 @@
 // printer_error(s) => "0/14"
 // s = "aaaxbbbbyyhwawiwjjjwwm"
 // printer_error(s) => "8/22"
-function printerError(s) {
-    console.log('m'.charAt);
-    return '';
-}
-printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz");
+// export function printerError(s: string): string {
+//   return `${s.split('').filter(el => el.charCodeAt(0) > 109).length}/${s.length}`
+// }
+// printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz")
+// export function vowelIndices(word: string): number[] {
+//   return word.toLowerCase().split('').reduce((acc: number[], el: string, i: number) => {
+//     if (['a', 'e', 'i', 'o', 'u', 'y'].includes(el)) {
+//       acc.push(i + 1)
+//     }
+//     return acc
+//   }, [])
+// }
+// function unluckyDays(year) {
+//     const arr = [];
+//     for (let i = 1; i <= 12; i++) {
+//         i < 10 ? arr.push(new Date(`${year}-0${i}-13`).getDay()) : arr.push(new Date(`${year}-${i}-13`).getDay());
+//     }
+//     return arr.filter(el => el === 4).length;
+// }
+// unluckyDays(2015);
+// var twoSum = function (nums, target) {
+//     for (let i = 0; i < nums.length; i++) {
+//         for (let j = 1; j < nums.length; j++) {
+//             if (nums[i] + nums[j] === target) {
+//                 return [i, j]
+//             }
+//         }
+//     }
+// };
+
+var twoSum = function (nums, target) {
+    for (let i = 0; i < nums.length; i++) {
+        nums.includes(target - nums[i]) ? [i, nums.indexOf(target - nums[i])] : null
+    }
+};
+
+console.log(twoSum([3, 2, 4], 6))
