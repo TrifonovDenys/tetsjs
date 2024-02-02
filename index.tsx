@@ -112,3 +112,23 @@
 // export function switcheroo(x: string): string {
 //   return x.split('').map(el => el === 'a' ? el = 'b' : el === 'b' ? el = 'a' : el = 'c').join('')
 // }
+
+
+var addTwoNumbers = function (l1: number[], l2: number[]) {
+  // return (Number(l1.reverse().join('')) + Number(l2.reverse().join(''))).toString().split('').reverse().map(Number)
+  const lr1: number[] = []
+  const lr2: number[] = []
+
+  for (let i = l1.length; i >= 0; i--) {
+    lr1.push(l1[i])
+  }
+
+  for (let i = l2.length; i >= 0; i--) {
+    lr2.push(l2[i])
+  }
+
+};
+
+console.log(addTwoNumbers([2, 4, 3], [5, 6, 4]));
+console.log(addTwoNumbers([0], [0]));
+console.log(addTwoNumbers([9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9]));

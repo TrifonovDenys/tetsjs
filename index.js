@@ -77,28 +77,24 @@
 //     return acc
 //   }, [])
 // }
-// function unluckyDays(year) {
-//     const arr = [];
-//     for (let i = 1; i <= 12; i++) {
-//         i < 10 ? arr.push(new Date(`${year}-0${i}-13`).getDay()) : arr.push(new Date(`${year}-${i}-13`).getDay());
-//     }
-//     return arr.filter(el => el === 4).length;
+// function unluckyDays(year: number): number {
+//   const arr: number[] = []
+//   for (let i = 1; i <= 12; i++) {
+//     i < 10 ? arr.push(new Date(`${year}-0${i}-13`).getDay()) : arr.push(new Date(`${year}-${i}-13`).getDay())
+//   }
+//   return arr.filter(el => el === 5).length
 // }
-// unluckyDays(2015);
-// var twoSum = function (nums, target) {
-//     for (let i = 0; i < nums.length; i++) {
-//         for (let j = 1; j < nums.length; j++) {
-//             if (nums[i] + nums[j] === target) {
-//                 return [i, j]
-//             }
-//         }
-//     }
-// };
-
-var twoSum = function (nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        nums.includes(target - nums[i]) ? [i, nums.indexOf(target - nums[i])] : null
-    }
+// unluckyDays(2015)
+// export function switcheroo(x: string): string {
+//   return x.split('').map(el => el === 'a' ? el = 'b' : el === 'b' ? el = 'a' : el = 'c').join('')
+// }
+var addTwoNumbers = function (l1, l2) {
+    return (Number(l1.reverse().join('')) + Number(l2.reverse().join(''))).toString().split('').reverse().map(Number);
+    // const lr1: number[] = []
+    // for (let i = l1.length; i >= 0; i--) {
+    //   lr1.push(l1[i])
+    // }
 };
-
-console.log(twoSum([3, 2, 4], 6))
+console.log(addTwoNumbers([2, 4, 3], [5, 6, 4]));
+console.log(addTwoNumbers([0], [0]));
+console.log(addTwoNumbers([9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9]));
