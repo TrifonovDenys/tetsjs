@@ -114,27 +114,39 @@
 // }
 
 
-var addTwoNumbers = function (l1: number[], l2: number[]) {
-  // return (Number(l1.reverse().join('')) + Number(l2.reverse().join(''))).toString().split('').reverse().map(Number)
-  const lr1: number[] = []
-  const lr2: number[] = []
-  const sum: number[] = []
-  for (let i = l1.length - 1; i >= 0; i--) {
-    lr1.push(l1[i])
-  }
+// var addTwoNumbers = function (l1: number[], l2: number[]) {
+//   // return (Number(l1.reverse().join('')) + Number(l2.reverse().join(''))).toString().split('').reverse().map(Number)
+//   const lr1: number[] = []
+//   const lr2: number[] = []
+//   const sum: number[] = []
+//   for (let i = l1.length - 1; i >= 0; i--) {
+//     lr1.push(l1[i])
+//   }
 
-  for (let i = l2.length - 1; i >= 0; i--) {
-    lr2.push(l2[i])
-  }
+//   for (let i = l2.length - 1; i >= 0; i--) {
+//     lr2.push(l2[i])
+//   }
 
-  const sumReversed = (Number(lr1.join('')) + Number(lr2.join(''))).toString()
+//   const sumReversed = (Number(lr1.join('')) + Number(lr2.join(''))).toString()
 
-  for (let i = sumReversed.length - 1; i >= 0; i--) {
-    sum.push(Number(sumReversed[i]))
-  }
-  return sum
-};
+//   for (let i = sumReversed.length - 1; i >= 0; i--) {
+//     sum.push(Number(sumReversed[i]))
+//   }
+//   return sum
+// };
 
-addTwoNumbers([2, 4, 3], [5, 6, 4])
-addTwoNumbers([0], [0])
-addTwoNumbers([9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9])
+// addTwoNumbers([2, 4, 3], [5, 6, 4])
+// addTwoNumbers([0], [0])
+// addTwoNumbers([9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9])
+
+
+export function adjacentElementsProduct(arr: number[]): number {
+  return arr.reduce((acc: number[], el: number, i: number) => {
+    if (arr[i + 1]) {
+      acc.push(el * arr[i + 1])
+    }
+    return [Math.max(...acc)]
+  }, [])[0]
+}
+
+console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
