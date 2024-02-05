@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.adjacentElementsProduct = void 0;
+exports.productArray = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -110,13 +110,17 @@ exports.adjacentElementsProduct = void 0;
 // addTwoNumbers([2, 4, 3], [5, 6, 4])
 // addTwoNumbers([0], [0])
 // addTwoNumbers([9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9])
-function adjacentElementsProduct(arr) {
-    return arr.reduce((acc, el, i) => {
-        if (arr[i + 1]) {
-            acc.push(el * arr[i + 1]);
-        }
-        return [Math.max(...acc)];
-    }, [])[0];
+// export function adjacentElementsProduct(arr: number[]): number {
+//   return arr.reduce((acc: number[], el: number, i: number) => {
+//     if (arr[i + 1]) {
+//       acc.push(el * arr[i + 1])
+//     }
+//     return [Math.max(...acc)]
+//   }, [])[0]
+// }
+// console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
+function productArray(nums) {
+    return nums.map(el => el = nums.reduce((acc, num) => acc * num) / el);
 }
-exports.adjacentElementsProduct = adjacentElementsProduct;
-console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
+exports.productArray = productArray;
+console.log(productArray([3, 27, 4, 2]));

@@ -140,13 +140,21 @@
 // addTwoNumbers([9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9])
 
 
-export function adjacentElementsProduct(arr: number[]): number {
-  return arr.reduce((acc: number[], el: number, i: number) => {
-    if (arr[i + 1]) {
-      acc.push(el * arr[i + 1])
-    }
-    return [Math.max(...acc)]
-  }, [])[0]
+// export function adjacentElementsProduct(arr: number[]): number {
+//   return arr.reduce((acc: number[], el: number, i: number) => {
+//     if (arr[i + 1]) {
+//       acc.push(el * arr[i + 1])
+//     }
+//     return [Math.max(...acc)]
+//   }, [])[0]
+// }
+
+// console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
+
+
+export function productArray(nums: number[]): number[] {
+  return nums.map(el => nums.reduce((acc: number, num: number) => acc * num) / el)
 }
 
-console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
+
+console.log(productArray([3, 27, 4, 2]));
