@@ -152,9 +152,17 @@
 // console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
 
 
-export function productArray(nums: number[]): number[] {
-  return nums.map(el => nums.reduce((acc: number, num: number) => acc * num) / el)
+// export function productArray(nums: number[]): number[] {
+//   return nums.map(el => nums.reduce((acc: number, num: number) => acc * num) / el)
+// }
+
+
+// console.log(productArray([3, 27, 4, 2]));
+
+export function sumCubes(n: number): number {
+  let result = 0
+  for (let i = 1; i <= n; i++) {
+    result += i ** 3
+  }
+  return result
 }
-
-
-console.log(productArray([3, 27, 4, 2]));
