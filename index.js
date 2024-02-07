@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.productArray = void 0;
+exports.encode = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -119,8 +119,22 @@ exports.productArray = void 0;
 //   }, [])[0]
 // }
 // console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
-function productArray(nums) {
-    return nums.map(el => el = nums.reduce((acc, num) => acc * num) / el);
+// export function productArray(nums: number[]): number[] {
+//   return nums.map(el => nums.reduce((acc: number, num: number) => acc * num) / el)
+// }
+// console.log(productArray([3, 27, 4, 2]));
+// export function incrementer(nums: number[]) {
+//   return nums.map((el, i) => (el + i + 1) % 10)
+// }
+// console.log(incrementer([4, 6, 7, 1, 3]));
+function encode(str, n) {
+    
+    const leters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    const strTynums = str.split('').map(el => leters.indexOf(el) + 1);
+    const sometrash = n.toString().repeat(strTynums.length - n.toString().length);
+    console.log(sometrash);
+    const a = sometrash.slice(0, strTynums.length).split('').map(Number);
+    return a.map((el, i) => el + strTynums[i]);
 }
-exports.productArray = productArray;
-console.log(productArray([3, 27, 4, 2]));
+exports.encode = encode;
+console.log(encode("scout", 1939));

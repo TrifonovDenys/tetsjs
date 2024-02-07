@@ -152,9 +152,25 @@
 // console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
 
 
-export function productArray(nums: number[]): number[] {
-  return nums.map(el => nums.reduce((acc: number, num: number) => acc * num) / el)
+// export function productArray(nums: number[]): number[] {
+//   return nums.map(el => nums.reduce((acc: number, num: number) => acc * num) / el)
+// }
+
+
+// console.log(productArray([3, 27, 4, 2]));
+
+// export function incrementer(nums: number[]) {
+//   return nums.map((el, i) => (el + i + 1) % 10)
+// }
+
+// console.log(incrementer([4, 6, 7, 1, 3]));
+
+
+export function encode(str: String, n: number) {
+  const leters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+  const sometrash = n.toString().repeat(100)
+  const strTynums = str.split('').map(el => leters.indexOf(el) + 1)
+  const a = sometrash.slice(0, strTynums.length).split('').map(Number)
+  return a.map((el, i) => el + strTynums[i])
 }
-
-
-console.log(productArray([3, 27, 4, 2]));
+console.log(encode("scout", 1939));
