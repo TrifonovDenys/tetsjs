@@ -159,10 +159,18 @@
 
 // console.log(productArray([3, 27, 4, 2]));
 
-export function sumCubes(n: number): number {
-  let result = 0
-  for (let i = 1; i <= n; i++) {
-    result += i ** 3
-  }
-  return result
+// export function sumCubes(n: number): number {
+//   let result = 0
+//   for (let i = 1; i <= n; i++) {
+//     result += i ** 3
+//   }
+//   return result
+// }
+
+
+export function maxTriSum(nums: number[]) {
+  const maxArr = nums.filter((el, i) => (nums.indexOf(el) === i)).sort((a: number, b: number) => a - b)
+  return maxArr.length > 3 ? maxArr.splice(-3).reduce((acc: number, el: number) => acc + el, 0) : maxArr.reduce((acc: number, el: number) => acc + el, 0)
 }
+
+console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]));

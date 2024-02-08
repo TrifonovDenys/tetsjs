@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.productArray = void 0;
+exports.maxTriSum = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -119,8 +119,19 @@ exports.productArray = void 0;
 //   }, [])[0]
 // }
 // console.log(adjacentElementsProduct([3, 6, -2, -5, 7, 3]));
-function productArray(nums) {
-    return nums.map(el => el = nums.reduce((acc, num) => acc * num) / el);
+// export function productArray(nums: number[]): number[] {
+//   return nums.map(el => nums.reduce((acc: number, num: number) => acc * num) / el)
+// }
+// console.log(productArray([3, 27, 4, 2]));
+// export function sumCubes(n: number): number {
+//   let result = 0
+//   for (let i = 1; i <= n; i++) {
+//     result += i ** 3
+//   }
+//   return result
+// }
+function maxTriSum(nums) {
+    return nums.filter((el, i) => (nums.indexOf(el) === i) && (el > 0)).sort();
 }
-exports.productArray = productArray;
-console.log(productArray([3, 27, 4, 2]));
+exports.maxTriSum = maxTriSum;
+console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]));
