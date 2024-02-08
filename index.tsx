@@ -173,4 +173,4 @@ export function maxTriSum(nums: number[]) {
   return maxArr.length > 3 ? maxArr.splice(-3).reduce((acc: number, el: number) => acc + el, 0) : maxArr.reduce((acc: number, el: number) => acc + el, 0)
 }
 
-console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]));
+console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]))
