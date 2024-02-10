@@ -168,9 +168,28 @@
 // }
 
 
-export function maxTriSum(nums: number[]) {
-  const maxArr = nums.filter((el, i) => (nums.indexOf(el) === i)).sort((a: number, b: number) => a - b)
-  return maxArr.length > 3 ? maxArr.splice(-3).reduce((acc: number, el: number) => acc + el, 0) : maxArr.reduce((acc: number, el: number) => acc + el, 0)
+// export function maxTriSum(nums: number[]) {
+//   const maxArr = nums.filter((el, i) => (nums.indexOf(el) === i)).sort((a: number, b: number) => a - b)
+//   return maxArr.length > 3 ? maxArr.splice(-3).reduce((acc: number, el: number) => acc + el, 0) : maxArr.reduce((acc: number, el: number) => acc + el, 0)
+// }
+
+// console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]))
+
+// String.prototype.toJadenCase = function () {
+//   return this.split(' ').map(el => el[0].toUpperCase() + el.slice(1)).join(' ')
+// }
+
+// interface String {      // Declaration needed, don't remove it
+//   toJadenCase(): string;
+// }
+
+// console.log('asdfaksodjmasoidnasoid oaismdfoias mdoiamdiomas imadoiamdoimadosima'.toJadenCase());
+export function sumTriangularNumbers(n: number): number {
+  let sum: number = 0
+  for (let i = 0; i <= n; i++) {
+    sum += (i * (i + 1)) / 2
+  }
+  return sum;
 }
 
-console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]))
+console.log(sumTriangularNumbers(943));

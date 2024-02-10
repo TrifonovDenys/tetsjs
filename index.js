@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.maxTriSum = void 0;
+exports.sumTriangularNumbers = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -130,8 +130,24 @@ exports.maxTriSum = void 0;
 //   }
 //   return result
 // }
-function maxTriSum(nums) {
-    return nums.filter((el, i) => (nums.indexOf(el) === i) && (el > 0)).sort();
+// export function maxTriSum(nums: number[]) {
+//   const maxArr = nums.filter((el, i) => (nums.indexOf(el) === i)).sort((a: number, b: number) => a - b)
+//   return maxArr.length > 3 ? maxArr.splice(-3).reduce((acc: number, el: number) => acc + el, 0) : maxArr.reduce((acc: number, el: number) => acc + el, 0)
+// }
+// console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]))
+// String.prototype.toJadenCase = function () {
+//   return this.split(' ').map(el => el[0].toUpperCase() + el.slice(1)).join(' ')
+// }
+// interface String {      // Declaration needed, don't remove it
+//   toJadenCase(): string;
+// }
+// console.log('asdfaksodjmasoidnasoid oaismdfoias mdoiamdiomas imadoiamdoimadosima'.toJadenCase());
+function sumTriangularNumbers(n) {
+    let sum = 0;
+    for (let i = 0; i <= n; i++) {
+        sum += (i * (i + 1)) / 2;
+    }
+    return sum;
 }
-exports.maxTriSum = maxTriSum;
-console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]));
+exports.sumTriangularNumbers = sumTriangularNumbers;
+console.log(sumTriangularNumbers(943));
