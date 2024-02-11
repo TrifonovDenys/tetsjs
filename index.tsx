@@ -184,12 +184,19 @@
 // }
 
 // console.log('asdfaksodjmasoidnasoid oaismdfoias mdoiamdiomas imadoiamdoimadosima'.toJadenCase());
-export function sumTriangularNumbers(n: number): number {
-  let sum: number = 0
-  for (let i = 0; i <= n; i++) {
-    sum += (i * (i + 1)) / 2
-  }
-  return sum;
+// export function sumTriangularNumbers(n: number): number {
+//   let sum: number = 0
+//   for (let i = 0; i <= n; i++) {
+//     sum += (i * (i + 1)) / 2
+//   }
+//   return sum;
+// }
+
+// console.log(sumTriangularNumbers(943));
+
+
+function potatoes(p0: number, w0: number, p1: number): number {
+  return Math.trunc(w0 * (100 - p0) / (100 - p1))
 }
 
-console.log(sumTriangularNumbers(943));
+console.log(potatoes(93, 129, 91));

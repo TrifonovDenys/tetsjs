@@ -10,8 +10,6 @@
 //   }).join()
 //   return replace;
 // }
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.sumTriangularNumbers = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -142,12 +140,15 @@ exports.sumTriangularNumbers = void 0;
 //   toJadenCase(): string;
 // }
 // console.log('asdfaksodjmasoidnasoid oaismdfoias mdoiamdiomas imadoiamdoimadosima'.toJadenCase());
-function sumTriangularNumbers(n) {
-    let sum = 0;
-    for (let i = 0; i <= n; i++) {
-        sum += (i * (i + 1)) / 2;
-    }
-    return sum;
+// export function sumTriangularNumbers(n: number): number {
+//   let sum: number = 0
+//   for (let i = 0; i <= n; i++) {
+//     sum += (i * (i + 1)) / 2
+//   }
+//   return sum;
+// }
+// console.log(sumTriangularNumbers(943));
+function potatoes(p0, w0, p1) {
+    return w0 * (100 - p0) / (100 - p1);
 }
-exports.sumTriangularNumbers = sumTriangularNumbers;
-console.log(sumTriangularNumbers(943));
+console.log(potatoes(93, 129, 91));
