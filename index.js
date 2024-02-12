@@ -10,6 +10,8 @@
 //   }).join()
 //   return replace;
 // }
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.last = exports.init = exports.tail = exports.head = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -148,7 +150,32 @@
 //   return sum;
 // }
 // console.log(sumTriangularNumbers(943));
-function potatoes(p0, w0, p1) {
-    return w0 * (100 - p0) / (100 - p1);
-}
-console.log(potatoes(93, 129, 91));
+// function potatoes(p0: number, w0: number, p1: number): number {
+//   return Math.trunc(w0 * (100 - p0) / (100 - p1))
+// }
+// console.log(potatoes(93, 129, 91));
+const head = (arr) => {
+    console.log("head");
+    return arr[0];
+};
+exports.head = head;
+const tail = (arr) => {
+    console.log("tail");
+    return arr.splice(1, arr.length);
+};
+exports.tail = tail;
+const init = (arr) => {
+    console.log("init");
+    return arr.splice(0, arr.length - 1);
+};
+exports.init = init;
+const last = (arr) => {
+    console.log("last");
+    return arr[arr.length - 1];
+};
+exports.last = last;
+console.log((0, exports.head)([5, 1]));
+console.log((0, exports.tail)([1]));
+((0, exports.tail)([1]));
+console.log((0, exports.init)([1, 5, 7, 9]));
+console.log((0, exports.last)([7, 2]));
