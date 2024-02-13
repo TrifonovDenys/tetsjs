@@ -202,24 +202,46 @@
 // console.log(potatoes(93, 129, 91));
 
 
-export const head = (arr: number[]) => {
-  console.log("head")
-  return arr[0]
-}
-export const tail = (arr: number[]) => {
-  console.log("tail")
-  return arr.splice(1, arr.length)
-}
-export const init = (arr: number[]) => {
-  console.log("init")
-  return arr.splice(0, arr.length - 1)
-}
-export const last = (arr: number[]) => {
-  console.log("last")
-  return arr[arr.length - 1]
-}
+// export const head = (arr: number[]) => {
+//   console.log("head")
+//   return arr[0]
+// }
+// export const tail = (arr: number[]) => {
+//   console.log("tail")
+//   return arr.splice(1, arr.length)
+// }
+// export const init = (arr: number[]) => {
+//   console.log("init")
+//   return arr.splice(0, arr.length - 1)
+// }
+// export const last = (arr: number[]) => {
+//   console.log("last")
+//   return arr[arr.length - 1]
+// }
+// export const head = (a: number[]) => a[0];
+// export const tail = (a: number[]) => a.slice(1);
+// export const init = (a: number[]) => a.slice(0, a.length - 1);
+// export const last = (a: number[]) => a[a.length - 1];
 
-console.log(head([5, 1]))
-console.log(tail([1])); (tail([1]))
-console.log(init([1, 5, 7, 9]))
-console.log(last([7, 2]))
+// console.log(head([5, 1]))
+// console.log(tail([1])); (tail([1]))
+// console.log(init([1, 5, 7, 9]))
+// console.log(last([7, 2]))
+// console.log(1);
+
+export function evaporator(content: number, evapPerDay: number, threshold: number): number {
+  let day = 0
+  for (let i = content; i >= (content * (threshold / 100)); i -= (i * (evapPerDay / 100))) {
+    day++
+  }
+  return day
+}
+//22 29
+evaporator(10, 10, 10)
+console.log(evaporator(10, 10, 5))
+
+// This program tests the life of an evaporator containing a gas.
+
+// We know the content of the evaporator(content in ml), the percentage of foam or gas lost every day(evap_per_day) and the threshold(threshold) in percentage beyond which the evaporator is no longer useful.All numbers are strictly positive.
+
+// The program reports the nth day(as an integer) on which the evaporator will be out of use.
