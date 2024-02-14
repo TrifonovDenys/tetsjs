@@ -229,19 +229,28 @@
 // console.log(last([7, 2]))
 // console.log(1);
 
-export function evaporator(content: number, evapPerDay: number, threshold: number): number {
-  let day = 0
-  for (let i = content; i >= (content * (threshold / 100)); i -= (i * (evapPerDay / 100))) {
-    day++
-  }
-  return day
-}
-//22 29
-evaporator(10, 10, 10)
-console.log(evaporator(10, 10, 5))
+// export function evaporator(content: number, evapPerDay: number, threshold: number): number {
+//   let day = 0
+//   for (let i = content; i >= (content * (threshold / 100)); i -= (i * (evapPerDay / 100))) {
+//     day++
+//   }
+//   return day
+// }
+// //22 29
+// evaporator(10, 10, 10)
+// console.log(evaporator(10, 10, 5))
 
 // This program tests the life of an evaporator containing a gas.
 
 // We know the content of the evaporator(content in ml), the percentage of foam or gas lost every day(evap_per_day) and the threshold(threshold) in percentage beyond which the evaporator is no longer useful.All numbers are strictly positive.
 
 // The program reports the nth day(as an integer) on which the evaporator will be out of use.
+
+export function toTime(seconds: number): string {
+
+  const h = Math.floor(seconds / 3600)
+  const m = Math.floor(((seconds / 3600) - h) * 60)
+  return `${h} hour(s) and ${m} minute(s)`
+}
+console.log(toTime(323500));
+
