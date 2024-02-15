@@ -246,11 +246,20 @@
 
 // The program reports the nth day(as an integer) on which the evaporator will be out of use.
 
-export function toTime(seconds: number): string {
+// export function toTime(seconds: number): string {
 
-  const h = Math.floor(seconds / 3600)
-  const m = Math.floor(((seconds / 3600) - h) * 60)
-  return `${h} hour(s) and ${m} minute(s)`
+//   const h = Math.floor(seconds / 3600)
+//   const m = Math.floor(((seconds / 3600) - h) * 60)
+//   return `${h} hour(s) and ${m} minute(s)`
+// }
+// console.log(toTime(323500));
+
+
+export class Kata {
+  static findLongest(array: number[]): number {
+    const arrL = array.map((el) => Number(el.toString().length))
+    return array[arrL.findIndex((_, i) => +array[i].toString().length === Math.max(...arrL))]
+  }
 }
-console.log(toTime(323500));
 
+console.log(Kata.findLongest([1, 10, 100]));
