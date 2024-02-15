@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Kata = void 0;
+exports.maxGap = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -198,13 +198,37 @@ exports.Kata = void 0;
 //   return `${h} hour(s) and ${m} minute(s)`
 // }
 // console.log(toTime(323500));
-class Kata {
-    static findLongest(array) {
-        const arrL = array.map((el) => Number(el.toString().length));
-        console.log(arrL);
-        console.log(array[arrL.findIndex((_, i) => +array[i].toString().length === Math.max(...arrL))]);
-        return array[arrL.findIndex((_, i) => +array[i].toString().length === Math.max(...arrL))];
-    }
+// export class Kata {
+//   static findLongest(array: number[]): number {
+//     const arrL = array.map((el) => Number(el.toString().length))
+//     return array[arrL.findIndex((_, i) => +array[i].toString().length === Math.max(...arrL))]
+//   }
+// }
+// console.log(Kata.findLongest([1, 10, 100]));
+function maxGap(nums) {
+    console.log(nums.sort((a, b) => a - b));
+    return Math.max(...nums.sort((a, b) => a - b).reduce((acc, el, i) => {
+        let gap = 0;
+        if ((el < 0) && (nums[i + 1] < 0)) {
+            gap = (el < nums[i + 1]) ? Math.abs(el) + nums[i + 1] : Math.abs(el) + nums[i + 1];
+            console.log('1', gap);
+        }
+        else if ((el > 0) && (nums[i + 1] > 0)) {
+            gap = (el > nums[i + 1]) ? el - nums[i + 1] : nums[i + 1] - el;
+        }
+        else if ((el > 0) && (nums[i + 1] < 0)) {
+            gap = el + nums[i + 1];
+            console.log('3', gap);
+        }
+        else if ((el < 0) && (nums[i + 1] > 0)) {
+            gap = Math.abs(el) + nums[i + 1];
+            console.log('4', gap);
+        }
+        console.log(gap);
+        acc.push(gap);
+        console.log(acc);
+        return acc;
+    }, []));
 }
-exports.Kata = Kata;
-console.log(Kata.findLongest([1, 10, 100]));
+exports.maxGap = maxGap;
+console.log(maxGap([-498, 0]));
