@@ -265,27 +265,42 @@
 // console.log(Kata.findLongest([1, 10, 100]));
 
 
-export function maxGap(nums: number[]): number {
-  console.log(nums.sort((a, b) => a - b));
-  return Math.max(...nums.sort((a, b) => a - b).reduce((acc: number[], el: number, i: number) => {
-    let gap = 0
-    if ((el < 0) && (nums[i + 1] < 0)) {
-      gap = (el < nums[i + 1]) ? Math.abs(el) + nums[i + 1] : Math.abs(el) + nums[i + 1]
-      console.log('1', gap);
-    } else if ((el > 0) && (nums[i + 1] > 0)) {
-      gap = (el > nums[i + 1]) ? el - nums[i + 1] : nums[i + 1] - el
-    }
-    else if ((el > 0) && (nums[i + 1] < 0)) {
-      gap = el + nums[i + 1]
-      console.log('3', gap);
-    } else if ((el < 0) && (nums[i + 1] >= 0)) {
-      gap = Math.abs(el) + nums[i + 1]
-      console.log('4', gap);
-    }
-    console.log(gap);
-    acc.push(gap)
-    console.log(acc);
-    return acc
-  }, []))
+// export function maxGap(nums: number[]): number {
+//   console.log(nums.sort((a, b) => a - b));
+//   return Math.max(...nums.sort((a, b) => a - b).reduce((acc: number[], el: number, i: number) => {
+//     let gap = 0
+//     if ((el < 0) && (nums[i + 1] < 0)) {
+//       gap = (el < nums[i + 1]) ? Math.abs(el) + nums[i + 1] : Math.abs(el) + nums[i + 1]
+//       console.log('1', gap);
+//     } else if ((el > 0) && (nums[i + 1] > 0)) {
+//       gap = (el > nums[i + 1]) ? el - nums[i + 1] : nums[i + 1] - el
+//     }
+//     else if ((el > 0) && (nums[i + 1] < 0)) {
+//       gap = el + nums[i + 1]
+//       console.log('3', gap);
+//     } else if ((el < 0) && (nums[i + 1] >= 0)) {
+//       gap = Math.abs(el) + nums[i + 1]
+//       console.log('4', gap);
+//     }
+//     console.log(gap);
+//     acc.push(gap)
+//     console.log(acc);
+//     return acc
+//   }, []))
+// }
+// console.log(maxGap([-498, 0]));
+
+
+export function overTheRoad(address: number, n: number): number {
+  const l: number[] = []
+  const r: number[] = []
+  for (let i = 1; i <= n * 2; i += 1) {
+    i % 2 !== 0 ? l.push(i) : r.push(i)
+  }
+  const rI = l.findIndex(el => el === address)
+  console.log(rI);
+  // return r.reverse()[rI]
+  return r[r.length - rI - 1]
 }
-console.log(maxGap([-498, 0]));
+
+console.log(overTheRoad(1, 3));

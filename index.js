@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.maxGap = void 0;
+exports.overTheRoad = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -205,30 +205,40 @@ exports.maxGap = void 0;
 //   }
 // }
 // console.log(Kata.findLongest([1, 10, 100]));
-function maxGap(nums) {
-    console.log(nums.sort((a, b) => a - b));
-    return Math.max(...nums.sort((a, b) => a - b).reduce((acc, el, i) => {
-        let gap = 0;
-        if ((el < 0) && (nums[i + 1] < 0)) {
-            gap = (el < nums[i + 1]) ? Math.abs(el) + nums[i + 1] : Math.abs(el) + nums[i + 1];
-            console.log('1', gap);
-        }
-        else if ((el > 0) && (nums[i + 1] > 0)) {
-            gap = (el > nums[i + 1]) ? el - nums[i + 1] : nums[i + 1] - el;
-        }
-        else if ((el > 0) && (nums[i + 1] < 0)) {
-            gap = el + nums[i + 1];
-            console.log('3', gap);
-        }
-        else if ((el < 0) && (nums[i + 1] > 0)) {
-            gap = Math.abs(el) + nums[i + 1];
-            console.log('4', gap);
-        }
-        console.log(gap);
-        acc.push(gap);
-        console.log(acc);
-        return acc;
-    }, []));
+// export function maxGap(nums: number[]): number {
+//   console.log(nums.sort((a, b) => a - b));
+//   return Math.max(...nums.sort((a, b) => a - b).reduce((acc: number[], el: number, i: number) => {
+//     let gap = 0
+//     if ((el < 0) && (nums[i + 1] < 0)) {
+//       gap = (el < nums[i + 1]) ? Math.abs(el) + nums[i + 1] : Math.abs(el) + nums[i + 1]
+//       console.log('1', gap);
+//     } else if ((el > 0) && (nums[i + 1] > 0)) {
+//       gap = (el > nums[i + 1]) ? el - nums[i + 1] : nums[i + 1] - el
+//     }
+//     else if ((el > 0) && (nums[i + 1] < 0)) {
+//       gap = el + nums[i + 1]
+//       console.log('3', gap);
+//     } else if ((el < 0) && (nums[i + 1] >= 0)) {
+//       gap = Math.abs(el) + nums[i + 1]
+//       console.log('4', gap);
+//     }
+//     console.log(gap);
+//     acc.push(gap)
+//     console.log(acc);
+//     return acc
+//   }, []))
+// }
+// console.log(maxGap([-498, 0]));
+function overTheRoad(address, n) {
+    const l = [];
+    const r = [];
+    for (let i = 1; i <= n * 2; i += 1) {
+        i % 2 !== 0 ? l.push(i) : r.push(i);
+    }
+    const rI = l.findIndex(el => el === address);
+    console.log(rI);
+    // return r.reverse()[rI]
+    return r[r.length - rI - 1];
 }
-exports.maxGap = maxGap;
-console.log(maxGap([-498, 0]));
+exports.overTheRoad = overTheRoad;
+console.log(overTheRoad(1, 3));
