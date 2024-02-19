@@ -324,3 +324,7 @@ console.log(bump("nnnnnnnnnnnnnnnnnnnnn"));
 export function stringTransformer(str: string) {
   return str.split('').map(el => el === el.toLowerCase() ? el.toUpperCase() : el.toLowerCase()).join('').split(' ').reverse().join(' ')
 }
+
+export function meeting(s: string): string {
+  return s.toUpperCase().split(";").map(el => `(${el.split(":").reverse().join(', ')})`).sort().join('')
+}
