@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.bump = void 0;
+exports.minimumSteps = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -248,9 +248,27 @@ exports.bump = void 0;
 //   }, letters.split(''))[0]
 // }
 // console.log(lastSurvivor('foiflxtpicahhkqjswjuyhmypkrdbwnmwbrrvdycqespfvdviucjoyvskltqaqirtjqulprjjoaiagobpftywabqjdmiofpsr', [8, 59, 52, 93, 21, 40, 88, 85, 59, 10, 82, 18, 74, 59, 51, 47, 75, 49, 23, 56, 1, 33, 39, 33, 34, 44, 25, 0, 51, 25, 36, 32, 57, 10, 57, 12, 51, 55, 24, 55, 31, 49, 6, 15, 10, 48, 27, 29, 38, 30, 35, 42, 23, 32, 9, 39, 39, 36, 8, 29, 2, 33, 14, 3, 13, 25, 9, 25, 18, 10, 1, 2, 20, 8, 2, 11, 5, 7, 0, 10, 10, 8, 12, 3, 5, 1, 7, 7, 5, 1, 4, 0, 4, 0, 0, 1])); //z
-function bump(x) {
-    return x.split('_').join('');
+// export function bump(x: string): string {
+//   return x.split('_').join('').length < 15 ? "Woohoo!" : "Car Dead"
+// }
+// console.log(bump("nnn_n__n_n___nnnnn___n__nnn__"));
+// console.log(bump("nnnnnnnnnnnnnnnnnnnnn"));
+// export function stringTransformer(str: string) {
+//   return str.split('').map(el => el === el.toLowerCase() ? el.toUpperCase() : el.toLowerCase()).join('').split(' ').reverse().join(' ')
+// }
+// export function meeting(s: string): string {
+//   return s.toUpperCase().split(";").map(el => `(${el.split(":").reverse().join(', ')})`).sort().join('')
+// }
+function minimumSteps(nums, value) {
+    const a = nums.sort((a, b) => a - b);
+    let sum = 0;
+    for (let i = 0; i < a.length; i++) {
+        sum += a[i];
+        if (sum >= value) {
+            return i;
+        }
+    }
+    //   return Math.ceil(value / Math.min(...nums))
 }
-exports.bump = bump;
-console.log(bump("nnn_n__n_n___nnnnn___n__nnn__"));
-console.log(bump("nnnnnnnnnnnnnnnnnnnnn"));
+exports.minimumSteps = minimumSteps;
+console.log(minimumSteps([10, 9, 9, 8], 17));
