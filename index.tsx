@@ -328,15 +328,23 @@
 // export function meeting(s: string): string {
 //   return s.toUpperCase().split(";").map(el => `(${el.split(":").reverse().join(', ')})`).sort().join('')
 // }
-export function minimumSteps(nums: number[], value: number) {
-  const a = nums.sort((a: number, b: number) => a - b)
-  let sum = 0
-  for (let i = 0; i < a.length; i++) {
-    sum += a[i]
-    if (sum >= value) {
-      return i
-    }
-  }
-}
+// export function minimumSteps(nums: number[], value: number) {
+//   const a = nums.sort((a: number, b: number) => a - b)
+//   let sum = 0
+//   for (let i = 0; i < a.length; i++) {
+//     sum += a[i]
+//     if (sum >= value) {
+//       return i
+//     }
+//   }
+// }
 
-console.log(minimumSteps([10, 9, 9, 8], 17));
+// console.log(minimumSteps([10, 9, 9, 8], 17));
+
+// export const mxdiflg = (a1: string[], a2: string[]): number => {
+//   return a1.length === 0 || a2.length === 0 ? -1 : Math.abs(a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length) > Math.abs(a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length) ? Math.abs(a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length) : Math.abs(a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length)
+// }
+// let s1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"];
+// let s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"];
+
+// console.log(mxdiflg(s1, s2));

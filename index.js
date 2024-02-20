@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.minimumSteps = void 0;
+exports.mxdiflg = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -259,16 +259,24 @@ exports.minimumSteps = void 0;
 // export function meeting(s: string): string {
 //   return s.toUpperCase().split(";").map(el => `(${el.split(":").reverse().join(', ')})`).sort().join('')
 // }
-function minimumSteps(nums, value) {
-    const a = nums.sort((a, b) => a - b);
-    let sum = 0;
-    for (let i = 0; i < a.length; i++) {
-        sum += a[i];
-        if (sum >= value) {
-            return i;
-        }
-    }
-    //   return Math.ceil(value / Math.min(...nums))
-}
-exports.minimumSteps = minimumSteps;
-console.log(minimumSteps([10, 9, 9, 8], 17));
+// export function minimumSteps(nums: number[], value: number) {
+//   const a = nums.sort((a: number, b: number) => a - b)
+//   let sum = 0
+//   for (let i = 0; i < a.length; i++) {
+//     sum += a[i]
+//     if (sum >= value) {
+//       return i
+//     }
+//   }
+// }
+// console.log(minimumSteps([10, 9, 9, 8], 17));
+const mxdiflg = (a1, a2) => {
+    console.log(a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length);
+    console.log(a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length);
+    // return a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length > a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length ? a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length : a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length
+    return 1;
+};
+exports.mxdiflg = mxdiflg;
+let s1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"];
+let s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"];
+console.log((0, exports.mxdiflg)(s1, s2));
