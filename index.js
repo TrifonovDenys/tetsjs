@@ -10,9 +10,8 @@
 //   }).join()
 //   return replace;
 // }
-// Object.defineProperty(exports, "__esModule", { value: true });
-// exports.encode = void 0;
-// exports.mxdiflg = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.gps = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -124,23 +123,26 @@
 //   return nums.map(el => nums.reduce((acc: number, num: number) => acc * num) / el)
 // }
 // console.log(productArray([3, 27, 4, 2]));
-
 // export function incrementer(nums: number[]) {
 //   return nums.map((el, i) => (el + i + 1) % 10)
 // }
 // console.log(incrementer([4, 6, 7, 1, 3]));
-// function encode(str, n) {
-
-//     const leters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-//     const strTynums = str.split('').map(el => leters.indexOf(el) + 1);
-//     const sometrash = n.toString().repeat(strTynums.length - n.toString().length);
-//     console.log(sometrash);
-//     const a = sometrash.slice(0, strTynums.length).split('').map(Number);
-//     return a.map((el, i) => el + strTynums[i]);
+// export function sumCubes(n: number): number {
+//   let result = 0
+//   for (let i = 1; i <= n; i++) {
+//     result += i ** 3
+//   }
+//   return result
 // }
-// exports.encode = encode;
+// export function encode(str: String, n: number) {
+//   const leters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+//   const sometrash = n.toString().repeat(100)
+//   const strTynums = str.split('').map(el => leters.indexOf(el) + 1)
+//   const a = sometrash.slice(0, strTynums.length).split('').map(Number)
+//   return a.map((el, i) => el + strTynums[i])
+// }
 // console.log(encode("scout", 1939));
-
+// =======
 // export function sumCubes(n: number): number {
 //   let result = 0
 //   for (let i = 1; i <= n; i++) {
@@ -288,13 +290,30 @@
 //   }
 // }
 // console.log(minimumSteps([10, 9, 9, 8], 17));
-// const mxdiflg = (a1, a2) => {
-//     console.log(a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length);
-//     console.log(a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length);
-//     // return a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length > a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length ? a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length : a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length
-//     return 1;
-// };
-// exports.mxdiflg = mxdiflg;
+// export const mxdiflg = (a1: string[], a2: string[]): number => {
+//   return a1.length === 0 || a2.length === 0 ? -1 : Math.abs(a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length) > Math.abs(a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length) ? Math.abs(a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length) : Math.abs(a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length)
+// }
 // let s1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"];
 // let s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"];
-// console.log((0, exports.mxdiflg)(s1, s2));
+// console.log(mxdiflg(s1, s2));
+const gps = (s, xs) => {
+    const delta_distance = Math.floor(xs
+        .reduce((acc, el, i, arr) => {
+        acc.push((arr[i + 1] - el));
+        return acc;
+    }, [])
+        .map(el => (3600 * el) / s)
+        .reduce((acc, el, i, arr) => {
+        if (!el) {
+            return acc / (arr.length - 1);
+        }
+        acc += el;
+        return acc;
+    }, 0));
+    console.log(delta_distance);
+    return delta_distance;
+};
+exports.gps = gps;
+(0, exports.gps)(20, [0.0, 0.23, 0.46, 0.69, 0.92, 1.15, 1.38, 1.61]);
+(0, exports.gps)(12, [0.0, 0.11, 0.22, 0.33, 0.44, 0.65, 1.08, 1.26, 1.68, 1.89, 2.1, 2.31, 2.52, 3.25]);
+(0, exports.gps)(20, [0.0, 0.18, 0.36, 0.54, 0.72, 1.05, 1.26, 1.47, 1.92, 2.16, 2.4, 2.64, 2.88, 3.12, 3.36, 3.6, 3.84]);

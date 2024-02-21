@@ -373,3 +373,23 @@
 
 // console.log(mxdiflg(s1, s2));
 
+export const gps = (s:number, xs:number[]):number => {
+  const delta_distance = Math.floor(xs
+    .reduce((acc: number[], el: number, i: number, arr: number[]) => {
+    acc.push((arr[i + 1] - el))
+    return acc
+  }, [])
+    .map(el => (3600 * el) / s)
+    .reduce((acc: number, el: number, i: number, arr: number[]) => {
+  if (!el) {
+    return acc / (arr.length - 1)
+  }
+  acc += el
+  return acc
+   }, 0))
+   console.log(delta_distance);
+  return delta_distance
+}
+gps(20, [0.0, 0.23, 0.46, 0.69, 0.92, 1.15, 1.38, 1.61])
+gps(12, [0.0, 0.11, 0.22, 0.33, 0.44, 0.65, 1.08, 1.26, 1.68, 1.89, 2.1, 2.31, 2.52, 3.25])
+gps(20, [0.0, 0.18, 0.36, 0.54, 0.72, 1.05, 1.26, 1.47, 1.92, 2.16, 2.4, 2.64, 2.88, 3.12, 3.36, 3.6, 3.84])
