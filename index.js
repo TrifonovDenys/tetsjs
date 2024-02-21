@@ -10,8 +10,9 @@
 //   }).join()
 //   return replace;
 // }
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.encode = void 0;
+// Object.defineProperty(exports, "__esModule", { value: true });
+// exports.encode = void 0;
+// exports.mxdiflg = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -123,18 +124,177 @@ exports.encode = void 0;
 //   return nums.map(el => nums.reduce((acc: number, num: number) => acc * num) / el)
 // }
 // console.log(productArray([3, 27, 4, 2]));
+
 // export function incrementer(nums: number[]) {
 //   return nums.map((el, i) => (el + i + 1) % 10)
 // }
 // console.log(incrementer([4, 6, 7, 1, 3]));
-function encode(str, n) {
-    
-    const leters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    const strTynums = str.split('').map(el => leters.indexOf(el) + 1);
-    const sometrash = n.toString().repeat(strTynums.length - n.toString().length);
-    console.log(sometrash);
-    const a = sometrash.slice(0, strTynums.length).split('').map(Number);
-    return a.map((el, i) => el + strTynums[i]);
-}
-exports.encode = encode;
-console.log(encode("scout", 1939));
+// function encode(str, n) {
+
+//     const leters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+//     const strTynums = str.split('').map(el => leters.indexOf(el) + 1);
+//     const sometrash = n.toString().repeat(strTynums.length - n.toString().length);
+//     console.log(sometrash);
+//     const a = sometrash.slice(0, strTynums.length).split('').map(Number);
+//     return a.map((el, i) => el + strTynums[i]);
+// }
+// exports.encode = encode;
+// console.log(encode("scout", 1939));
+
+// export function sumCubes(n: number): number {
+//   let result = 0
+//   for (let i = 1; i <= n; i++) {
+//     result += i ** 3
+//   }
+//   return result
+// }
+// export function maxTriSum(nums: number[]) {
+//   const maxArr = nums.filter((el, i) => (nums.indexOf(el) === i)).sort((a: number, b: number) => a - b)
+//   return maxArr.length > 3 ? maxArr.splice(-3).reduce((acc: number, el: number) => acc + el, 0) : maxArr.reduce((acc: number, el: number) => acc + el, 0)
+// }
+// console.log(maxTriSum([-13, -50, 57, 13, 67, -13, 57, 108, 67]))
+// String.prototype.toJadenCase = function () {
+//   return this.split(' ').map(el => el[0].toUpperCase() + el.slice(1)).join(' ')
+// }
+// interface String {      // Declaration needed, don't remove it
+//   toJadenCase(): string;
+// }
+// console.log('asdfaksodjmasoidnasoid oaismdfoias mdoiamdiomas imadoiamdoimadosima'.toJadenCase());
+// export function sumTriangularNumbers(n: number): number {
+//   let sum: number = 0
+//   for (let i = 0; i <= n; i++) {
+//     sum += (i * (i + 1)) / 2
+//   }
+//   return sum;
+// }
+// console.log(sumTriangularNumbers(943));
+// function potatoes(p0: number, w0: number, p1: number): number {
+//   return Math.trunc(w0 * (100 - p0) / (100 - p1))
+// }
+// console.log(potatoes(93, 129, 91));
+// export const head = (arr: number[]) => {
+//   console.log("head")
+//   return arr[0]
+// }
+// export const tail = (arr: number[]) => {
+//   console.log("tail")
+//   return arr.splice(1, arr.length)
+// }
+// export const init = (arr: number[]) => {
+//   console.log("init")
+//   return arr.splice(0, arr.length - 1)
+// }
+// export const last = (arr: number[]) => {
+//   console.log("last")
+//   return arr[arr.length - 1]
+// }
+// export const head = (a: number[]) => a[0];
+// export const tail = (a: number[]) => a.slice(1);
+// export const init = (a: number[]) => a.slice(0, a.length - 1);
+// export const last = (a: number[]) => a[a.length - 1];
+// console.log(head([5, 1]))
+// console.log(tail([1])); (tail([1]))
+// console.log(init([1, 5, 7, 9]))
+// console.log(last([7, 2]))
+// console.log(1);
+// export function evaporator(content: number, evapPerDay: number, threshold: number): number {
+//   let day = 0
+//   for (let i = content; i >= (content * (threshold / 100)); i -= (i * (evapPerDay / 100))) {
+//     day++
+//   }
+//   return day
+// }
+// //22 29
+// evaporator(10, 10, 10)
+// console.log(evaporator(10, 10, 5))
+// This program tests the life of an evaporator containing a gas.
+// We know the content of the evaporator(content in ml), the percentage of foam or gas lost every day(evap_per_day) and the threshold(threshold) in percentage beyond which the evaporator is no longer useful.All numbers are strictly positive.
+// The program reports the nth day(as an integer) on which the evaporator will be out of use.
+// export function toTime(seconds: number): string {
+//   const h = Math.floor(seconds / 3600)
+//   const m = Math.floor(((seconds / 3600) - h) * 60)
+//   return `${h} hour(s) and ${m} minute(s)`
+// }
+// console.log(toTime(323500));
+// export class Kata {
+//   static findLongest(array: number[]): number {
+//     const arrL = array.map((el) => Number(el.toString().length))
+//     return array[arrL.findIndex((_, i) => +array[i].toString().length === Math.max(...arrL))]
+//   }
+// }
+// console.log(Kata.findLongest([1, 10, 100]));
+// export function maxGap(nums: number[]): number {
+//   console.log(nums.sort((a, b) => a - b));
+//   return Math.max(...nums.sort((a, b) => a - b).reduce((acc: number[], el: number, i: number) => {
+//     let gap = 0
+//     if ((el < 0) && (nums[i + 1] < 0)) {
+//       gap = (el < nums[i + 1]) ? Math.abs(el) + nums[i + 1] : Math.abs(el) + nums[i + 1]
+//       console.log('1', gap);
+//     } else if ((el > 0) && (nums[i + 1] > 0)) {
+//       gap = (el > nums[i + 1]) ? el - nums[i + 1] : nums[i + 1] - el
+//     }
+//     else if ((el > 0) && (nums[i + 1] < 0)) {
+//       gap = el + nums[i + 1]
+//       console.log('3', gap);
+//     } else if ((el < 0) && (nums[i + 1] >= 0)) {
+//       gap = Math.abs(el) + nums[i + 1]
+//       console.log('4', gap);
+//     }
+//     console.log(gap);
+//     acc.push(gap)
+//     console.log(acc);
+//     return acc
+//   }, []))
+// }
+// console.log(maxGap([-498, 0]));
+// export function overTheRoad(address: number, n: number): number {
+//   const l: number[] = []
+//   const r: number[] = []
+//   for (let i = 1; i <= n * 2; i += 1) {
+//     i % 2 !== 0 ? l.push(i) : r.push(i)
+//   }
+//   const rI = l.findIndex(el => el === address)
+//   console.log(rI);
+//   // return r.reverse()[rI]
+//   return r[r.length - rI - 1]
+// }
+// console.log(overTheRoad(1, 3));
+// export function lastSurvivor(letters: string, coords: number[]): string {
+//   return coords.reduce((acc: string[], el: number) => {
+//     acc.splice(el, 1)
+//     return acc
+//   }, letters.split(''))[0]
+// }
+// console.log(lastSurvivor('foiflxtpicahhkqjswjuyhmypkrdbwnmwbrrvdycqespfvdviucjoyvskltqaqirtjqulprjjoaiagobpftywabqjdmiofpsr', [8, 59, 52, 93, 21, 40, 88, 85, 59, 10, 82, 18, 74, 59, 51, 47, 75, 49, 23, 56, 1, 33, 39, 33, 34, 44, 25, 0, 51, 25, 36, 32, 57, 10, 57, 12, 51, 55, 24, 55, 31, 49, 6, 15, 10, 48, 27, 29, 38, 30, 35, 42, 23, 32, 9, 39, 39, 36, 8, 29, 2, 33, 14, 3, 13, 25, 9, 25, 18, 10, 1, 2, 20, 8, 2, 11, 5, 7, 0, 10, 10, 8, 12, 3, 5, 1, 7, 7, 5, 1, 4, 0, 4, 0, 0, 1])); //z
+// export function bump(x: string): string {
+//   return x.split('_').join('').length < 15 ? "Woohoo!" : "Car Dead"
+// }
+// console.log(bump("nnn_n__n_n___nnnnn___n__nnn__"));
+// console.log(bump("nnnnnnnnnnnnnnnnnnnnn"));
+// export function stringTransformer(str: string) {
+//   return str.split('').map(el => el === el.toLowerCase() ? el.toUpperCase() : el.toLowerCase()).join('').split(' ').reverse().join(' ')
+// }
+// export function meeting(s: string): string {
+//   return s.toUpperCase().split(";").map(el => `(${el.split(":").reverse().join(', ')})`).sort().join('')
+// }
+// export function minimumSteps(nums: number[], value: number) {
+//   const a = nums.sort((a: number, b: number) => a - b)
+//   let sum = 0
+//   for (let i = 0; i < a.length; i++) {
+//     sum += a[i]
+//     if (sum >= value) {
+//       return i
+//     }
+//   }
+// }
+// console.log(minimumSteps([10, 9, 9, 8], 17));
+// const mxdiflg = (a1, a2) => {
+//     console.log(a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length);
+//     console.log(a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length);
+//     // return a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length > a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length ? a1.sort((a, b) => a.length - b.length)[0].length - a2.sort((a, b) => b.length - a.length)[0].length : a2.sort((a, b) => a.length - b.length)[0].length - a1.sort((a, b) => b.length - a.length)[0].length
+//     return 1;
+// };
+// exports.mxdiflg = mxdiflg;
+// let s1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"];
+// let s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"];
+// console.log((0, exports.mxdiflg)(s1, s2));
