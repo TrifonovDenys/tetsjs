@@ -394,13 +394,36 @@
 // gps(12, [0.0, 0.11, 0.22, 0.33, 0.44, 0.65, 1.08, 1.26, 1.68, 1.89, 2.1, 2.31, 2.52, 3.25])
 // gps(20, [0.0, 0.18, 0.36, 0.54, 0.72, 1.05, 1.26, 1.47, 1.92, 2.16, 2.4, 2.64, 2.88, 3.12, 3.36, 3.6, 3.84])
 
-export function factorial(n: number) {
-  const arr: number[] = []
-for(let i = 1; i <= n; i++){
-   arr.push(i)
-}
- return arr.reduce((acc: number, el: number)=>{
-  acc*=el
-   return acc
- })
-}
+// export function factorial(n: number) {
+//   const arr: number[] = []
+// for(let i = 1; i <= n; i++){
+//    arr.push(i)
+// }
+//  return arr.reduce((acc: number, el: number)=>{
+//   acc*=el
+//    return acc
+//  })
+// }
+
+var SequenceSum = (function () {
+  function SequenceSum() { }
+
+  SequenceSum.showSequence = function (count: number) {
+    // for
+    let sum: number[] = []
+    let start = 0
+    while (start <= count) {
+      sum.push(start)
+      start++
+    }
+    if (count === 0) return '0=0'
+    if (count < 0) {
+      return count + '<' + 0
+    }
+    return sum.join('+') + ' = ' + sum.reduce((acc: number, el: number) => { acc += el; return acc }, 0)
+
+  };
+
+  return SequenceSum;
+
+})();
