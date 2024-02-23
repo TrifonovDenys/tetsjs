@@ -405,25 +405,40 @@
 //  })
 // }
 
-var SequenceSum = (function () {
-  function SequenceSum() { }
+// var SequenceSum = (function () {
+//   function SequenceSum() { }
 
-  SequenceSum.showSequence = function (count: number) {
-    // for
-    let sum: number[] = []
-    let start = 0
-    while (start <= count) {
-      sum.push(start)
-      start++
-    }
-    if (count === 0) return '0=0'
-    if (count < 0) {
-      return count + '<' + 0
-    }
-    return sum.join('+') + ' = ' + sum.reduce((acc: number, el: number) => { acc += el; return acc }, 0)
+//   SequenceSum.showSequence = function (count: number) {
+//     // for
+//     let sum: number[] = []
+//     let start = 0
+//     while (start <= count) {
+//       sum.push(start)
+//       start++
+//     }
+//     if (count === 0) return '0=0'
+//     if (count < 0) {
+//       return count + '<' + 0
+//     }
+//     return sum.join('+') + ' = ' + sum.reduce((acc: number, el: number) => { acc += el; return acc }, 0)
 
-  };
+//   };
 
-  return SequenceSum;
+//   return SequenceSum;
 
-})();
+// })();
+
+function sumMul(n, m) {
+  console.log(n);
+  console.log(m);
+  if (n <= 0 || m <= 0) return "INVALID"
+  let sum = 0
+  let count = 1
+  let p = 1
+  while (n < m) {
+    sum += p
+    count++
+    p = n * count
+  }
+  return sum
+}
