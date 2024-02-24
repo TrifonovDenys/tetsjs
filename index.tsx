@@ -437,7 +437,45 @@
 // }
 
 
-export function tidyNumber(num: number): boolean {
-  // your code here
-  return Number(`${num}`.split('').map(el => +el).sort((a, b) => a - b).join('')) === num
-}
+// export function tidyNumber(num: number): boolean {
+//   // your code here
+//   return Number(`${num}`.split('').map(el => +el).sort((a, b) => a - b).join('')) === num
+// }
+
+
+// export const towerBuilder = (nFloors: number): string[] => {
+//   const arr: string[] = []
+//   for (let i = 1; i <= nFloors; i++) {
+//     arr.push(' '.repeat(nFloors - i) + '*'.repeat(i * 2 - 1) + ' '.repeat(nFloors - i))
+//   }
+//   return arr
+// }
+
+// towerBuilder(1)
+// towerBuilder(2)
+// towerBuilder(3)
+
+export function dashatize(num: number): string {
+  const res = num
+    .toString()
+    .split('')
+    .map(el => {
+      if (+el % 2 !== 0) {
+        return `-${el}-`
+      }
+      return el
+    })
+    .join('')
+    .split('')
+    .reduce((acc: string, el: string) => {
+      if (acc === '-') return el
+      if (el === '-' && acc[acc.length - 1] === '-') {
+        return acc
+      }
+      return acc + el
+    })
+  if (res[res.length - 1] === '-') return res.slice(0, res.length - 1)
+  return res
+};
+
+console.log(dashatize(97431));

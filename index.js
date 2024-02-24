@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.gps = void 0;
+exports.dashatize = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -296,24 +296,99 @@ exports.gps = void 0;
 // let s1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"];
 // let s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"];
 // console.log(mxdiflg(s1, s2));
-const gps = (s, xs) => {
-    const delta_distance = Math.floor(xs
-        .reduce((acc, el, i, arr) => {
-        acc.push((arr[i + 1] - el));
-        return acc;
-    }, [])
-        .map(el => (3600 * el) / s)
-        .reduce((acc, el, i, arr) => {
-        if (!el) {
-            return acc / (arr.length - 1);
+// export const gps = (s:number, xs:number[]):number => {
+//   const delta_distance = Math.floor(xs
+//     .reduce((acc: number[], el: number, i: number, arr: number[]) => {
+//     acc.push((arr[i + 1] - el))
+//     return acc
+//   }, [])
+//     .map(el => (3600 * el) / s)
+//     .reduce((acc: number, el: number, i: number, arr: number[]) => {
+//   if (!el) {
+//     return acc / (arr.length - 1)
+//   }
+//   acc += el
+//   return acc
+//    }, 0))
+//    console.log(delta_distance);
+//   return delta_distance
+// }
+// gps(20, [0.0, 0.23, 0.46, 0.69, 0.92, 1.15, 1.38, 1.61])
+// gps(12, [0.0, 0.11, 0.22, 0.33, 0.44, 0.65, 1.08, 1.26, 1.68, 1.89, 2.1, 2.31, 2.52, 3.25])
+// gps(20, [0.0, 0.18, 0.36, 0.54, 0.72, 1.05, 1.26, 1.47, 1.92, 2.16, 2.4, 2.64, 2.88, 3.12, 3.36, 3.6, 3.84])
+// export function factorial(n: number) {
+//   const arr: number[] = []
+// for(let i = 1; i <= n; i++){
+//    arr.push(i)
+// }
+//  return arr.reduce((acc: number, el: number)=>{
+//   acc*=el
+//    return acc
+//  })
+// }
+// var SequenceSum = (function () {
+//   function SequenceSum() { }
+//   SequenceSum.showSequence = function (count: number) {
+//     // for
+//     let sum: number[] = []
+//     let start = 0
+//     while (start <= count) {
+//       sum.push(start)
+//       start++
+//     }
+//     if (count === 0) return '0=0'
+//     if (count < 0) {
+//       return count + '<' + 0
+//     }
+//     return sum.join('+') + ' = ' + sum.reduce((acc: number, el: number) => { acc += el; return acc }, 0)
+//   };
+//   return SequenceSum;
+// })();
+// function sumMul(n: number, m: number) {
+//   let sum = 0
+//   for (let i = n; i < m; i += n){
+//     sum += i
+//   }
+//   return sum
+// }
+// export function tidyNumber(num: number): boolean {
+//   // your code here
+//   return Number(`${num}`.split('').map(el => +el).sort((a, b) => a - b).join('')) === num
+// }
+// export const towerBuilder = (nFloors: number): string[] => {
+//   const arr: string[] = []
+//   for (let i = 1; i <= nFloors; i++) {
+//     arr.push(' '.repeat(nFloors - i) + '*'.repeat(i * 2 - 1) + ' '.repeat(nFloors - i))
+//   }
+//   return arr
+// }
+// towerBuilder(1)
+// towerBuilder(2)
+// towerBuilder(3)
+function dashatize(num) {
+    const res = num
+        .toString()
+        .split('')
+        .map(el => {
+        if (+el % 2 !== 0) {
+            return `-${el}-`;
         }
-        acc += el;
-        return acc;
-    }, 0));
-    console.log(delta_distance);
-    return delta_distance;
-};
-exports.gps = gps;
-(0, exports.gps)(20, [0.0, 0.23, 0.46, 0.69, 0.92, 1.15, 1.38, 1.61]);
-(0, exports.gps)(12, [0.0, 0.11, 0.22, 0.33, 0.44, 0.65, 1.08, 1.26, 1.68, 1.89, 2.1, 2.31, 2.52, 3.25]);
-(0, exports.gps)(20, [0.0, 0.18, 0.36, 0.54, 0.72, 1.05, 1.26, 1.47, 1.92, 2.16, 2.4, 2.64, 2.88, 3.12, 3.36, 3.6, 3.84]);
+        return el;
+    })
+        .join('')
+        .split('')
+        .reduce((acc, el) => {
+        if (acc === '-')
+            return el;
+        if (el === '-' && acc[acc.length - 1] === '-') {
+            return acc;
+        }
+        return acc + el;
+    });
+    if (res[res.length - 1] === '-')
+        return res.slice(0, res.length - 1);
+    return res;
+}
+exports.dashatize = dashatize;
+;
+console.log(dashatize(97431));
