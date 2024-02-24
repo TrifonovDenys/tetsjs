@@ -428,17 +428,16 @@
 
 // })();
 
-function sumMul(n, m) {
-  console.log(n);
-  console.log(m);
-  if (n <= 0 || m <= 0) return "INVALID"
-  let sum = 0
-  let count = 1
-  let p = 1
-  while (n < m) {
-    sum += p
-    count++
-    p = n * count
-  }
-  return sum
+// function sumMul(n: number, m: number) {
+//   let sum = 0
+//   for (let i = n; i < m; i += n){
+//     sum += i
+//   }
+//   return sum
+// }
+
+
+export function tidyNumber(num: number): boolean {
+  // your code here
+  return Number(`${num}`.split('').map(el => +el).sort((a, b) => a - b).join('')) === num
 }
