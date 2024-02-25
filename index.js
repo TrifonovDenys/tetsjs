@@ -12,136 +12,136 @@
 //   }).join()
 //   return replace;
 // }
-// const students = [
-//     {
-//         name: 'asdasdas',
-//         age: 22,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 24,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 23,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 2,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 4,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 3,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 221,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 241,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 231,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 222,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 242,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 232,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 223,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 243,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 233,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 224,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 244,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 234,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 225,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 245,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 235,
-//         city: 'kmfksdf'
-//     },
+// // const students = [
+// //     {
+// //         name: 'asdasdas',
+// //         age: 22,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 24,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 23,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 2,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 4,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 3,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 221,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 241,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 231,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 222,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 242,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 232,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 223,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 243,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 233,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 224,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 244,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 234,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 225,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 245,
+// //         city: 'kmfksdf'
+// //     },
+// //     {
+// //         name: 'asdasdas',
+// //         age: 235,
+// //         city: 'kmfksdf'
+// //     },
 
-// ];
+// // ];
 
-const students = [22, 443, 543, 3452, 234, 6, 43, 324, 235, 2]
+// const students = [22, 443, 543, 3452, 234, 6, 43, 324, 235, 2]
 
-// const studentsSort = (students) => {
-//     const start = new Date();
-//     let isSorted = false
-//     let temp
-//     while (!isSorted) {
-//         isSorted = true
-//         for (let i = 0; i < students.length - 1; i++) {
-//             if (students[i] > students[i + 1]) {
-//                 temp = students[i]
-//                 students[i] = students[i + 1]
-//                 students[i + 1] = temp
-//                 isSorted = false
-//             }
-//         }
-//     }
-//     const end = new Date();
-//     console.log('Время выполнения:', end - start, 'мс');
-//     return students
-// }
+// // const studentsSort = (students) => {
+// //     const start = new Date();
+// //     let isSorted = false
+// //     let temp
+// //     while (!isSorted) {
+// //         isSorted = true
+// //         for (let i = 0; i < students.length - 1; i++) {
+// //             if (students[i] > students[i + 1]) {
+// //                 temp = students[i]
+// //                 students[i] = students[i + 1]
+// //                 students[i + 1] = temp
+// //                 isSorted = false
+// //             }
+// //         }
+// //     }
+// //     const end = new Date();
+// //     console.log('Время выполнения:', end - start, 'мс');
+// //     return students
+// // }
 
 
 
@@ -155,10 +155,10 @@ const logfile = path.join(__dirname, 'MYLOGS.json')
 const sortedJson = path.join(__dirname, "sorted.json")
 // const createID = async () => {
 //     const arr = []
-//     for (let i = 0; i < 1000000; i++) {
+//     for (let i = 0; i < 100000; i++) {
 //         arr.push({ id: uuidv4(), age: Math.floor(Math.random() * 100) })
 //     }
-//     await fs.appendFile(logfile, JSON.stringify(arr, null, 2))
+//     await fs.writeFile(logfile, JSON.stringify(arr, null, 2))
 // }
 // createID()
 
@@ -172,6 +172,7 @@ const getArr = async () => {
 }
 
 const studentsSort = async (stud) => {
+    const start = new Date();
     let isSorted = false
     let temp
     while (!isSorted) {
@@ -185,9 +186,12 @@ const studentsSort = async (stud) => {
             }
         }
     }
+
     try {
-        await fs.appendFile(sortedJson, JSON.stringify(stud)); // Записываем отсортированный JSON в файл
-        console.log('Отсортированный JSON записан в файл:', sortedJson);
+        await fs.writeFile(sortedJson, JSON.stringify(stud, null, 2)); // Записываем отсортированный JSON в файл
+        // console.log('Отсортированный JSON записан в файл:', sortedJson);
+        const end = new Date();
+        console.log('Время выполнения:', end - start, 'мс');
         return stud; // Возвращаем отсортированный массив студентов
     } catch (err) {
         console.error('Ошибка при записи в файл:', err);
@@ -197,14 +201,22 @@ const studentsSort = async (stud) => {
 
 getArr() // Получаем массив студентов из файла
     .then(students => {
-        console.log('Исходный массив студентов:', students);
+        // console.log('Исходный массив студентов:', students);
         return studentsSort(students); // Сортируем массив студентов и записываем в файл
     })
     .then(sortedStudents => {
-        console.log('Отсортированный массив студентов:', sortedStudents);
+        // console.log('Отсортированный массив студентов:', sortedStudents);
     })
     .catch(error => {
         console.error('Произошла ошибка:', error);
     });
 
 
+// const sum = (N) => {
+
+//     return (N * (N + 1)) / 2
+// }
+
+// console.log(sum(1000000) / sum(50000));
+
+// console.log(6 * 400 / );
