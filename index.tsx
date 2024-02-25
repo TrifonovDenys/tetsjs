@@ -455,27 +455,57 @@
 // towerBuilder(2)
 // towerBuilder(3)
 
-export function dashatize(num: number): string {
-  const res = num
-    .toString()
-    .split('')
-    .map(el => {
-      if (+el % 2 !== 0) {
-        return `-${el}-`
-      }
-      return el
-    })
-    .join('')
-    .split('')
-    .reduce((acc: string, el: string) => {
-      if (acc === '-') return el
-      if (el === '-' && acc[acc.length - 1] === '-') {
-        return acc
-      }
-      return acc + el
-    })
-  if (res[res.length - 1] === '-') return res.slice(0, res.length - 1)
-  return res
-};
+// export function dashatize(num: number): string {
+//   const res = num
+//     .toString()
+//     .split('')
+//     .map(el => {
+//       if (+el % 2 !== 0) {
+//         return `-${el}-`
+//       }
+//       return el
+//     })
+//     .join('')
+//     .split('')
+//     .reduce((acc: string, el: string) => {
+//       if (acc === '-') return el
+//       if (el === '-' && acc[acc.length - 1] === '-') {
+//         return acc
+//       }
+//       return acc + el
+//     })
+//   if (res[res.length - 1] === '-') return res.slice(0, res.length - 1)
+//   return res
+// };
 
-console.log(dashatize(97431));
+// console.log(dashatize(97431));
+
+interface Student {
+  name: string;
+  age: number;
+  city: string;
+}
+
+const students: Student[] = [
+  {
+    name: 'asdasdas',
+    age: 22,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 24,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 23,
+    city: 'kmfksdf'
+  }
+]
+
+// const studentsSort = (students: Student[]): Student[] => {
+//   return students.reduce((acc: Student[], el: Student) => {
+//     return acc
+//   })
+// }
