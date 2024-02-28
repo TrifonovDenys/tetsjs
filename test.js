@@ -1332,7 +1332,7 @@
 //     console.log('F');
 //     return 'F'
 //   }
-  
+
 // }
 
 // getGrade(100, 85, 96)
@@ -1359,8 +1359,8 @@
 //   if (bmiIndex > 30) {
 //     return "Obese"
 //   }
-  
-  
+
+
 // }
 
 // bmi(50, 1.8)
@@ -1432,8 +1432,8 @@
 // function getProductPrice(productName) {
 //   // Change code below this line
 // for (let product of products){
-  
-    
+
+
 //       const keys = Object.keys(product)
 //       for (let key of keys) {
 //         if (product[key] === productName) {
@@ -1443,10 +1443,10 @@
 //         //   console.log(null);
 //         // }
 //       }
-  
+
 //   // return null
 // }
-  
+
 //   // Change code above this line
 // }
 // getProductPrice("Radar")
@@ -1562,7 +1562,7 @@
 //     { name: "Stone skin", price: 520 },
 //   ],
 
-  
+
 //   // getPotions() {
 //   //   return this.potions;
 //   // },
@@ -1583,7 +1583,7 @@
 
 
 //   removePotion(potionName) {
-    
+
 //     // const [potion] = atTheOldToad.potions
 //     // const { name, cost } = potions
 //     for (let potion of atTheOldToad.potions) {
@@ -1592,7 +1592,7 @@
 //       console.log(potionIndex);
 //       if (potion.name === potionName) {
 //         //  console.log(this.potions.splice((potionIndex),1));
-        
+
 //         // return `Potion ${potionName} is not in inventory!`;
 //         console.log(this.potions.splice((potionIndex), 1));
 //       }
@@ -1601,10 +1601,10 @@
 //         if(potionIndex === -1){
 //         return `Potion ${potionName} is not in inventory!`;}
 //       }
-    
-    
+
+
 //     }
-    
+
 //     console.log(atTheOldToad.potions);
 //   },
 
@@ -1647,7 +1647,7 @@
 //  if(potion.name === newPotion.name){
 //    return `Error! Potion ${newPotion.name} is already in your inventory!`
 //  }
-    
+
 //   }
 //   this.potions.push(newPotion)
 // },
@@ -1744,7 +1744,7 @@
 //   repeat(5, printText)
 
 // const numbers = [5, 10, 15, 20, 25];
-  
+
 // for (i = 0; i < numbers.length; i += 1){
 //   console.log(i, numbers[i]);
 // }
@@ -2001,7 +2001,7 @@
 // Change code below this line
 // const getSortedFriends = users => {
 //   console.log([...users].flatMap((element, index, arr) => {
-  
+
 //     if (arr.indexOf(element) === index) {
 //       return element.friends}
 //   }).sort((a, b) => a.localeCompare(b)));
@@ -2162,7 +2162,7 @@
 //   }
 //   padEnd(str){
 //    return this.value = str + this.value
-    
+
 //   }
 //   padStart(str){
 //     return this.value += str
@@ -2264,27 +2264,27 @@
 //     let arrche = []
 //     for (i = 0; i < n; i += 1){
 //       arrche.push(customers.shift())
-      
+
 //     }
 //     let res = 0
 //     let curMi = 0
 //    while( customers.length > 0){
-     
-     
+
+
 //      for (i = 0; i < arrche.length; i++){
 //        arrche[i] -= curMi
 //        if (arrche[i] === 0) {
 //          arrche[i] = customers.shift()
 //        }
-       
+
 //      }
 // curMi = Math.min(...arrche)
 //        res += curMi
-     
+
 //     }
 //     return res
 //   }
-  
+
 // }
 // function queueTime(customers, registers) {
 //   let arr = [];
@@ -2625,11 +2625,11 @@
 //   console.log(first);
 //   first.length = 0
 //   console.log(first);
-  
+
 // }
 
 // newA(1,2,3,4,5,6,7,8)
-    
+
 
 // function persistence(num) {
 //   let strNum = String(num);
@@ -2758,7 +2758,7 @@
 //     string += `${i} * ${number} = ${i * number}\n`
 //   }
 
-  
+
 //   console.log(string.slice(0, -1));
 //   return string.slice(0, -1)
 
@@ -2837,7 +2837,7 @@
 //     for(i=1; i<=n; i+=1){
 //       res *= i
 //     }
-    
+
 //     return BigInt(res)
 // }
 // console.log(factorial(55));
@@ -2876,7 +2876,7 @@
 // const diamondNum = (n) => {
 //   let str = ''
 //   if(n % 2 === 0 || n <= 0) null
-  
+
 //   for (let i = 0; i < n; i++){
 //     let rep = Math.abs((n - 2*i - 1)/2)
 //     str += ' '.repeat(rep)
@@ -4217,3 +4217,236 @@
 //   return [h,m,s]
 // }
 
+const students = [
+  {
+    name: 'asdasdas',
+    age: 22,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 24,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 23,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 2,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 4,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 3,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 221,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 241,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 231,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 222,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 242,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 232,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 223,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 243,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 233,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 224,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 244,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 234,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 225,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 245,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 235,
+    city: 'kmfksdf'
+  },
+
+];
+
+
+
+// // const studentsSort = (students) => {
+// //     const start = new Date();
+// //     let isSorted = false
+// //     let temp
+// //     while (!isSorted) {
+// //         isSorted = true
+// //         for (let i = 0; i < students.length - 1; i++) {
+// //             if (students[i] > students[i + 1]) {
+// //                 temp = students[i]
+// //                 students[i] = students[i + 1]
+// //                 students[i + 1] = temp
+// //                 isSorted = false
+// //             }
+// //         }
+// //     }
+// //     const end = new Date();
+// //     console.log('Время выполнения:', end - start, 'мс');
+// //     return students
+// // }
+
+
+
+
+// const fs = require('fs').promises
+// const { v4: uuidv4 } = require('uuid');
+// const path = require('path')
+
+
+// const logfile = path.join(__dirname, 'MYLOGS.json')
+// const sortedJson = path.join(__dirname, "sorted.json")
+// const createID = async () => {
+//     const arr = []
+//     for (let i = 0; i < 100000000; i++) {
+//         arr.push(Math.floor(Math.random() * 100))
+//     }
+//     await fs.writeFile(logfile, JSON.stringify(arr))
+// }
+// createID()
+
+// const getArr = async () => {
+//     try {
+//         const file = await fs.readFile(logfile)
+//         return JSON.parse(file)
+//     } catch (err) {
+//         console.log(err);
+//     }
+// }
+
+// const studentsSort = async (stud) => {
+//     const start = new Date();
+//     let isSorted = false
+//     let temp
+//     while (!isSorted) {
+//         isSorted = true
+//         for (let i = 0; i < stud.length - 1; i++) {
+//             if (stud[i].age > stud[i + 1].age) {
+//                 temp = stud[i]
+//                 stud[i] = stud[i + 1]
+//                 stud[i + 1] = temp
+//                 isSorted = false
+//             }
+//         }
+//     }
+
+//     try {
+//         await fs.writeFile(sortedJson, JSON.stringify(stud, null, 2)); // Записываем отсортированный JSON в файл
+//         const end = new Date();
+//         console.log('Время выполнения:', end - start, 'мс');
+//         return stud; // Возвращаем отсортированный массив студентов
+//     } catch (err) {
+//         console.error('Ошибка при записи в файл:', err);
+//         throw err; // Пробрасываем ошибку выше для обработки в вызывающем коде
+//     }
+// }
+
+
+// const studentsSort = async (stud) => {
+//     const start = new Date();
+//     stud = stud.sort((a, b) => a.age - b.age)
+
+//     try {
+//         await fs.writeFile(sortedJson, JSON.stringify(stud, null, 2)); // Записываем отсортированный JSON в файл
+//         const end = new Date();
+//         console.log('Время выполнения:', end - start, 'мс');
+//         return stud; // Возвращаем отсортированный массив студентов
+//     } catch (err) {
+//         console.error('Ошибка при записи в файл:', err);
+//         throw err; // Пробрасываем ошибку выше для обработки в вызывающем коде
+//     }
+// }
+
+// getArr() // Получаем массив студентов из файла
+//     .then(students => {
+//         // console.log('Исходный массив студентов:', students);
+//         return studentsSort(students); // Сортируем массив студентов и записываем в файл
+//     })
+//     .then(sortedStudents => {
+//         // console.log('Отсортированный массив студентов:', sortedStudents);
+//     })
+//     .catch(error => {
+//         console.error('Произошла ошибка:', error);
+//     });
+
+const student = [22, 443, 543, 3452, 234, 6, 43, 324, 235, 2]
+const sortArr = (arr) => {
+  let isSorted = false
+  let temp
+  while (!isSorted) {
+    isSorted = true
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        temp = arr[i]
+        arr[i] = arr[i + 1]
+        arr[i + i] = temp
+        isSorted = false
+      }
+    }
+  }
+  return arr
+}
+
+console.log(sortArr(student));

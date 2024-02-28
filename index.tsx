@@ -502,7 +502,7 @@
 //     age: 23,
 //     city: 'kmfksdf'
 //   }
-]
+// ]
 
 // const studentsSort = (students: Student[]): Student[] => {
 //   return students.reduce((acc: Student[], el: Student) => {

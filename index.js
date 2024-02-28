@@ -121,7 +121,7 @@ const students = [
 
 ];
 
-// const students = [22, 443, 543, 3452, 234, 6, 43, 324, 235, 2]
+
 
 // // const studentsSort = (students) => {
 // //     const start = new Date();
@@ -146,13 +146,13 @@ const students = [
 
 
 
-const fs = require('fs').promises
-const { v4: uuidv4 } = require('uuid');
-const path = require('path')
+// const fs = require('fs').promises
+// const { v4: uuidv4 } = require('uuid');
+// const path = require('path')
 
 
-const logfile = path.join(__dirname, 'MYLOGS.json')
-const sortedJson = path.join(__dirname, "sorted.json")
+// const logfile = path.join(__dirname, 'MYLOGS.json')
+// const sortedJson = path.join(__dirname, "sorted.json")
 // const createID = async () => {
 //     const arr = []
 //     for (let i = 0; i < 100000000; i++) {
@@ -162,14 +162,14 @@ const sortedJson = path.join(__dirname, "sorted.json")
 // }
 // createID()
 
-const getArr = async () => {
-    try {
-        const file = await fs.readFile(logfile)
-        return JSON.parse(file)
-    } catch (err) {
-        console.log(err);
-    }
-}
+// const getArr = async () => {
+//     try {
+//         const file = await fs.readFile(logfile)
+//         return JSON.parse(file)
+//     } catch (err) {
+//         console.log(err);
+//     }
+// }
 
 // const studentsSort = async (stud) => {
 //     const start = new Date();
@@ -199,29 +199,52 @@ const getArr = async () => {
 // }
 
 
-const studentsSort = async (stud) => {
-    const start = new Date();
-    stud = stud.sort((a, b) => a.age - b.age)
+// const studentsSort = async (stud) => {
+//     const start = new Date();
+//     stud = stud.sort((a, b) => a.age - b.age)
 
-    try {
-        await fs.writeFile(sortedJson, JSON.stringify(stud, null, 2)); // Записываем отсортированный JSON в файл
-        const end = new Date();
-        console.log('Время выполнения:', end - start, 'мс');
-        return stud; // Возвращаем отсортированный массив студентов
-    } catch (err) {
-        console.error('Ошибка при записи в файл:', err);
-        throw err; // Пробрасываем ошибку выше для обработки в вызывающем коде
+//     try {
+//         await fs.writeFile(sortedJson, JSON.stringify(stud, null, 2)); // Записываем отсортированный JSON в файл
+//         const end = new Date();
+//         console.log('Время выполнения:', end - start, 'мс');
+//         return stud; // Возвращаем отсортированный массив студентов
+//     } catch (err) {
+//         console.error('Ошибка при записи в файл:', err);
+//         throw err; // Пробрасываем ошибку выше для обработки в вызывающем коде
+//     }
+// }
+
+// getArr() // Получаем массив студентов из файла
+//     .then(students => {
+//         // console.log('Исходный массив студентов:', students);
+//         return studentsSort(students); // Сортируем массив студентов и записываем в файл
+//     })
+//     .then(sortedStudents => {
+//         // console.log('Отсортированный массив студентов:', sortedStudents);
+//     })
+//     .catch(error => {
+//         console.error('Произошла ошибка:', error);
+//     });
+
+const randomNumbers = [22, 443, 543, 3452, 234, 6, 43, 324, 235, 2, 5, 4, 3, 2, 1, 4, 5, 6, 7, 8, 21]
+
+
+const bubbleSort = (arr) => {
+    let isSorted = false
+    let temp
+    while (!isSorted) {
+        isSorted = true
+        for (let i = 0; i <= arr.length; i++) {
+            if (arr[i] > arr[i + 1]) {
+                console.log(i);
+                temp = arr[i]
+                arr[i] = arr[i + 1]
+                arr[i + 1] = temp
+                isSorted = false
+            }
+        }
     }
+    return arr
 }
 
-getArr() // Получаем массив студентов из файла
-    .then(students => {
-        // console.log('Исходный массив студентов:', students);
-        return studentsSort(students); // Сортируем массив студентов и записываем в файл
-    })
-    .then(sortedStudents => {
-        // console.log('Отсортированный массив студентов:', sortedStudents);
-    })
-    .catch(error => {
-        console.error('Произошла ошибка:', error);
-    });
+console.log(bubbleSort(randomNumbers));
