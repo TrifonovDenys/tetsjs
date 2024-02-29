@@ -229,22 +229,41 @@ const students = [
 const randomNumbers = [22, 443, 543, 3452, 234, 6, 43, 324, 235, 2, 5, 4, 3, 2, 1, 4, 5, 6, 7, 8, 21]
 
 
-const bubbleSort = (arr) => {
-    let isSorted = false
+// const bubbleSort = (arr) => {
+//     let isSorted = false
+//     let temp
+//     while (!isSorted) {
+//         isSorted = true
+//         for (let i = 0; i <= arr.length; i++) {
+//             if (arr[i] > arr[i + 1]) {
+//                 console.log(i);
+//                 temp = arr[i]
+//                 arr[i] = arr[i + 1]
+//                 arr[i + 1] = temp
+//                 isSorted = false
+//             }
+//         }
+//     }
+//     return arr
+// }
+
+// console.log(bubbleSort(randomNumbers));
+
+const sortA = (arr) => {
+    let s = false
     let temp
-    while (!isSorted) {
-        isSorted = true
-        for (let i = 0; i <= arr.length; i++) {
+    while (!s) {
+        s = true
+        for (let i = 0; i < arr.length; i++) {
             if (arr[i] > arr[i + 1]) {
-                console.log(i);
                 temp = arr[i]
                 arr[i] = arr[i + 1]
                 arr[i + 1] = temp
-                isSorted = false
+                s = false
             }
         }
     }
     return arr
 }
 
-console.log(bubbleSort(randomNumbers));
+console.log(sortA(randomNumbers));
