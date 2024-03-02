@@ -705,4 +705,7 @@
 //     console.error('Произошла ошибка:', error);
 //   });
 
-
+export function movie(card: number, ticket: number, perc: number): number {
+  // your code
+  return -1
+}
