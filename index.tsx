@@ -510,114 +510,119 @@
 //   })
 // }
 
-// const students = [
-//     {
-//         name: 'asdasdas',
-//         age: 22,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 24,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 23,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 2,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 4,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 3,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 221,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 241,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 231,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 222,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 242,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 232,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 223,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 243,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 233,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 224,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 244,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 234,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 225,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 245,
-//         city: 'kmfksdf'
-//     },
-//     {
-//         name: 'asdasdas',
-//         age: 235,
-//         city: 'kmfksdf'
-//     },
+interface Student {
+  name: string,
+  age: number,
+  city: string
+}
+const students = [
+  {
+    name: 'asdasdas',
+    age: 22,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 24,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 23,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 2,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 4,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 3,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 221,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 241,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 231,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 222,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 242,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 232,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 223,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 243,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 233,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 224,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 244,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 234,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 225,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 245,
+    city: 'kmfksdf'
+  },
+  {
+    name: 'asdasdas',
+    age: 235,
+    city: 'kmfksdf'
+  },
 
-// ];
+];
 
 // const students = [22, 443, 543, 3452, 234, 6, 43, 324, 235, 2]
 
@@ -705,7 +710,17 @@
 //     console.error('Произошла ошибка:', error);
 //   });
 
-export function movie(card: number, ticket: number, perc: number): number {
-  // your code
-  return -1
+const lightSort = (students: Student[]) => {
+  const arr: Student[] = []
+  while (students.length > 0) {
+    let index = students.reduce((acc: number, el: Student, index: number, arr: Student[]) => {
+      return el.age > arr[acc].age ? acc : index
+    }, 0)
+    arr.push(students[index])
+    students.splice(index, 1)
+  }
+  return arr
 }
+
+
+console.log(lightSort(students));
