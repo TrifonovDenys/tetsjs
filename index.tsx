@@ -510,119 +510,119 @@
 //   })
 // }
 
-interface Student {
-  name: string,
-  age: number,
-  city: string
-}
-const students = [
-  {
-    name: 'asdasdas',
-    age: 22,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 24,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 23,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 2,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 4,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 3,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 221,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 241,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 231,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 222,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 242,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 232,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 223,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 243,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 233,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 224,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 244,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 234,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 225,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 245,
-    city: 'kmfksdf'
-  },
-  {
-    name: 'asdasdas',
-    age: 235,
-    city: 'kmfksdf'
-  },
+// interface Student {
+//   name: string,
+//   age: number,
+//   city: string
+// }
+// const students = [
+//   {
+//     name: 'asdasdas',
+//     age: 22,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 24,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 23,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 2,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 4,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 3,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 221,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 241,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 231,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 222,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 242,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 232,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 223,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 243,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 233,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 224,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 244,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 234,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 225,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 245,
+//     city: 'kmfksdf'
+//   },
+//   {
+//     name: 'asdasdas',
+//     age: 235,
+//     city: 'kmfksdf'
+//   },
 
-];
+// ];
 
 // const students = [22, 443, 543, 3452, 234, 6, 43, 324, 235, 2]
 
@@ -724,7 +724,147 @@ const students = [
 
 
 // console.log(lightSort(students));
+// console.log(lightSort(students));
 
+// const students = [
+//   { name: 'Alice', age: 21, courses: ['Math', 'Physics'] },
+//   { name: 'Bob', age: 19, courses: ['Computer Science'] },
+//   { name: 'Charlie', age: 20, courses: ['History', 'Art'] },
+// ];
+
+// // Заборонено використовувати метод .sort(), рекурсії, цикл у циклі, більше одного явного виклику циклу (for, .foreach(), .map(), .reduce(), .filter(), etc).
+
+// function sortStudentsByAge(students) {
+//     let isSorted = false;
+//     let temp;
+//     while (!isSorted) {
+//         isSorted = true;
+//         for (let i = 0; i < students.length - 1; i += 1) {
+//             if (students[i].age < students[i + 1].age) {
+//                 temp = students[i];
+//                 students[i] = students[i + 1];
+//                 students[i + 1] = temp;
+//                 isSorted = false;
+//             }
+//         }
+//     }
+//     return students.map((student) => student.name);
+// }
+
+// function sortStudentsByAge(students) {
+//     const arr = [];
+//     console.log(arr);
+//     while (students.length > 0) {
+//         const indexOfMinAge = students.reduce((minIndex, student, currentIndex, array) => {
+//             return student.age < array[minIndex].age ? currentIndex : minIndex;
+//         }, 0);
+//         arr.push(students[indexOfMinAge]);
+//         students.splice(indexOfMinAge, 1);
+//     }
+//     return arr;
+// }
+
+// function sortStudentsByAge(arr) {
+//     const sortedArr = [];
+//     const newArr = [...arr];
+//     const arrAges = arr.map((student) => student.age);
+
+//     while (newArr.length > 0) {
+//         let index = arrAges.indexOf(Math.max(...arrAges));
+//         sortedArr.push(newArr[index].name);
+//         newArr.splice(index, 1);
+//         arrAges.splice(index, 1);
+//     }
+//     return sortedArr;
+// }
+
+// console.log(sortStudentsByAge(students));
+
+// Очікуваний результат
+
+// [ 'Alice', 'Charlie', 'Bob' ]
+// const csv = require('csv-parser');
+// const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+// const fs = require('fs').promises;
+// const path = require('path');
+// const { email, paidP } = require('./const');
+
+// const baseOld = path.join(__dirname, 'baseOld.json');
+// const baseGeg = path.join(__dirname, 'baseGeg.json');
+// const baseNew = path.join(__dirname, 'baseNew.json');
+// // const paidPeople = path.join(__dirname, 'peoplePaid.xls');
+
+// const csvWriter = createCsvWriter({
+//     path: 'peoplePaid.csv',
+//     header: [
+//         { id: 'Имя', title: 'Имя' },
+//         { id: 'Фамилия', title: 'Фамилия' },
+//         { id: 'Отчество', title: 'Отчество' },
+//         { id: 'email', title: 'email' },
+//     ],
+//     encoding: 'utf-8',
+// });
+
+// // FUNCTION GET A STRING AND FORM AN ARRAY WITH OBJECTS
+// const creatJson = async (email, paidP) => {
+//     const separator = ';';
+//     const obj = email
+//         .split('\n')
+//         .map((el) => el.split('\t'))
+//         .map((el) => ({
+//             Имя: el[0].trim(),
+//             Фамилия: el[1].trim(),
+//             Отчество: el[2].trim(),
+//             email: el[3].trim(),
+//         }));
+
+//     const arrPaidP = paidP.split('\n');
+
+//     const objPaid = obj.filter((el) => arrPaidP.includes(el.email));
+//     // .map((el) => `${el.Имя}${separator}${el.Фамилия}${separator}${el.Отчество}${separator}${el.email}`);
+
+//     console.log(objPaid);
+
+//     csvWriter.writeRecords(objPaid).then(() => console.log('The CSV file was written successfully'));
+//     // return await fs.writeFile(paidPeople, objPaid, 'utf-8');
+// };
+
+// creatJson(email, paidP);
+
+// (async () => {
+//     const old = JSON.parse(await fs.readFile(baseOld, 'utf-8'));
+//     const reg = JSON.parse(await fs.readFile(baseGeg, 'utf-8'));
+//     const newEmails = reg.filter((email) => !old.includes(email));
+//     await await fs.writeFile(baseNew, JSON.stringify(newEmails, null, 2));
+// })();
+
+// FUNCTION GET A STRING AND FORM AN ARRAY WITH OBJECTS
+// const creatJson = async (email, paidP) => {
+//     const obj = email
+//         .split('\n')
+//         .map((el) => el.split('\t'))
+//         .map((el) => ({
+//             Имя: el[2],
+//             Фамилия: el[1],
+//             Побатькові: el[3],
+//             email: el[0],
+//             телефон: el[7],
+//             Спеціальність: el[6],
+//             Стать: el[4],
+//             робота: el[9],
+//             Регіон: el[5],
+//             народження: el[8],
+//         }));
+
+//     const arrPaidP = paidP.split('\n');
+
+//     const objPaid = obj.filter((el) => arrPaidP.includes(el.email)).map((el) => el);
+//     console.log(obj);
+
+//     return await fs.writeFile(paidPeople, JSON.stringify(objPaid, null, 2));
+// };
+
+// creatJson(email, paidP);
 
 export const encryptThis = (str: string): string => {
 
@@ -747,3 +887,4 @@ export const encryptThis = (str: string): string => {
 }
 console.log(encryptThis("A"));
 console.log(encryptThis("A wise old owl lived in an oak"));
+
