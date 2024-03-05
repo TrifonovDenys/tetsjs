@@ -710,17 +710,40 @@ const students = [
 //     console.error('Произошла ошибка:', error);
 //   });
 
-const lightSort = (students: Student[]) => {
-  const arr: Student[] = []
-  while (students.length > 0) {
-    let index = students.reduce((acc: number, el: Student, index: number, arr: Student[]) => {
-      return el.age > arr[acc].age ? acc : index
-    }, 0)
-    arr.push(students[index])
-    students.splice(index, 1)
-  }
-  return arr
+// const lightSort = (students: Student[]) => {
+//   const arr: Student[] = []
+//   while (students.length > 0) {
+//     let index = students.reduce((acc: number, el: Student, index: number, arr: Student[]) => {
+//       return el.age > arr[acc].age ? acc : index
+//     }, 0)
+//     arr.push(students[index])
+//     students.splice(index, 1)
+//   }
+//   return arr
+// }
+
+
+// console.log(lightSort(students));
+
+
+export const encryptThis = (str: string): string => {
+
+  return str.split(' ').map(word => {
+    if (word.length > 3) {
+      return `${word.charCodeAt(0)}${word[word.length - 1]}${word.slice(2, word.length - 1)}${word[1]}`
+    }
+    if (word.length == 2) {
+      return `${word.charCodeAt(0)}${word[1]}`
+    }
+    if (word.length > 1) {
+      return `${word.charCodeAt(0)}${word[word.length - 1]}${word[1]}`
+    }
+
+    if (word.length == 1) {
+      return word[0].charCodeAt(0)
+    }
+    return word
+  }).join(' ')
 }
-
-
-console.log(lightSort(students));
+console.log(encryptThis("A"));
+console.log(encryptThis("A wise old owl lived in an oak"));

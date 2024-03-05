@@ -10,6 +10,8 @@
 //   }).join()
 //   return replace;
 // }
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.encryptThis = void 0;
 const students = [
     {
         name: 'asdasdas',
@@ -192,16 +194,30 @@ const students = [
 //   .catch(error => {
 //     console.error('Произошла ошибка:', error);
 //   });
-const lightSort = (students) => {
-    const arr = [];
-    // return students
-    while (students.length > 0) {
-        let index = students.reduce((acc, el, index, arr) => {
-            return el.age > arr[acc].age ? acc : index;
-        }, 0);
-        arr.push(students[index]);
-        students.splice(index, 1);
-    }
-    return arr;
+// const lightSort = (students: Student[]) => {
+//   const arr: Student[] = []
+//   while (students.length > 0) {
+//     let index = students.reduce((acc: number, el: Student, index: number, arr: Student[]) => {
+//       return el.age > arr[acc].age ? acc : index
+//     }, 0)
+//     arr.push(students[index])
+//     students.splice(index, 1)
+//   }
+//   return arr
+// }
+// console.log(lightSort(students));
+const encryptThis = (str) => {
+    console.log(str);
+    return str.split(' ').map(word => {
+        if (word.length > 1) {
+            return `${word.charCodeAt(0)}${word[word.length - 1]}${word.slice(2, word.length - 1)}${word[1]}`;
+        }
+        if (word.length == 1) {
+            return word[0].charCodeAt(0);
+        }
+        return word;
+    }).join(' ');
 };
-console.log(lightSort(students));
+exports.encryptThis = encryptThis;
+console.log((0, exports.encryptThis)("A"));
+console.log((0, exports.encryptThis)("A wise old owl lived in an oak"));
