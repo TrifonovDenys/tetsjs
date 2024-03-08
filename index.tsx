@@ -866,25 +866,45 @@
 
 // creatJson(email, paidP);
 
-export const encryptThis = (str: string): string => {
+// export const encryptThis = (str: string): string => {
 
-  return str.split(' ').map(word => {
-    if (word.length > 3) {
-      return `${word.charCodeAt(0)}${word[word.length - 1]}${word.slice(2, word.length - 1)}${word[1]}`
-    }
-    if (word.length == 2) {
-      return `${word.charCodeAt(0)}${word[1]}`
-    }
-    if (word.length > 1) {
-      return `${word.charCodeAt(0)}${word[word.length - 1]}${word[1]}`
-    }
+//   return str.split(' ').map(word => {
+//     if (word.length > 3) {
+//       return `${word.charCodeAt(0)}${word[word.length - 1]}${word.slice(2, word.length - 1)}${word[1]}`
+//     }
+//     if (word.length == 2) {
+//       return `${word.charCodeAt(0)}${word[1]}`
+//     }
+//     if (word.length > 1) {
+//       return `${word.charCodeAt(0)}${word[word.length - 1]}${word[1]}`
+//     }
 
-    if (word.length == 1) {
-      return word[0].charCodeAt(0)
-    }
-    return word
-  }).join(' ')
-}
-console.log(encryptThis("A"));
-console.log(encryptThis("A wise old owl lived in an oak"));
+//     if (word.length == 1) {
+//       return word[0].charCodeAt(0)
+//     }
+//     return word
+//   }).join(' ')
+// }
+// console.log(encryptThis("A"));
+// console.log(encryptThis("A wise old owl lived in an oak"));
 
+
+
+let age: number = 50;
+let namen: string = 'Max';
+let toggle: Boolean = true;
+let empty: null = null;
+let notInitialize: unknown;
+let callback = (a: number) => { return 100 + a };
+
+let anything: any = -20;
+anything = 'Text';
+anything = {};
+
+let some:unknown;
+some = 'Text';
+let str: string;
+str = some as string
+
+type Person = [string, number]
+let person: = ['Max', 21];
