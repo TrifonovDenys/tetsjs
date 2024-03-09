@@ -888,3 +888,6 @@ export const encryptThis = (str: string): string => {
 console.log(encryptThis("A"));
 console.log(encryptThis("A wise old owl lived in an oak"));
 
+export function saleHotdogs(n: number): number {
+  return n < 5 ? n * 100 : n >= 5 && n < 10 ? n * 95 : n * 90
+}
