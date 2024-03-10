@@ -889,26 +889,29 @@
 // console.log(encryptThis("A wise old owl lived in an oak"));
 
 
-export function saleHotdogs(n: number): number {
-  return n < 5 ? n * 100 : n >= 5 && n < 10 ? n * 95 : n * 90
-}
+// export function saleHotdogs(n: number): number {
+//   return n < 5 ? n * 100 : n >= 5 && n < 10 ? n * 95 : n * 90
+// }
 
 
-let age: number = 50;
-let namen: string = 'Max';
-let toggle: Boolean = true;
-let empty: null = null;
-let notInitialize: unknown;
-let callback = (a: number) => { return 100 + a };
+// let age: number = 50;
+// let namen: string = 'Max';
+// let toggle: Boolean = true;
+// let empty: null = null;
+// let notInitialize: unknown;
+// let callback = (a: number) => { return 100 + a };
 
-let anything: any = -20;
-anything = 'Text';
-anything = {};
+// let anything: any = -20;
+// anything = 'Text';
+// anything = {};
 
-let some: unknown;
-some = 'Text';
-let str: string;
-str = some as string
+// let some: unknown;
+// some = 'Text';
+// let str: string;
+// str = some as string
 
-type Person = [string, number]
+// type Person = [string, number]
 // let person: = ['Max', 21];
+
+
+export const flyBy = (lamps: string, drone: string): string => lamps.length < drone.length ? "o".repeat(lamps.length) : 'o'.repeat(drone.length) + lamps.slice(drone.length) 
