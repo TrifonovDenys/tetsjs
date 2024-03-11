@@ -914,4 +914,15 @@
 // let person: = ['Max', 21];
 
 
-export const flyBy = (lamps: string, drone: string): string => lamps.length < drone.length ? "o".repeat(lamps.length) : 'o'.repeat(drone.length) + lamps.slice(drone.length) 
+// export const flyBy = (lamps: string, drone: string): string => lamps.length < drone.length ? "o".repeat(lamps.length) : 'o'.repeat(drone.length) + lamps.slice(drone.length) 
+export function sumArray(array: number[]): number {
+  if (!array || array.length <= 1) return 0;
+  return array.sort((a, b) => a - b).slice(1, -1).reduce((p, n) => p + n, 0);
+}
+
+export function usdcny(usd: number): string {
+
+  return (usd * 6.75).toFixed(2)
+}
+
+console.log(usdcny(9758));
