@@ -915,14 +915,36 @@
 
 
 // export const flyBy = (lamps: string, drone: string): string => lamps.length < drone.length ? "o".repeat(lamps.length) : 'o'.repeat(drone.length) + lamps.slice(drone.length) 
-export function sumArray(array: number[]): number {
-  if (!array || array.length <= 1) return 0;
-  return array.sort((a, b) => a - b).slice(1, -1).reduce((p, n) => p + n, 0);
+// export function sumArray(array: number[]): number {
+//   if (!array || array.length <= 1) return 0;
+//   return array.sort((a, b) => a - b).slice(1, -1).reduce((p, n) => p + n, 0);
+// }
+
+// export function usdcny(usd: number): string {
+
+//   return (usd * 6.75).toFixed(2)
+// }
+
+// console.log(usdcny(9758));
+
+
+export function circleArea(radius: number): number {
+  if (radius <= 0) throw new Error
+  return Math.PI * (radius ** 2)
 }
 
-export function usdcny(usd: number): string {
+export function rank(st: string, we: number[], n: number) {
+  const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+  const aaa = st.split(',').map((el, i) => {
+    return el.split('').reduce((acc: number, leter: string) => {
+      const weigth = (alphabet.indexOf(leter.toLowerCase()) + 1)
+      return acc + weigth
+    }, 0)
+  })
+    .map(el => el + n).map((el, i) => el * we[i])
 
-  return (usd * 6.75).toFixed(2)
+  console.log(aaa);
+  return aaa
 }
 
-console.log(usdcny(9758));
+console.log(rank("COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH", [1, 4, 4, 5, 2, 1], 4));

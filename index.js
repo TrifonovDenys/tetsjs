@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.usdcny = exports.sumArray = void 0;
+exports.rank = exports.circleArea = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -770,14 +770,31 @@ exports.usdcny = exports.sumArray = void 0;
 // type Person = [string, number]
 // let person: = ['Max', 21];
 // export const flyBy = (lamps: string, drone: string): string => lamps.length < drone.length ? "o".repeat(lamps.length) : 'o'.repeat(drone.length) + lamps.slice(drone.length) 
-function sumArray(array) {
-    if (!array || array.length <= 1)
-        return 0;
-    return array.sort((a, b) => a - b).slice(1, -1).reduce((p, n) => p + n, 0);
+// export function sumArray(array: number[]): number {
+//   if (!array || array.length <= 1) return 0;
+//   return array.sort((a, b) => a - b).slice(1, -1).reduce((p, n) => p + n, 0);
+// }
+// export function usdcny(usd: number): string {
+//   return (usd * 6.75).toFixed(2)
+// }
+// console.log(usdcny(9758));
+function circleArea(radius) {
+    if (radius <= 0)
+        throw new Error;
+    return Math.PI * (radius ** 2);
 }
-exports.sumArray = sumArray;
-function usdcny(usd) {
-    return (usd * 6.75).toFixed(2);
+exports.circleArea = circleArea;
+function rank(st, we, n) {
+    const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    const aaa = st.split(',').map((el, i) => {
+        return el.split('').reduce((acc, leter) => {
+            const weigth = (alphabet.indexOf(leter.toLowerCase()) + 1);
+            return acc + weigth;
+        }, 0);
+    })
+        .map(el => el + n).map((el, i) => el * we[i]);
+    console.log(aaa);
+    return aaa;
 }
-exports.usdcny = usdcny;
-console.log(usdcny(9758));
+exports.rank = rank;
+console.log(rank("COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH", [1, 4, 4, 5, 2, 1], 4));
