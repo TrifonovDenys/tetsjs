@@ -933,18 +933,54 @@ export function circleArea(radius: number): number {
   return Math.PI * (radius ** 2)
 }
 
-export function rank(st: string, we: number[], n: number) {
-  const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-  const aaa = st.split(',').map((el, i) => {
-    return el.split('').reduce((acc: number, leter: string) => {
-      const weigth = (alphabet.indexOf(leter.toLowerCase()) + 1)
-      return acc + weigth
-    }, 0)
-  })
-    .map(el => el + n).map((el, i) => el * we[i])
+// export function rank(st: string, we: number[], n: number): string {
+//   const arrParticipants = st.split(',')
+//   if (!st) return "No participants"
+//   if (n > arrParticipants.length) return "Not enough participants"
+//   const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+//   const aaa = arrParticipants
+//     .map((el) => {
+//       return el.split('').reduce((acc: number, leter: string) => {
+//         const weigth = (alphabet.indexOf(leter.toLowerCase()) + 1)
+//         return acc + weigth
+//       }, 0)
+//     })
+//     .map(el => el + n)
+//     .map((el, i) => el * we[i])
+//   const newArr = [...aaa]
+//   return arrParticipants[aaa.indexOf(newArr.sort((a, b) => b - a)[0])]
+// } 
 
-  console.log(aaa);
-  return aaa
+
+
+export function rank(st: string, we: number[], n: number): string {
+  if (st === '') {
+    return "No participants";
+  }
+
+  const names = st.split(",");
+  if (n > names.length) {
+    return "Not enough participants";
+  }
+
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const getRank = (letter: string) => alphabet.indexOf(letter.toLowerCase()) + 1;
+
+  const scores = names.map((name, index) => {
+    const sumOfRanks = name.split("").reduce((sum, letter) => sum + getRank(letter), 0);
+    const weightedScore = (sumOfRanks + name.length) * we[index];
+    return { name, score: weightedScore };
+  });
+
+  scores.sort((a, b) => {
+    if (a.score !== b.score) {
+      return b.score - a.score;
+    } else {
+      return a.name.localeCompare(b.name);
+    }
+  });
+
+  return scores[n - 1].name;
 }
 
 console.log(rank("COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH", [1, 4, 4, 5, 2, 1], 4));
