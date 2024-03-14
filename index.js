@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.rank = exports.circleArea = void 0;
+exports.splitTheBill = exports.circleArea = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -800,31 +800,51 @@ exports.circleArea = circleArea;
 //     .map((el, i) => el * we[i])
 //   const newArr = [...aaa]
 //   return arrParticipants[aaa.indexOf(newArr.sort((a, b) => b - a)[0])]
-// } 
-function rank(st, we, n) {
-    if (st === '') {
-        return "No participants";
+// }
+// export function rank(st: string, we: number[], n: number): string {
+//   if (st === '') {
+//     return "No participants";
+//   }
+//   const names = st.split(",");
+//   if (n > names.length) {
+//     return "Not enough participants";
+//   }
+//   const alphabet = "abcdefghijklmnopqrstuvwxyz";
+//   const getRank = (letter: string) => alphabet.indexOf(letter.toLowerCase()) + 1;
+//   const scores = names.map((name, index) => {
+//     const sumOfRanks = name.split("").reduce((sum, letter) => sum + getRank(letter), 0);
+//     const weightedScore = (sumOfRanks + name.length) * we[index];
+//     return { name, score: weightedScore };
+//   });
+//   scores.sort((a, b) => {
+//     if (a.score !== b.score) {
+//       return b.score - a.score;
+//     } else {
+//       return a.name.localeCompare(b.name);
+//     }
+//   });
+//   return scores[n - 1].name;
+// }
+// console.log(rank("COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH", [1, 4, 4, 5, 2, 1], 4));
+function splitTheBill(x) {
+    const newArr = [];
+    const keys = [];
+    for (let key in x) {
+        keys.push(key);
+        newArr.push(x[key]);
     }
-    const names = st.split(",");
-    if (n > names.length) {
-        return "Not enough participants";
-    }
-    const alphabet = "abcdefghijklmnopqrstuvwxyz";
-    const getRank = (letter) => alphabet.indexOf(letter.toLowerCase()) + 1;
-    const scores = names.map((name, index) => {
-        const sumOfRanks = name.split("").reduce((sum, letter) => sum + getRank(letter), 0);
-        const weightedScore = (sumOfRanks + name.length) * we[index];
-        return { name, score: weightedScore };
-    });
-    scores.sort((a, b) => {
-        if (a.score !== b.score) {
-            return b.score - a.score;
+    return keys.reduce((acc, el, i) => {
+        if (i === 0) {
+            acc[el] = newArr[0] - newArr[1];
         }
-        else {
-            return a.name.localeCompare(b.name);
+        if (i === 1) {
+            acc[el] = 0;
         }
-    });
-    return scores[n - 1].name;
+        if (i === 2) {
+            acc[el] = newArr[2] - newArr[1];
+        }
+        return acc;
+    }, {});
 }
-exports.rank = rank;
-console.log(rank("COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH", [1, 4, 4, 5, 2, 1], 4));
+exports.splitTheBill = splitTheBill;
+console.log(splitTheBill({ A: 20, B: 15, C: 10 }));
