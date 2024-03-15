@@ -986,25 +986,25 @@ export function circleArea(radius: number): number {
 // console.log(rank("COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH", [1, 4, 4, 5, 2, 1], 4));
 
 
-export function splitTheBill(x: { [k: string]: number }): { [k: string]: number } {
-  const newArr: number[] = []
-  const keys: string[] = []
-  for (let key in x) {
-    keys.push(key)
-    newArr.push(x[key]);
-  }
-  return keys.reduce((acc: Record<string, number>, el: string, i: number) => {
-    if (i === 0) {
-      acc[el] = newArr[0] - newArr[1]
-    }
-    if (i === 1) {
-      acc[el] = 0
-    }
-    if (i === 2) {
-      acc[el] = newArr[2] - newArr[1]
-    }
-    return acc
-  }, {})
-}
+// export function splitTheBill(x: { [k: string]: number }): { [k: string]: number } {
+//   const newArr: number[] = []
+//   const keys: string[] = []
+//   for (let key in x) {
+//     keys.push(key)
+//     newArr.push(x[key]);
+//   }
+//   return keys.reduce((acc: Record<string, number>, el: string, i: number) => {
+//     if (i === 0) {
+//       acc[el] = newArr[0] - newArr[1]
+//     }
+//     if (i === 1) {
+//       acc[el] = 0
+//     }
+//     if (i === 2) {
+//       acc[el] = newArr[2] - newArr[1]
+//     }
+//     return acc
+//   }, {})
+// }
 
-console.log(splitTheBill({ A: 20, B: 15, C: 10 }));
+// console.log(splitTheBill({ A: 20, B: 15, C: 10 }));
