@@ -1008,3 +1008,14 @@ export function circleArea(radius: number): number {
 // }
 
 // console.log(splitTheBill({ A: 20, B: 15, C: 10 }));
+
+// export function rps(p1: string, p2: string): string {
+//   return (p1 === "scissors" && p2 === "paper") || (p1 === "paper" && p2 === "rock") || (p1 === "rock" && p2 === "scissors")
+//     ? "Player 1 won!" : (p1 === "paper" && p2 === "scissors") || (p1 === "scissors" && p2 === "rock") || (p1 === "rock" && p2 === "paper")
+//       ? "Player 2 won!" : "Draw!"
+// }
+
+
+export function countLettersAndDigits(input: string): number {
+  return 0;
+}
