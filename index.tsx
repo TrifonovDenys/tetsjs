@@ -1017,5 +1017,7 @@ export function circleArea(radius: number): number {
 
 
 export function countLettersAndDigits(input: string): number {
-  return 0;
+  let temp: number = 0;
+  input.split('').forEach(i => i.match(/^[a-z0-9]+$/i) ? temp++ : temp)
+  return temp;
 }
