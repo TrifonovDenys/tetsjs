@@ -1021,3 +1021,11 @@ export function countLettersAndDigits(input: string): number {
   input.split('').forEach(i => i.match(/^[a-z0-9]+$/i) ? temp++ : temp)
   return temp;
 }
+
+export function nbMonths(p0: number, p1: number, s: number, r: number, m: number = 0, t: number = 0): number[] {
+  if (p1 <= p0 + t) return [m, Math.round(p0 - p1 + t)];
+  p0 -= p0 * .01 * r;
+  p1 -= p1 * .01 * r;
+  if (++m % 2) r += .5;
+  return nbMonths(p0, p1, s, r, m, t + s);
+}
