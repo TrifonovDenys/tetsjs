@@ -1029,3 +1029,8 @@ export function nbMonths(p0: number, p1: number, s: number, r: number, m: number
   if (++m % 2) r += .5;
   return nbMonths(p0, p1, s, r, m, t + s);
 }
+
+export function getMiddle(s: string) {
+  const middle = Math.ceil(s.length / 2) - 1
+  return s.slice(middle, s.length - middle)
+}
