@@ -889,22 +889,148 @@
 // console.log(encryptThis("A wise old owl lived in an oak"));
 
 
+// export function saleHotdogs(n: number): number {
+//   return n < 5 ? n * 100 : n >= 5 && n < 10 ? n * 95 : n * 90
+// }
 
-let age: number = 50;
-let namen: string = 'Max';
-let toggle: Boolean = true;
-let empty: null = null;
-let notInitialize: unknown;
-let callback = (a: number) => { return 100 + a };
 
-let anything: any = -20;
-anything = 'Text';
-anything = {};
+// let age: number = 50;
+// let namen: string = 'Max';
+// let toggle: Boolean = true;
+// let empty: null = null;
+// let notInitialize: unknown;
+// let callback = (a: number) => { return 100 + a };
 
-let some:unknown;
-some = 'Text';
-let str: string;
-str = some as string
+// let anything: any = -20;
+// anything = 'Text';
+// anything = {};
 
-type Person = [string, number]
-let person: = ['Max', 21];
+// let some: unknown;
+// some = 'Text';
+// let str: string;
+// str = some as string
+
+// type Person = [string, number]
+// let person: = ['Max', 21];
+
+
+// export const flyBy = (lamps: string, drone: string): string => lamps.length < drone.length ? "o".repeat(lamps.length) : 'o'.repeat(drone.length) + lamps.slice(drone.length) 
+// export function sumArray(array: number[]): number {
+//   if (!array || array.length <= 1) return 0;
+//   return array.sort((a, b) => a - b).slice(1, -1).reduce((p, n) => p + n, 0);
+// }
+
+// export function usdcny(usd: number): string {
+
+//   return (usd * 6.75).toFixed(2)
+// }
+
+// console.log(usdcny(9758));
+
+
+export function circleArea(radius: number): number {
+  if (radius <= 0) throw new Error
+  return Math.PI * (radius ** 2)
+}
+
+// export function rank(st: string, we: number[], n: number): string {
+//   const arrParticipants = st.split(',')
+//   if (!st) return "No participants"
+//   if (n > arrParticipants.length) return "Not enough participants"
+//   const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+//   const aaa = arrParticipants
+//     .map((el) => {
+//       return el.split('').reduce((acc: number, leter: string) => {
+//         const weigth = (alphabet.indexOf(leter.toLowerCase()) + 1)
+//         return acc + weigth
+//       }, 0)
+//     })
+//     .map(el => el + n)
+//     .map((el, i) => el * we[i])
+//   const newArr = [...aaa]
+//   return arrParticipants[aaa.indexOf(newArr.sort((a, b) => b - a)[0])]
+// }
+
+
+
+// export function rank(st: string, we: number[], n: number): string {
+//   if (st === '') {
+//     return "No participants";
+//   }
+
+//   const names = st.split(",");
+//   if (n > names.length) {
+//     return "Not enough participants";
+//   }
+
+//   const alphabet = "abcdefghijklmnopqrstuvwxyz";
+//   const getRank = (letter: string) => alphabet.indexOf(letter.toLowerCase()) + 1;
+
+//   const scores = names.map((name, index) => {
+//     const sumOfRanks = name.split("").reduce((sum, letter) => sum + getRank(letter), 0);
+//     const weightedScore = (sumOfRanks + name.length) * we[index];
+//     return { name, score: weightedScore };
+//   });
+
+//   scores.sort((a, b) => {
+//     if (a.score !== b.score) {
+//       return b.score - a.score;
+//     } else {
+//       return a.name.localeCompare(b.name);
+//     }
+//   });
+
+//   return scores[n - 1].name;
+// }
+
+// console.log(rank("COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH", [1, 4, 4, 5, 2, 1], 4));
+
+
+// export function splitTheBill(x: { [k: string]: number }): { [k: string]: number } {
+//   const newArr: number[] = []
+//   const keys: string[] = []
+//   for (let key in x) {
+//     keys.push(key)
+//     newArr.push(x[key]);
+//   }
+//   return keys.reduce((acc: Record<string, number>, el: string, i: number) => {
+//     if (i === 0) {
+//       acc[el] = newArr[0] - newArr[1]
+//     }
+//     if (i === 1) {
+//       acc[el] = 0
+//     }
+//     if (i === 2) {
+//       acc[el] = newArr[2] - newArr[1]
+//     }
+//     return acc
+//   }, {})
+// }
+
+// console.log(splitTheBill({ A: 20, B: 15, C: 10 }));
+
+// export function rps(p1: string, p2: string): string {
+//   return (p1 === "scissors" && p2 === "paper") || (p1 === "paper" && p2 === "rock") || (p1 === "rock" && p2 === "scissors")
+//     ? "Player 1 won!" : (p1 === "paper" && p2 === "scissors") || (p1 === "scissors" && p2 === "rock") || (p1 === "rock" && p2 === "paper")
+//       ? "Player 2 won!" : "Draw!"
+// }
+
+
+export function countLettersAndDigits(input: string): number {
+  let temp: number = 0;
+  input.split('').forEach(i => i.match(/^[a-z0-9]+$/i) ? temp++ : temp)
+  return temp;
+}
+
+export function nbMonths(p0: number, p1: number, s: number, r: number, m: number = 0, t: number = 0): number[] {
+  if (p1 <= p0 + t) return [m, Math.round(p0 - p1 + t)];
+  p0 -= p0 * .01 * r;
+  p1 -= p1 * .01 * r;
+  if (++m % 2) r += .5;
+  return nbMonths(p0, p1, s, r, m, t + s);
+}
+
+export function getMiddle(s: string) {
+  const middle = Math.ceil(s.length / 2) - 1
+  return s.slice(middle, s.length - middle)
+}
