@@ -1016,21 +1016,26 @@ export function circleArea(radius: number): number {
 // }
 
 
-export function countLettersAndDigits(input: string): number {
-  let temp: number = 0;
-  input.split('').forEach(i => i.match(/^[a-z0-9]+$/i) ? temp++ : temp)
-  return temp;
-}
+// export function countLettersAndDigits(input: string): number {
+//   let temp: number = 0;
+//   input.split('').forEach(i => i.match(/^[a-z0-9]+$/i) ? temp++ : temp)
+//   return temp;
+// }
 
-export function nbMonths(p0: number, p1: number, s: number, r: number, m: number = 0, t: number = 0): number[] {
-  if (p1 <= p0 + t) return [m, Math.round(p0 - p1 + t)];
-  p0 -= p0 * .01 * r;
-  p1 -= p1 * .01 * r;
-  if (++m % 2) r += .5;
-  return nbMonths(p0, p1, s, r, m, t + s);
-}
+// export function nbMonths(p0: number, p1: number, s: number, r: number, m: number = 0, t: number = 0): number[] {
+//   if (p1 <= p0 + t) return [m, Math.round(p0 - p1 + t)];
+//   p0 -= p0 * .01 * r;
+//   p1 -= p1 * .01 * r;
+//   if (++m % 2) r += .5;
+//   return nbMonths(p0, p1, s, r, m, t + s);
+// }
 
-export function getMiddle(s: string) {
-  const middle = Math.ceil(s.length / 2) - 1
-  return s.slice(middle, s.length - middle)
+// export function getMiddle(s: string) {
+//   const middle = Math.ceil(s.length / 2) - 1
+//   return s.slice(middle, s.length - middle)
+// }
+
+const f = (n: number) => {
+  if (n === 0) return 1
+  return f(n + f(n - 1))
 }
