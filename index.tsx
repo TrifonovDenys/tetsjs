@@ -1039,3 +1039,19 @@ const f = (n: number) => {
   if (n === 0) return 1
   return f(n + f(n - 1))
 }
+
+export function change(string: string): string {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  let result = '';
+
+  for (let i = 0; i < alphabet.length; i++) {
+    const char = alphabet[i];
+    if (string.toLowerCase().includes(char)) {
+      result += '1';
+    } else {
+      result += '0';
+    }
+  }
+
+  return result;
+}
