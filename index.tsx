@@ -1055,3 +1055,14 @@ export function circleArea(radius: number): number {
 
 //   return result;
 // }
+
+export function nthSmallest(arr: number[], pos: number) {
+  if (arr.length < 3) {
+    throw new Error(`Array must contain at least 3 elements!`);
+  }
+
+  const arrCopy = arr.slice();
+  const arrSortedAscending = arrCopy.sort((a, b) => a - b);
+
+  return arrSortedAscending[pos - 1];
+}
