@@ -1056,19 +1056,24 @@ export function circleArea(radius: number): number {
 //   return result;
 // }
 
-export function nthSmallest(arr: number[], pos: number) {
-  if (arr.length < 3) {
-    throw new Error(`Array must contain at least 3 elements!`);
-  }
+// export function nthSmallest(arr: number[], pos: number) {
+//   if (arr.length < 3) {
+//     throw new Error(`Array must contain at least 3 elements!`);
+//   }
 
-  const arrCopy = arr.slice();
-  const arrSortedAscending = arrCopy.sort((a, b) => a - b);
+//   const arrCopy = arr.slice();
+//   const arrSortedAscending = arrCopy.sort((a, b) => a - b);
 
-  return arrSortedAscending[pos - 1];
-}
+//   return arrSortedAscending[pos - 1];
+// }
 
-export function findNb(m: number): number {
-  var n = 0;
-  while (m > 0) m -= Math.pow(++n, 3);
-  return m ? -1 : n
+// export function findNb(m: number): number {
+//   var n = 0;
+//   while (m > 0) m -= Math.pow(++n, 3);
+//   return m ? -1 : n
+// }
+
+export function average(scores: number[]): number {
+
+  return Math.round(scores.reduce((acc: number, el: number) => acc += el) / scores.length)
 }
