@@ -1073,7 +1073,15 @@ export function circleArea(radius: number): number {
 //   return m ? -1 : n
 // }
 
-export function average(scores: number[]): number {
+// export function average(scores: number[]): number {
 
-  return Math.round(scores.reduce((acc: number, el: number) => acc += el) / scores.length)
+//   return Math.round(scores.reduce((acc: number, el: number) => acc += el) / scores.length)
+// }
+
+export function wallpaper(l: number, w: number, h: number): string {
+  const roomArea = 2 * (l + w) * h
+  const rollArea = 0.52 * 10
+  const rollsNeed = Math.ceil(roomArea / rollArea * 1.15)
+  const numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+  return l && w && h ? numbers[rollsNeed] : "zero"
 }
