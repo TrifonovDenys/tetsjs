@@ -1085,3 +1085,13 @@ export function wallpaper(l: number, w: number, h: number): string {
   const numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
   return l && w && h ? numbers[rollsNeed] : "zero"
 }
+
+export function wallpaper(l: number, w: number, h: number): string {
+  const numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+  const rollWidth = 0.52;
+  const rollLongth = 10;
+  if ([w, l, h].includes(0)) return numbers[0]
+  const minimum = (2 * (w + l) * h) / (rollWidth * rollLongth)
+  const result = Math.ceil(minimum + 0.15 * minimum)
+  return numbers[result]
+}
