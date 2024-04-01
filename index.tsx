@@ -1078,20 +1078,44 @@ export function circleArea(radius: number): number {
 //   return Math.round(scores.reduce((acc: number, el: number) => acc += el) / scores.length)
 // }
 
-export function wallpaper(l: number, w: number, h: number): string {
-  const roomArea = 2 * (l + w) * h
-  const rollArea = 0.52 * 10
-  const rollsNeed = Math.ceil(roomArea / rollArea * 1.15)
-  const numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
-  return l && w && h ? numbers[rollsNeed] : "zero"
+// export function wallpaper(l: number, w: number, h: number): string {
+//   const roomArea = 2 * (l + w) * h
+//   const rollArea = 0.52 * 10
+//   const rollsNeed = Math.ceil(roomArea / rollArea * 1.15)
+//   const numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+//   return l && w && h ? numbers[rollsNeed] : "zero"
+// }
+
+// export function wallpaper(l: number, w: number, h: number): string {
+//   const numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+//   const rollWidth = 0.52;
+//   const rollLongth = 10;
+//   if ([w, l, h].includes(0)) return numbers[0]
+//   const minimum = (2 * (w + l) * h) / (rollWidth * rollLongth)
+//   const result = Math.ceil(minimum + 0.15 * minimum)
+//   return numbers[result]
+// }
+
+
+// const f = (n: number): number => {
+//   if (n <= 1) return 1
+//   return n * f(n - 1)
+// }
+const factorial = (n: number): number => {
+  let res = 0
+  for (let i = 1; i < n; i++) {
+    res *= i
+  }
+  return res
 }
 
-export function wallpaper(l: number, w: number, h: number): string {
-  const numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
-  const rollWidth = 0.52;
-  const rollLongth = 10;
-  if ([w, l, h].includes(0)) return numbers[0]
-  const minimum = (2 * (w + l) * h) / (rollWidth * rollLongth)
-  const result = Math.ceil(minimum + 0.15 * minimum)
-  return numbers[result]
-}
+export const strongNumber = (num: number): string => {
+  const arrNumber = num.toString().split('').map(el => +el)
+  return arrNumber.reduce((acc: number, n: number) => {
+    acc += factorial(n)
+    return acc
+  }, 0) === num ? "STRONG!!!!" : "Not Strong !!"
+};
+
+
+console.log(strongNumber(14));

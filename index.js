@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.splitTheBill = exports.circleArea = void 0;
+exports.strongNumber = exports.circleArea = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -826,25 +826,108 @@ exports.circleArea = circleArea;
 //   return scores[n - 1].name;
 // }
 // console.log(rank("COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH", [1, 4, 4, 5, 2, 1], 4));
-function splitTheBill(x) {
-    const newArr = [];
-    const keys = [];
-    for (let key in x) {
-        keys.push(key);
-        newArr.push(x[key]);
-    }
-    return keys.reduce((acc, el, i) => {
-        if (i === 0) {
-            acc[el] = newArr[0] - newArr[1];
-        }
-        if (i === 1) {
-            acc[el] = 0;
-        }
-        if (i === 2) {
-            acc[el] = newArr[2] - newArr[1];
-        }
+// export function splitTheBill(x: { [k: string]: number }): { [k: string]: number } {
+//   const newArr: number[] = []
+//   const keys: string[] = []
+//   for (let key in x) {
+//     keys.push(key)
+//     newArr.push(x[key]);
+//   }
+//   return keys.reduce((acc: Record<string, number>, el: string, i: number) => {
+//     if (i === 0) {
+//       acc[el] = newArr[0] - newArr[1]
+//     }
+//     if (i === 1) {
+//       acc[el] = 0
+//     }
+//     if (i === 2) {
+//       acc[el] = newArr[2] - newArr[1]
+//     }
+//     return acc
+//   }, {})
+// }
+// console.log(splitTheBill({ A: 20, B: 15, C: 10 }));
+// export function rps(p1: string, p2: string): string {
+//   return (p1 === "scissors" && p2 === "paper") || (p1 === "paper" && p2 === "rock") || (p1 === "rock" && p2 === "scissors")
+//     ? "Player 1 won!" : (p1 === "paper" && p2 === "scissors") || (p1 === "scissors" && p2 === "rock") || (p1 === "rock" && p2 === "paper")
+//       ? "Player 2 won!" : "Draw!"
+// }
+// export function countLettersAndDigits(input: string): number {
+//   let temp: number = 0;
+//   input.split('').forEach(i => i.match(/^[a-z0-9]+$/i) ? temp++ : temp)
+//   return temp;
+// }
+// export function nbMonths(p0: number, p1: number, s: number, r: number, m: number = 0, t: number = 0): number[] {
+//   if (p1 <= p0 + t) return [m, Math.round(p0 - p1 + t)];
+//   p0 -= p0 * .01 * r;
+//   p1 -= p1 * .01 * r;
+//   if (++m % 2) r += .5;
+//   return nbMonths(p0, p1, s, r, m, t + s);
+// }
+// export function getMiddle(s: string) {
+//   const middle = Math.ceil(s.length / 2) - 1
+//   return s.slice(middle, s.length - middle)
+// }
+// const f = (n: number) => {
+//   if (n === 0) return 1
+//   return f(n + f(n - 1))
+// }
+// export function change(string: string): string {
+//   const alphabet = "abcdefghijklmnopqrstuvwxyz";
+//   let result = '';
+//   for (let i = 0; i < alphabet.length; i++) {
+//     const char = alphabet[i];
+//     if (string.toLowerCase().includes(char)) {
+//       result += '1';
+//     } else {
+//       result += '0';
+//     }
+//   }
+//   return result;
+// }
+// export function nthSmallest(arr: number[], pos: number) {
+//   if (arr.length < 3) {
+//     throw new Error(`Array must contain at least 3 elements!`);
+//   }
+//   const arrCopy = arr.slice();
+//   const arrSortedAscending = arrCopy.sort((a, b) => a - b);
+//   return arrSortedAscending[pos - 1];
+// }
+// export function findNb(m: number): number {
+//   var n = 0;
+//   while (m > 0) m -= Math.pow(++n, 3);
+//   return m ? -1 : n
+// }
+// export function average(scores: number[]): number {
+//   return Math.round(scores.reduce((acc: number, el: number) => acc += el) / scores.length)
+// }
+// export function wallpaper(l: number, w: number, h: number): string {
+//   const roomArea = 2 * (l + w) * h
+//   const rollArea = 0.52 * 10
+//   const rollsNeed = Math.ceil(roomArea / rollArea * 1.15)
+//   const numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+//   return l && w && h ? numbers[rollsNeed] : "zero"
+// }
+// export function wallpaper(l: number, w: number, h: number): string {
+//   const numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+//   const rollWidth = 0.52;
+//   const rollLongth = 10;
+//   if ([w, l, h].includes(0)) return numbers[0]
+//   const minimum = (2 * (w + l) * h) / (rollWidth * rollLongth)
+//   const result = Math.ceil(minimum + 0.15 * minimum)
+//   return numbers[result]
+// }
+const f = (n) => {
+    if (n <= 1)
+        return 1;
+    return n * f(n - 1);
+};
+const strongNumber = (num) => {
+    const arrNumber = num.toString().split('').map(el => +el);
+    return arrNumber.reduce((acc, n) => {
+        acc += f(n);
         return acc;
-    }, {});
-}
-exports.splitTheBill = splitTheBill;
-console.log(splitTheBill({ A: 20, B: 15, C: 10 }));
+    }, 0) > num ? "STRONG!!!!" : "Not Strong !!";
+};
+exports.strongNumber = strongNumber;
+console.log((0, exports.strongNumber)(14));
