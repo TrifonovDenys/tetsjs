@@ -917,17 +917,21 @@ exports.circleArea = circleArea;
 //   const result = Math.ceil(minimum + 0.15 * minimum)
 //   return numbers[result]
 // }
-const f = (n) => {
-    if (n <= 1)
-        return 1;
-    return n * f(n - 1);
+// const f = (n: number): number => {
+//   if (n <= 1) return 1
+//   return n * f(n - 1)
+// }
+const factorial = (n) => {
+    let res = 1;
+    for (let i = 1; i <= n; res *= i, i++) { }
+    return res;
 };
 const strongNumber = (num) => {
     const arrNumber = num.toString().split('').map(el => +el);
     return arrNumber.reduce((acc, n) => {
-        acc += f(n);
+        acc += factorial(n);
         return acc;
-    }, 0) > num ? "STRONG!!!!" : "Not Strong !!";
+    }, 0) === num ? "STRONG!!!!" : "Not Strong !!";
 };
 exports.strongNumber = strongNumber;
-console.log((0, exports.strongNumber)(14));
+console.log((0, exports.strongNumber)(1));

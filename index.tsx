@@ -1102,10 +1102,8 @@ export function circleArea(radius: number): number {
 //   return n * f(n - 1)
 // }
 const factorial = (n: number): number => {
-  let res = 0
-  for (let i = 1; i < n; i++) {
-    res *= i
-  }
+  let res = 1
+  for (let i = 1; i <= n; res *= i, i++) { }
   return res
 }
 
@@ -1118,4 +1116,4 @@ export const strongNumber = (num: number): string => {
 };
 
 
-console.log(strongNumber(14));
+console.log(strongNumber(1));
