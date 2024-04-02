@@ -1117,3 +1117,12 @@ export const strongNumber = (num: number): string => {
 
 
 console.log(strongNumber(1));
+
+export function abbreviate(str: string): string {
+  return str.replace(/[a-z]{4,}/gi, (match) => {
+    const firstLetter = match[0];
+    const lastLetter = match[match.length - 1];
+    const abbreviation = `${firstLetter}${match.length - 2}${lastLetter}`;
+    return abbreviation;
+  })
+}
