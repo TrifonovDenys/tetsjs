@@ -1101,28 +1101,69 @@ export function circleArea(radius: number): number {
 //   if (n <= 1) return 1
 //   return n * f(n - 1)
 // }
-const factorial = (n: number): number => {
-  let res = 1
-  for (let i = 1; i <= n; res *= i, i++) { }
-  return res
+// const factorial = (n: number): number => {
+//   let res = 1
+//   for (let i = 1; i <= n; res *= i, i++) { }
+//   return res
+// }
+
+// export const strongNumber = (num: number): string => {
+//   const arrNumber = num.toString().split('').map(el => +el)
+//   return arrNumber.reduce((acc: number, n: number) => {
+//     acc += factorial(n)
+//     return acc
+//   }, 0) === num ? "STRONG!!!!" : "Not Strong !!"
+// };
+
+
+// console.log(strongNumber(1));
+
+// export function abbreviate(str: string): string {
+//   return str.replace(/[a-z]{4,}/gi, (match) => {
+//     const firstLetter = match[0];
+//     const lastLetter = match[match.length - 1];
+//     const abbreviation = `${firstLetter}${match.length - 2}${lastLetter}`;
+//     return abbreviation;
+//   })
+// }
+export function arrayLeaders(numbers: number[]): number[] {
+
+  const leadingArr: number[] = []
+  let temp: number = 0
+  const tempArr: number[] = [...numbers]
+  let sumOfTempArr: number = 0
+
+  for (let i = 0; i < numbers.length; i++) {
+    temp = numbers[i]
+    tempArr.shift()
+    sumOfTempArr = tempArr.reduce((acc: number, number: number) => {
+      acc += number
+      return acc
+    }, 0)
+    if (temp > sumOfTempArr) {
+      leadingArr.push(temp)
+    }
+  }
+
+  return leadingArr
 }
 
-export const strongNumber = (num: number): string => {
-  const arrNumber = num.toString().split('').map(el => +el)
-  return arrNumber.reduce((acc: number, n: number) => {
-    acc += factorial(n)
-    return acc
-  }, 0) === num ? "STRONG!!!!" : "Not Strong !!"
-};
+
+console.log(arrayLeaders([16, 17, 4, 3, 5, 2]));
 
 
-console.log(strongNumber(1));
+export function save(sizes: number[], hd: number) {
+  let counter = 0
 
-export function abbreviate(str: string): string {
-  return str.replace(/[a-z]{4,}/gi, (match) => {
-    const firstLetter = match[0];
-    const lastLetter = match[match.length - 1];
-    const abbreviation = `${firstLetter}${match.length - 2}${lastLetter}`;
-    return abbreviation;
-  })
+  sizes.reduce((accum: number, elem: number) => {
+    accum += elem
+    if (accum <= hd) {
+      counter++
+    }
+    return accum
+  }, 0)
+  return counter
 }
+
+console.log(save([1, 2, 3, 4], 250));
+
