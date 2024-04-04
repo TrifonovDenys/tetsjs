@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.save = exports.arrayLeaders = exports.circleArea = void 0;
+exports.isPowerOfTwo = exports.circleArea = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -942,37 +942,37 @@ exports.circleArea = circleArea;
 //     return abbreviation;
 //   })
 // }
-function arrayLeaders(numbers) {
-    const leadingArr = [];
-    let temp = 0;
-    const tempArr = [...numbers];
-    let sumOfTempArr = 0;
-    for (let i = 0; i < numbers.length; i++) {
-        temp = numbers[i];
-        tempArr.shift();
-        sumOfTempArr = tempArr.reduce((acc, number) => {
-            acc += number;
-            return acc;
-        }, 0);
-        if (temp > sumOfTempArr) {
-            leadingArr.push(temp);
-        }
-    }
-    return leadingArr;
-}
-exports.arrayLeaders = arrayLeaders;
-console.log(arrayLeaders([16, 17, 4, 3, 5, 2]));
-function save(sizes, hd) {
-    let counter = 0;
-    for (let i = 1; i <= sizes.length; i++) {
-        if (sizes.slice(-sizes.length + i).reduce((accum, elem) => {
-            accum += elem;
-            return accum;
-        }, 0) <= hd) {
-            counter += 1;
-        }
-    }
-    return counter;
-}
-exports.save = save;
-console.log(save([1, 2, 3, 4], 250));
+// export function arrayLeaders(numbers: number[]): number[] {
+//   const leadingArr: number[] = []
+//   let temp: number = 0
+//   const tempArr: number[] = [...numbers]
+//   let sumOfTempArr: number = 0
+//   for (let i = 0; i < numbers.length; i++) {
+//     temp = numbers[i]
+//     tempArr.shift()
+//     sumOfTempArr = tempArr.reduce((acc: number, number: number) => {
+//       acc += number
+//       return acc
+//     }, 0)
+//     if (temp > sumOfTempArr) {
+//       leadingArr.push(temp)
+//     }
+//   }
+//   return leadingArr
+// }
+// console.log(arrayLeaders([16, 17, 4, 3, 5, 2]));
+// export function save(sizes: number[], hd: number) {
+//   let counter = 0
+//   sizes.reduce((accum: number, elem: number) => {
+//     accum += elem
+//     if (accum <= hd) {
+//       counter++
+//     }
+//     return accum
+//   }, 0)
+//   return counter
+// }
+// console.log(save([1, 2, 3, 4], 250));
+const isPowerOfTwo = (n) => [true, false][Number.isInteger(Math.log2(n))];
+exports.isPowerOfTwo = isPowerOfTwo;
+console.log((0, exports.isPowerOfTwo)(524288));

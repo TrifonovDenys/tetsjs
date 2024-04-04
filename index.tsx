@@ -1126,44 +1126,49 @@ export function circleArea(radius: number): number {
 //     return abbreviation;
 //   })
 // }
-export function arrayLeaders(numbers: number[]): number[] {
+// export function arrayLeaders(numbers: number[]): number[] {
 
-  const leadingArr: number[] = []
-  let temp: number = 0
-  const tempArr: number[] = [...numbers]
-  let sumOfTempArr: number = 0
+//   const leadingArr: number[] = []
+//   let temp: number = 0
+//   const tempArr: number[] = [...numbers]
+//   let sumOfTempArr: number = 0
 
-  for (let i = 0; i < numbers.length; i++) {
-    temp = numbers[i]
-    tempArr.shift()
-    sumOfTempArr = tempArr.reduce((acc: number, number: number) => {
-      acc += number
-      return acc
-    }, 0)
-    if (temp > sumOfTempArr) {
-      leadingArr.push(temp)
-    }
-  }
+//   for (let i = 0; i < numbers.length; i++) {
+//     temp = numbers[i]
+//     tempArr.shift()
+//     sumOfTempArr = tempArr.reduce((acc: number, number: number) => {
+//       acc += number
+//       return acc
+//     }, 0)
+//     if (temp > sumOfTempArr) {
+//       leadingArr.push(temp)
+//     }
+//   }
 
-  return leadingArr
-}
-
-
-console.log(arrayLeaders([16, 17, 4, 3, 5, 2]));
+//   return leadingArr
+// }
 
 
-export function save(sizes: number[], hd: number) {
-  let counter = 0
+// console.log(arrayLeaders([16, 17, 4, 3, 5, 2]));
 
-  sizes.reduce((accum: number, elem: number) => {
-    accum += elem
-    if (accum <= hd) {
-      counter++
-    }
-    return accum
-  }, 0)
-  return counter
-}
 
-console.log(save([1, 2, 3, 4], 250));
+// export function save(sizes: number[], hd: number) {
+//   let counter = 0
 
+//   sizes.reduce((accum: number, elem: number) => {
+//     accum += elem
+//     if (accum <= hd) {
+//       counter++
+//     }
+//     return accum
+//   }, 0)
+//   return counter
+// }
+
+// console.log(save([1, 2, 3, 4], 250));
+
+
+
+export const isPowerOfTwo = (n: number): boolean => [false, true][+Number.isInteger(Math.log2(n))]
+
+console.log(isPowerOfTwo(524288));
