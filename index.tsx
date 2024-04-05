@@ -1172,3 +1172,9 @@ export function circleArea(radius: number): number {
 export const isPowerOfTwo = (n: number): boolean => [false, true][+Number.isInteger(Math.log2(n))]
 
 console.log(isPowerOfTwo(524288));
+export const shorterReverseLonger = (a: string, b: string): string => {
+  const [str1, str2] = [a, b].sort((a, b) => a.length - b.length);
+  return a.length === b.length
+    ? `${b}${[...a].reverse().join('')}${b}`
+    : `${str1}${[...str2].reverse().join('')}${str1}`;
+};
