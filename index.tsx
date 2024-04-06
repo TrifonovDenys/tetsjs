@@ -1178,3 +1178,11 @@ export const shorterReverseLonger = (a: string, b: string): string => {
     ? `${b}${[...a].reverse().join('')}${b}`
     : `${str1}${[...str2].reverse().join('')}${str1}`;
 };
+
+export class G964 {
+  public static game(n: number): number[] {
+    var m = n * n;
+    if (m % 2 === 0) return [m / 2];
+    else return [m, 2];
+  }
+}
