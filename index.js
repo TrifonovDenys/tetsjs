@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isPowerOfTwo = exports.circleArea = void 0;
+exports.binaryToString = exports.circleArea = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -973,6 +973,24 @@ exports.circleArea = circleArea;
 //   return counter
 // }
 // console.log(save([1, 2, 3, 4], 250));
-const isPowerOfTwo = (n) => [true, false][Number.isInteger(Math.log2(n))];
-exports.isPowerOfTwo = isPowerOfTwo;
-console.log((0, exports.isPowerOfTwo)(524288));
+// export const isPowerOfTwo = (n: number): boolean => [false, true][+Number.isInteger(Math.log2(n))]
+// console.log(isPowerOfTwo(524288));
+// export const shorterReverseLonger = (a: string, b: string): string => {
+//   const [str1, str2] = [a, b].sort((a, b) => a.length - b.length);
+//   return a.length === b.length
+//     ? `${b}${[...a].reverse().join('')}${b}`
+//     : `${str1}${[...str2].reverse().join('')}${str1}`;
+// };
+// export class G964 {
+//   public static game(n: number): number[] {
+//     var m = n * n;
+//     if (m % 2 === 0) return [m / 2];
+//     else return [m, 2];
+//   }
+// }
+const binaryToString = (binary) => {
+    return `${binary.match(/.{1,8}/g)}`.split(',').map(el => String.fromCharCode(parseInt(el, 2))).join('');
+};
+exports.binaryToString = binaryToString;
+// 
+console.log((0, exports.binaryToString)('01001011010101000100100001011000010000100101100101000101'));

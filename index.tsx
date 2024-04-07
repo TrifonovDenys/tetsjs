@@ -1169,20 +1169,31 @@ export function circleArea(radius: number): number {
 
 
 
-export const isPowerOfTwo = (n: number): boolean => [false, true][+Number.isInteger(Math.log2(n))]
+// export const isPowerOfTwo = (n: number): boolean => [false, true][+Number.isInteger(Math.log2(n))]
 
-console.log(isPowerOfTwo(524288));
-export const shorterReverseLonger = (a: string, b: string): string => {
-  const [str1, str2] = [a, b].sort((a, b) => a.length - b.length);
-  return a.length === b.length
-    ? `${b}${[...a].reverse().join('')}${b}`
-    : `${str1}${[...str2].reverse().join('')}${str1}`;
-};
+// console.log(isPowerOfTwo(524288));
+// export const shorterReverseLonger = (a: string, b: string): string => {
+//   const [str1, str2] = [a, b].sort((a, b) => a.length - b.length);
+//   return a.length === b.length
+//     ? `${b}${[...a].reverse().join('')}${b}`
+//     : `${str1}${[...str2].reverse().join('')}${str1}`;
+// };
 
-export class G964 {
-  public static game(n: number): number[] {
-    var m = n * n;
-    if (m % 2 === 0) return [m / 2];
-    else return [m, 2];
+// export class G964 {
+//   public static game(n: number): number[] {
+//     var m = n * n;
+//     if (m % 2 === 0) return [m / 2];
+//     else return [m, 2];
+//   }
+// }
+
+export const binaryToString = (binary: string) => {
+  const binaryRegex = /^[01]+$/;
+  if (binaryRegex.test(binary)) {
+    return `${binary.match(/.{1,8}/g)}`.split(',').map(el => String.fromCharCode(parseInt(el, 2))).join('')
   }
+  return ''
 }
+
+
+console.log(binaryToString('01001011010101000100100001011000010000100101100101000101'));
