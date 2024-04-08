@@ -1197,3 +1197,15 @@ export const binaryToString = (binary: string) => {
 
 
 console.log(binaryToString('01001011010101000100100001011000010000100101100101000101'));
+
+
+export function sortMyString(s: string): string {
+  let even = ''
+  let odd = ''
+  for (let i = 0; i < s.length; i++){
+    i % 2 === 0 ? even += s[i] : odd += s[i]
+  }
+  return even + odd
+}
+
+console.log(sortMyString("YCOLUE'VREER"));
