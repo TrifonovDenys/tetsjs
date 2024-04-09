@@ -1197,3 +1197,31 @@ export const binaryToString = (binary: string) => {
 
 
 console.log(binaryToString('01001011010101000100100001011000010000100101100101000101'));
+
+
+export function calcType(a: number, b: number, res: number): string {
+  if (a + b === res) return 'addition'
+  if (a - b === res) return 'subtraction'
+  if (a * b === res) return 'multiplication'
+  return 'division'
+}
+
+export const scale = (s: string, k: number, n: number): string => {
+  if (s == "") return s;
+  const strings = s.split("\n");
+  const horizontalScaled = strings.map(l => {
+    return l
+      .split("")
+      .map(x => x.repeat(k))
+      .join("");
+  });
+
+  let finalString = "";
+  for (const s of horizontalScaled) {
+    finalString += `${s}\n`.repeat(n);
+  }
+
+  const final = finalString.slice(0, -1);
+  console.log(final);
+  return final;
+};
