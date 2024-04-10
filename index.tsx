@@ -1237,3 +1237,8 @@ export const scale = (s: string, k: number, n: number): string => {
   console.log(final);
   return final;
 };
+
+export const isAllPossibilities = (x: number[]): boolean => x.every((_, i, arr) => arr.includes(i))
+
+
+console.log(isAllPossibilities([4, 2, 1, 0]));

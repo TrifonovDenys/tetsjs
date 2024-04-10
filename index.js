@@ -11,7 +11,7 @@
 //   return replace;
 // }
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.binaryToString = exports.circleArea = void 0;
+exports.isAllPossibilities = exports.scale = exports.calcType = exports.sortMyString = exports.binaryToString = exports.circleArea = void 0;
 // htmlspecialchars("<h2>Hello World</h2>")
 // function noBoringZeros(n: number): number {
 //   for (let i = String(n).length - 1; i > 0; i--)
@@ -989,8 +989,55 @@ exports.circleArea = circleArea;
 //   }
 // }
 const binaryToString = (binary) => {
-    return `${binary.match(/.{1,8}/g)}`.split(',').map(el => String.fromCharCode(parseInt(el, 2))).join('');
+    const binaryRegex = /^[01]+$/;
+    if (binaryRegex.test(binary)) {
+        return `${binary.match(/.{1,8}/g)}`.split(',').map(el => String.fromCharCode(parseInt(el, 2))).join('');
+    }
+    return '';
 };
 exports.binaryToString = binaryToString;
-// 
 console.log((0, exports.binaryToString)('01001011010101000100100001011000010000100101100101000101'));
+function sortMyString(s) {
+    let even = '';
+    let odd = '';
+    for (let i = 0; i < s.length; i++) {
+        i % 2 === 0 ? even += s[i] : odd += s[i];
+    }
+    return even + odd;
+}
+exports.sortMyString = sortMyString;
+console.log(sortMyString("YCOLUE'VREER"));
+function calcType(a, b, res) {
+    if (a + b === res)
+        return 'addition';
+    if (a - b === res)
+        return 'subtraction';
+    if (a * b === res)
+        return 'multiplication';
+    return 'division';
+}
+exports.calcType = calcType;
+const scale = (s, k, n) => {
+    if (s == "")
+        return s;
+    const strings = s.split("\n");
+    const horizontalScaled = strings.map(l => {
+        return l
+            .split("")
+            .map(x => x.repeat(k))
+            .join("");
+    });
+    let finalString = "";
+    for (const s of horizontalScaled) {
+        finalString += `${s}\n`.repeat(n);
+    }
+    const final = finalString.slice(0, -1);
+    console.log(final);
+    return final;
+};
+exports.scale = scale;
+function isAllPossibilities(x) {
+    return x.every((_, i, arr) => arr.includes(i));
+}
+exports.isAllPossibilities = isAllPossibilities;
+console.log(isAllPossibilities([4, 2, 1, 0]));
