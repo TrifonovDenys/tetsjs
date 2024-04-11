@@ -1242,3 +1242,10 @@ export const isAllPossibilities = (x: number[]): boolean => x.every((_, i, arr) 
 
 
 console.log(isAllPossibilities([4, 2, 1, 0]));
+
+
+export function dative(word: string): string | undefined {
+  const front = 'eéiíöőüű'.split('')
+  const back = 'aáoóuú'.split('')
+  return front.some(el => word.includes(el)) ? `${word}nak` : `${word}nek`
+}
