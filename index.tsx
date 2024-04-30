@@ -1187,80 +1187,85 @@ export function circleArea(radius: number): number {
 //   }
 // }
 
-export const binaryToString = (binary: string) => {
-  const binaryRegex = /^[01]+$/;
-  if (binaryRegex.test(binary)) {
-    return `${binary.match(/.{1,8}/g)}`.split(',').map(el => String.fromCharCode(parseInt(el, 2))).join('')
-  }
-  return ''
-}
+// export const binaryToString = (binary: string) => {
+//   const binaryRegex = /^[01]+$/;
+//   if (binaryRegex.test(binary)) {
+//     return `${binary.match(/.{1,8}/g)}`.split(',').map(el => String.fromCharCode(parseInt(el, 2))).join('')
+//   }
+//   return ''
+// }
 
 
-console.log(binaryToString('01001011010101000100100001011000010000100101100101000101'));
+// console.log(binaryToString('01001011010101000100100001011000010000100101100101000101'));
 
-export function sortMyString(s: string): string {
-  let even = ''
-  let odd = ''
-  for (let i = 0; i < s.length; i++) {
-    i % 2 === 0 ? even += s[i] : odd += s[i]
-  }
-  return even + odd
-}
+// export function sortMyString(s: string): string {
+//   let even = ''
+//   let odd = ''
+//   for (let i = 0; i < s.length; i++) {
+//     i % 2 === 0 ? even += s[i] : odd += s[i]
+//   }
+//   return even + odd
+// }
 
-console.log(sortMyString("YCOLUE'VREER"));
-
-
-
-export function calcType(a: number, b: number, res: number): string {
-  if (a + b === res) return 'addition'
-  if (a - b === res) return 'subtraction'
-  if (a * b === res) return 'multiplication'
-  return 'division'
-}
-
-export const scale = (s: string, k: number, n: number): string => {
-  if (s == "") return s;
-  const strings = s.split("\n");
-  const horizontalScaled = strings.map(l => {
-    return l
-      .split("")
-      .map(x => x.repeat(k))
-      .join("");
-  });
-
-  let finalString = "";
-  for (const s of horizontalScaled) {
-    finalString += `${s}\n`.repeat(n);
-  }
-
-  const final = finalString.slice(0, -1);
-  console.log(final);
-  return final;
-};
-
-export const isAllPossibilities = (x: number[]): boolean => x.every((_, i, arr) => arr.includes(i))
+// console.log(sortMyString("YCOLUE'VREER"));
 
 
-console.log(isAllPossibilities([4, 2, 1, 0]));
+
+// export function calcType(a: number, b: number, res: number): string {
+//   if (a + b === res) return 'addition'
+//   if (a - b === res) return 'subtraction'
+//   if (a * b === res) return 'multiplication'
+//   return 'division'
+// }
+
+// export const scale = (s: string, k: number, n: number): string => {
+//   if (s == "") return s;
+//   const strings = s.split("\n");
+//   const horizontalScaled = strings.map(l => {
+//     return l
+//       .split("")
+//       .map(x => x.repeat(k))
+//       .join("");
+//   });
+
+//   let finalString = "";
+//   for (const s of horizontalScaled) {
+//     finalString += `${s}\n`.repeat(n);
+//   }
+
+//   const final = finalString.slice(0, -1);
+//   console.log(final);
+//   return final;
+// };
+
+// export const isAllPossibilities = (x: number[]): boolean => x.every((_, i, arr) => arr.includes(i))
 
 
-export function dative(word: string): string | undefined {
-  const front = 'eéiíöőüű'.split('')
-  const back = 'aáoóuú'.split('')
-  return front.some(el => word.includes(el)) ? `${word}nak` : `${word}nek`
-}
+// console.log(isAllPossibilities([4, 2, 1, 0]));
 
-export function jumpingNumber(n: number) {
-  let arr: number[] = String(n).split('')
-    .map(num => Number(num))
 
-  if (arr.length === 1) {
-    return 'Jumping!!'
-  }
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] - arr[i + 1] !== 1 && arr[i + 1] - arr[i] !== 1) {
-      return 'Not!!'
-    }
-  }
-  return 'Jumping!!'
+// export function dative(word: string): string | undefined {
+//   const front = 'eéiíöőüű'.split('')
+//   const back = 'aáoóuú'.split('')
+//   return front.some(el => word.includes(el)) ? `${word}nak` : `${word}nek`
+// }
+
+// export function jumpingNumber(n: number) {
+//   let arr: number[] = String(n).split('')
+//     .map(num => Number(num))
+
+//   if (arr.length === 1) {
+//     return 'Jumping!!'
+//   }
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     if (arr[i] - arr[i + 1] !== 1 && arr[i + 1] - arr[i] !== 1) {
+//       return 'Not!!'
+//     }
+//   }
+//   return 'Jumping!!'
+// }
+
+
+export function rakeGarden(garden: string): string {
+  return garden.split(' ').map(x => x === 'rock' ? 'rock' : 'gravel').join(' ')
 }
