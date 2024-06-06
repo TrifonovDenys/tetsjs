@@ -1266,6 +1266,12 @@ export function circleArea(radius: number): number {
 // }
 
 
-export function rakeGarden(garden: string): string {
-  return garden.split(' ').map(x => x === 'rock' ? 'rock' : 'gravel').join(' ')
+// export function rakeGarden(garden: string): string {
+//   return garden.split(' ').map(x => x === 'rock' ? 'rock' : 'gravel').join(' ')
+// }
+
+export function nerdify(txt: string): string {
+  return txt.split('').map(el => el.toLowerCase() === 'a' ? 4 : el.toLowerCase() === 'e' ? 3 : el === 'l' ? 1 : el).join('')
 }
+
+// Replace all 'a'/'A' with 4, 'e'/'E' with 3 and 'l' with 1 e.g.

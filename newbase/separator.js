@@ -1,8 +1,6 @@
-// const { fullNames } = require('./dneprusers');
+const { fullNames } = require('./dneprusers');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
-const fullNames = `Lytbc Nhbajyjd   Ybrjkftdbx
-Денис Трифонов   Николаевич`;
 const csvWriter = createCsvWriter({
     path: 'fullNames.csv',
     header: [
